@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium investment opportunities at FKN Financial Hub - Stocks, Real Estate, Mutual Funds and more">
+    <title>Investment Opportunities | FKN FINANCIAL HUB</title>
+    <style>
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #040c05;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #9910cf;
+        }
+        
+        nav a::after {
+            content: "|";
+            position: absolute;
+            right: -1.2rem;
+            color: #040c05;
+        }
+        
+        nav a:last-child::after {
+            display: none;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+        
+        /* ===== INVESTMENT OPTIONS ===== */
+        .investment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .investment-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .investment-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #9910cf;
+        }
+        
+        .investment-card h2 {
+            color: #9910cf;
+            margin-top: 0;
+        }
+        
+        .investment-features {
+            margin: 1.5rem 0;
+            padding-left: 1.2rem;
+        }
+        
+        .investment-features li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            list-style-type: none;
+        }
+        
+        .investment-features li::before {
+            content: "•";
+            color: #9910cf;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .expected-returns {
+            font-weight: bold;
+            color: #25D366;
+            margin-top: 1rem;
+        }
+        
+        /* ===== TESTIMONIAL SECTION ===== */
+        .testimonials {
+            background: rgba(255,255,255,0.7);
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #9910cf;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #a777e3, #6e8efb);
+            color: white;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: #040c05;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9910cf;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== MEDIA QUERIES ===== */
+        @media (max-width: 900px) {
+            .investment-options {
+                grid-template-columns: 1fr 1fr;
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .investment-options,
+            .testimonials {
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .investment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            nav a::after {
+                display: none;
+            }
+            
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="services.html">SERVICES</a>
+            <a href="FKN_academy.html">ACADEMY</a>
+            <a href="education.html">EDUCATION</a>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header>
+        <h1>FKN Investment Opportunities</h1>
+        <p class="header-subtitle">Grow your wealth with our carefully curated investment options designed for all experience levels</p>
+        <p>Refer to our <a href="education.html#investing-intro">EDUCATION</a> section for a basic intro to investing, types of investments, and financial market education.</p>
+        <div style="background-color: #fff3cd; padding: 10px; color: #856404; border: 1px solid #ffeeba;">
+             ⚠️ The investment products listed below are not yet operational. They are part of our long-term fund structure vision and do not constitute any public offering or solicitation under CMA laws.
+        </div>
+    
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="investment-options">
+            <div class="investment-card">
+                <div class="investment-icon">📈</div>
+                <h2>Stocks & Shares</h2>
+                <p>Build your portfolio with our expert-guided stock market investments across global markets.</p>
+                <ul class="investment-features">
+                    <li>Access to blue-chip and emerging growth stocks</li>
+                    <li>Dividend reinvestment programs</li>
+                    <li>Quarterly portfolio reviews</li>
+                    <li>Personalized risk assessment</li>
+                    <li>Tax-efficient investment strategies</li>
+                </ul>
+                <p class="expected-returns">Historical Returns: 7-12% annually</p>
+            </div>
+            
+            <div class="investment-card">
+                <div class="investment-icon">🏠</div>
+                <h2>Real Estate</h2>
+                <p>Diversify your portfolio with tangible assets offering stable cash flow and appreciation.</p>
+                <ul class="investment-features">
+                    <li>Residential rental properties</li>
+                    <li>Commercial real estate syndications</li>
+                    <li>REIT investment options</li>
+                    <li>Property value appreciation tracking</li>
+                    <li>Full-service property management available</li>
+                </ul>
+                <p class="expected-returns">Target Returns: 8-15% annually</p>
+            </div>
+            
+            <div class="investment-card">
+                <div class="investment-icon">📊</div>
+                <h2>Mutual Funds</h2>
+                <p>Professionally managed diversified portfolios for hands-off investors.</p>
+                <ul class="investment-features">
+                    <li>Index funds with low expense ratios</li>
+                    <li>Sector-specific growth funds</li>
+                    <li>Fixed income bond funds</li>
+                    <li>ESG (Environmental, Social, Governance) options</li>
+                    <li>Automatic rebalancing</li>
+                </ul>
+                <p class="expected-returns">Average Returns: 6-10% annually</p>
+            </div>
+            
+            <div class="investment-card">
+                <div class="investment-icon">💎</div>
+                <h2>Alternative Investments</h2>
+                <p>Unique opportunities beyond traditional markets for sophisticated investors.</p>
+                <ul class="investment-features">
+                    <li>Private equity funds</li>
+                    <li>Venture capital opportunities</li>
+                    <li>Cryptocurrency and blockchain assets</li>
+                    <li>Commodities and precious metals</li>
+                    <li>Collectibles and art investment</li>
+                </ul>
+                <p class="expected-returns">Potential Returns: 10-20%+ annually</p>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2 style="text-align: center; color: #9910cf; margin-bottom: 2rem;">What Our Investors Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"FKN's real estate investments have provided consistent returns that outperform my other holdings. Their property selection process is exceptional."</p>
+                    <p class="testimonial-author">- James K., 5-year investor</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The personalized stock portfolio they built for me has grown 28% in two years, with lower risk than I expected. Highly recommend their services."</p>
+                    <p class="testimonial-author">- Sarah M., Portfolio Client</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As someone new to investing, FKN's guidance helped me understand my options and build a diversified portfolio I'm confident in."</p>
+                    <p class="testimonial-author">- David T., First-time Investor</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Start Investing?</h2>
+            <p>Schedule a consultation with our investment specialists today</p>
+            <a href="https://wa.me/254769043920?text=I'm%20interested%20in%20FKN%20investment%20opportunities" class="cta-btn">
+                CONTACT US ON WHATSAPP
+            </a>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="FKN_academy.html">Academy</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="https://wa.me/254769043920">Contact</a>
+        </div>
+        <p style="font-size: 14px; color: gray; max-width: 800px;">
+            Disclaimer: FKN Heights is a private financial research and education initiative currently not licensed by the Capital Markets Authority (CMA) of Kenya or any other regulatory body. The investment strategies, fund structures, and portfolio models described on this website are intended purely for educational and illustrative purposes.
+
+            We are not accepting external investor funds, providing portfolio management, or offering financial products at this time. Any reference to hedge fund activities or investment offerings reflects future plans and does not constitute an invitation or solicitation to invest.
+
+            In accordance with Section 23 of the Capital Markets Act (Cap 485A), we confirm that no fund management or investment advisory services are being conducted without regulatory approval.
+
+            Visitors are advised to treat all content as informational, not financial advice or offers.
+        </p>
+
+        <p class="copyright">&copy; 2025 FKN Financial Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

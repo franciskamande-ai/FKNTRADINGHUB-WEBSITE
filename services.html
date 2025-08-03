@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional financial services at FKN Financial Hub - Wealth management, retirement planning, tax optimization, and portfolio analysis">
+    <title>Financial Services | FKN FINANCIAL HUB</title>
+    <style>
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #040c05;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #9910cf;
+        }
+        
+        nav a::after {
+            content: "|";
+            position: absolute;
+            right: -1.2rem;
+            color: #040c05;
+        }
+        
+        nav a:last-child::after {
+            display: none;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        /* ===== SERVICES GRID ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #9910cf;
+        }
+        
+        .service-card h2 {
+            color: #9910cf;
+            margin-top: 0;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: #040c05;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== MEDIA QUERIES ===== */
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            nav a::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="investments.html">INVESTMENTS</a>
+            <a href="FKN_academy.html">ACADEMY</a>
+            <a href="education.html">EDUCATION</a>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header>
+        <h1>Our Professional Financial Services</h1>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h2>Wealth Management</h2>
+                <p>Customized financial planning and investment strategies designed to grow and protect your assets through market cycles.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h2>Retirement Planning</h2>
+                <p>Comprehensive strategies to ensure financial security in your retirement years, tailored to your lifestyle goals.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🏦</div>
+                <h2>Tax Optimization</h2>
+                <p>Strategic planning to legally minimize tax liabilities while maximizing investment returns and wealth preservation.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h2>Portfolio Analysis</h2>
+                <p>In-depth evaluation of your current investments with actionable recommendations for improved performance.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <a href="https://wa.me/254769043920?text=Hello%20FKN%20Financial%20Hub,%20I'm%20interested%20in%20your%20services" class="contact-btn">
+            CONTACT US ON WHATSAPP 📞
+        </a>
+        <p class="copyright">&copy; 2025 FKN Financial Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

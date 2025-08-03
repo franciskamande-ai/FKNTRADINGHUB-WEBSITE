@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Academy - FKN FINANCIAL HUB</title>
+    <style>
+        /* Shared Navigation Styles */
+        nav a {
+            text-decoration: none;
+            color: #040c05;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0 10px;
+        }
+        nav a:not(:last-child)::after {
+            content: "|";
+            margin-left: 10px;
+            color: #040c05;
+        }
+        nav {
+            text-align: center;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        nav a:hover {
+            color: #9910cf;
+        }
+        
+        /* Academy Page Specific Styles */
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .academy-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .course-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .course {
+            background: rgba(255, 255, 255, 0.85);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .course:hover {
+            transform: translateY(-5px);
+        }
+        .enroll-btn {
+            background-color: #9910cf;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+        .enroll-btn:hover {
+            background-color: #7a0da8;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .course-features {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .course-features li {
+            margin-bottom: 8px;
+        }
+        .whatsapp-link {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            font-size: 1.2em;
+        }
+        /* Mobile First Responsive Styles */
+        @media (max-width: 600px) {
+            .academy-header h1 {
+                font-size: 1.5em;
+            }
+            .academy-header p {
+                font-size: 1em;
+            }
+            nav {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            .course-container {
+                max-width: 100%;
+                padding: 0 5px;
+            }
+            .course {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            .course h2 {
+                font-size: 1.1em;
+            }
+            .course-features h3 {
+                font-size: 1em;
+            }
+            .course-features ul {
+                padding-left: 15px;
+            }
+            .enroll-btn {
+                padding: 8px 12px;
+                font-size: 0.95em;
+                margin-top: 10px;
+            }
+            .whatsapp-link {
+                font-size: 1em;
+                margin: 20px auto;
+            }
+            footer {
+                font-size: 0.95em;
+                margin-top: 25px;
+                padding: 0 5px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1200px) {
+            .academy-header h1 {
+                font-size: 2em;
+            }
+            .academy-header p {
+                font-size: 1.2em;
+            }
+            nav {
+                font-size: 18px;
+                margin: 15px 0;
+            }
+            .course-container {
+                max-width: 95%;
+                padding: 0 10px;
+            }
+            .course {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .course h2 {
+                font-size: 1.3em;
+            }
+            .course-features h3 {
+                font-size: 1.1em;
+            }
+            .enroll-btn {
+                padding: 10px 16px;
+                font-size: 1em;
+            }
+            .whatsapp-link {
+                font-size: 1.1em;
+                margin: 25px auto;
+            }
+            footer {
+                font-size: 1em;
+                margin-top: 30px;
+            }
+        }
+
+        @media (min-width: 1201px) {
+            .academy-header h1 {
+                font-size: 2.5em;
+            }
+            .academy-header p {
+                font-size: 1.3em;
+            }
+            nav {
+                font-size: 22px;
+                margin: 25px 0;
+            }
+            .course-container {
+                max-width: 900px;
+                padding: 0;
+            }
+            .course {
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+            .course h2 {
+                font-size: 1.5em;
+            }
+            .course-features h3 {
+                font-size: 1.2em;
+            }
+            .enroll-btn {
+                padding: 12px 24px;
+                font-size: 1.1em;
+            }
+            .whatsapp-link {
+                font-size: 1.2em;
+                margin: 30px auto;
+            }
+            footer {
+                font-size: 1.05em;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="academy-header">
+        <h1 style="color: blue;">FKN Financial Academy</h1>
+        <p>Master your financial future with our expert-led courses</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="investments.html">INVESTMENTS</a>
+        <a href="services.html">SERVICES</a>
+        <a href="education.html">EDUCATION</a>
+    </nav>
+    
+    <main>
+        <section class="course-container">
+            <div class="course">
+                <h2 style="color: #9910cf;">Investing Fundamentals</h2>
+                <p><strong>Duration:</strong> 4 Weeks | <strong>Level:</strong> Beginner</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Stock market basics and terminology</li>
+                        <li>How to analyze companies</li>
+                        <li>Portfolio diversification strategies</li>
+                        <li>Risk management techniques</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Investing%20Fundamentals%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            
+            <div class="course">
+                <h2 style="color: #9910cf;">Wealth Building Masterclass</h2>
+                <p><strong>Duration:</strong> 6 Weeks | <strong>Level:</strong> Intermediate</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Advanced investment strategies</li>
+                        <li>Real estate investment principles</li>
+                        <li>Passive income generation</li>
+                        <li>Tax optimization methods</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Wealth%20Building%20Masterclass" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            
+            <div class="course">
+                <h2 style="color: #9910cf;">Cryptocurrency & Blockchain</h2>
+                <p><strong>Duration:</strong> 5 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Blockchain technology fundamentals</li>
+                        <li>Cryptocurrency trading strategies</li>
+                        <li>NFT and DeFi opportunities</li>
+                        <li>Security best practices</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Cryptocurrency%20%26%20Blockchain%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            <div class="course">
+                <h2 style="color: #9910cf;">Personal Finance Management</h2>
+                <p><strong>Duration:</strong> 3 Weeks | <strong>Level:</strong> Beginner</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Budgeting and saving techniques</li>
+                        <li>Debt management strategies</li>
+                        <li>Setting financial goals</li>
+                        <li>Building emergency funds</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Personal%20Finance%20Management%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+
+            <div class="course">
+                <h2 style="color: #9910cf;">Business Finance Essentials</h2>
+                <p><strong>Duration:</strong> 4 Weeks | <strong>Level:</strong> Intermediate</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Financial planning for businesses</li>
+                        <li>Cash flow management</li>
+                        <li>Business budgeting and forecasting</li>
+                        <li>Understanding financial statements</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Business%20Finance%20Essentials%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            <div class="course">
+                <h2 style="color: #9910cf;">Financial Engineering Strategies & Models</h2>
+                <p><strong>Duration:</strong> 8 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Quantitative analysis for financial markets</li>
+                        <li>Building and evaluating financial models (DCF, CAPM, Black-Scholes)</li>
+                        <li>Portfolio optimization and risk management</li>
+                        <li>Python for financial data analysis</li>
+                        <li>Time series forecasting (ARIMA, GARCH)</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Financial%20Engineering%20Strategies%20%26%20Models%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            <div class="course">
+                <h2 style="color: #9910cf;">Algorithmic Trading Mastery</h2>
+                <p><strong>Duration:</strong> 6 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Algorithmic trading concepts and strategies</li>
+                        <li>Developing trading bots using Python</li>
+                        <li>Mean reversion and arbitrage models</li>
+                        <li>Machine learning for financial prediction</li>
+                        <li>Backtesting and deploying trading algorithms</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Algorithmic%20Trading%20Mastery%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            <div class="course">
+                <h2 style="color: #9910cf;">Machine Learning for Finance</h2>
+                <p><strong>Duration:</strong> 8 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Supervised learning models (Regression, Classification, Decision Trees, Random Forests)</li>
+                        <li>Unsupervised learning models (Clustering, PCA, Anomaly Detection)</li>
+                        <li>Reinforcement learning for trading and portfolio management</li>
+                        <li>Deep learning applications (LSTM, CNN for time series and sentiment analysis)</li>
+                        <li>Model selection and evaluation for financial data</li>
+                        <li>Hands-on projects with Python and real market datasets</li>
+                    </ul>
+                    <p style="color: #9910cf; font-size: 0.95em; margin-top: 10px;">
+                        <strong>Disclaimer:</strong> Some active models and free resources are available on <a href="education.html" style="color: #25D366; text-decoration: underline;">education.html</a>.
+                    </p>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Machine%20Learning%20for%20Finance%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+            <div class="course">
+                <h2 style="color: #9910cf;">Sentiment Analysis Mastery</h2>
+                <p><strong>Duration:</strong> 5 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Retail sentiment analysis techniques</li>
+                        <li>Commitment of Traders (COT) report interpretation</li>
+                        <li>Currency strength indicators</li>
+                        <li>Volatility Index (VIX) analysis</li>
+                        <li>Russell index sentiment tracking</li>
+                        <li>Integrating multiple sentiment sources for trading decisions</li>
+                        <li>Hands-on sentiment data visualization and Python automation</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Sentiment%20Analysis%20Mastery%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+
+            <div class="course">
+                <h2 style="color: #9910cf;">Volume & Footprint Analysis</h2>
+                <p><strong>Duration:</strong> 6 Weeks | <strong>Level:</strong> Advanced</p>
+                <div class="course-features">
+                    <h3>You'll Learn:</h3>
+                    <ul>
+                        <li>Order flow and volume profile analysis</li>
+                        <li>Footprint chart interpretation (bid/ask, delta, imbalance)</li>
+                        <li>Institutional indicators and market depth</li>
+                        <li>Identifying liquidity zones and price action triggers</li>
+                        <li>Integrating volume and footprint with technical strategies</li>
+                        <li>Python tools for volume analytics</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/254769043920?text=I%20want%20to%20enroll%20in%20Volume%20%26%20Footprint%20Analysis%20course" class="enroll-btn">Enroll via WhatsApp</a>
+            </div>
+        </section>
+        
+        <div class="whatsapp-link">
+            <p>Have questions? <a href="https://wa.me/254769043920" style="color: #25D366; font-weight: bold;">Chat with us on WhatsApp</a></p>
+        </div>
+    </main>
+    
+    <footer style="margin-top: 40px; text-align: center;">
+        <p style="color: rgb(255, 7, 7);">&copy; 2025 FKN Financial Hub. All rights reserved.</p>
+        <p style="color: rgb(255, 17, 69);">Designed by FKN</p>
+    </footer>
+</body>
+</html>

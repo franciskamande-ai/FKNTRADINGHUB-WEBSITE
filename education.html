@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Education | FKN TRADING HUB</title>
+    <style>
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #040c05;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #9910cf;
+        }
+        
+        nav a::after {
+            content: "|";
+            position: absolute;
+            right: -1.2rem;
+            color: #040c05;
+        }
+        
+        nav a:last-child::after {
+            display: none;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        .education-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: #9910cf;
+            border-bottom: 2px solid #9910cf;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: #6e8efb;
+        }
+        
+        .example-box {
+            background: #f5f5f5;
+            border-left: 4px solid #9910cf;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .concept-card {
+            background: rgba(255,255,255,0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #a777e3, #6e8efb);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: #040c05;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9910cf;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== MEDIA QUERIES ===== */
+        @media (max-width: 900px) {
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .education-container {
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            nav a::after {
+                display: none;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="investments.html">INVESTMENTS</a>
+            <a href="services.html">SERVICES</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="FKN_academy.html">ACADEMY</a>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header>
+        <h1>Financial Education Center</h1>
+        <p>Master stocks, forex, and volume analysis with our comprehensive guides</p>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="education-container">
+        <!-- After the <header> but before stock market section -->
+<section class="section" id="investing-intro">
+    <h2>What is Investing?</h2>
+    <p>Investing means allocating money with the expectation of generating profit or income. Unlike saving, investing involves calculated risks to grow your wealth over time.</p>
+    
+    <div class="concept-card">
+        <h3>Why Invest?</h3>
+        <ul>
+            <li><strong>Beat inflation:</strong> Cash loses value (3-7% annually in Kenya)</li>
+            <li><strong>Wealth building:</strong> Compound growth over time</li>
+            <li><strong>Passive income:</strong> Dividends/rental income</li>
+        </ul>
+    </div>
+
+    <h3>Main Ways to Invest</h3>
+    <div class="concept-grid">
+        <div class="concept-card">
+            <h4>1. Stocks (Equities)</h4>
+            <p>Buying shares of companies like Safaricom, KCB</p>
+            <p><strong>Example:</strong> 100 Safaricom shares @ KSh 20 = KSh 2,000 investment</p>
+            <div class="example-box">
+                <strong>Expected Returns Comparison:</strong>
+                <ul>
+                    <li>
+                        <strong>Stocks:</strong> Average annual return for stocks in Kenya is typically 10-15%. For example, if you invest KSh 2,000 in Safaricom shares and the price grows by 12% in a year, your investment becomes KSh 2,240.
+                        <br>
+                        <em>Calculation:</em> KSh 2,000 × 1.12 = KSh 2,240
+                    </li>
+                    <li>
+                        <strong>Real Estate:</strong> Rental properties in Nairobi can yield 8-12% per year plus property value appreciation. For instance, a KSh 5,000,000 apartment rented at KSh 40,000/month earns KSh 480,000/year (9.6% yield).
+                        <br>
+                        <em>Calculation:</em> (KSh 40,000 × 12) / KSh 5,000,000 × 100% = 9.6%
+                    </li>
+                    <li>
+                        <strong>Bonds:</strong> Government bonds pay 7-12% annually. A KSh 10,000 bond at 10% earns KSh 1,000 interest per year.
+                        <br>
+                        <em>Calculation:</em> KSh 10,000 × 0.10 = KSh 1,000
+                    </li>
+                    <li>
+                        <strong>Banks (Savings Account):</strong> Most Kenyan banks offer 4% annual interest. If you save KSh 10,000, after one year you get KSh 10,400.
+                        <br>
+                        <em>Calculation:</em> KSh 10,000 × 1.04 = KSh 10,400
+                    </li>
+                </ul>
+            </div>
+            <div class="concept-card">
+                <h4>Why Not Just Save in a Bank?</h4>
+                <p>
+                    While banks offer safety and liquidity, the average savings account yields only about 4% per year. This is often less than the rate of inflation (typically 6-8% in Kenya), meaning your money loses purchasing power over time.
+                </p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>
+                            You save KSh 10,000 in a bank at 4% interest. After one year, you have KSh 10,400.
+                        </li>
+                        <li>
+                            If inflation is 7%, your money's real value is KSh 10,400 / 1.07 ≈ KSh 9,720 (less than you started with).
+                        </li>
+                        <li>
+                            By investing in stocks, bonds, or real estate, you can earn higher returns (8-15%+), outpacing inflation and growing your wealth.
+                        </li>
+                    </ul>
+                </div>
+                <p>
+                    <strong>Summary:</strong> Allocating money to investments rather than just saving in a bank helps you beat inflation, build wealth, and achieve financial goals faster.
+                </p>
+            </div>
+        </div>
+        
+        <div class="concept-card">
+            <h4>2. Real Estate</h4>
+            <p>Physical properties or REITs</p>
+            <p><strong>Example:</strong> Buying a rental apartment in Nairobi</p>
+            <p><strong>Expected Return:</strong> Real estate in Nairobi typically yields 8-12% annually from rental income, plus property value appreciation. For example, a KSh 5,000,000 apartment rented at KSh 40,000/month earns KSh 480,000/year (9.6% yield).</p>
+            <div class="example-box">
+                <strong>Calculation:</strong> (KSh 40,000 × 12) / KSh 5,000,000 × 100% = 9.6% annual yield
+            </div>
+            <p><strong>Why Not Just Save in a Bank?</strong> Most Kenyan banks offer about 4% annual interest. If you save KSh 5,000,000, after one year you get KSh 5,200,000. But if inflation is 7%, your real value is KSh 5,200,000 / 1.07 ≈ KSh 4,859,813—less than you started with.</p>
+            <div class="example-box">
+                <strong>Example:</strong>
+                <ul>
+                    <li>Bank savings: KSh 5,000,000 × 1.04 = KSh 5,200,000 after one year</li>
+                    <li>Inflation adjustment: KSh 5,200,000 / 1.07 ≈ KSh 4,859,813 (real value)</li>
+                    <li>Real estate: Earn KSh 480,000 rent + property appreciation, outpacing inflation</li>
+                </ul>
+            </div>
+            <p><strong>Summary:</strong> Allocating money to real estate can provide higher returns and protect against inflation, while bank savings may lose value in real terms.</p>
+        </div>
+        
+        <div class="concept-card">
+            <h4>3. Bonds</h4>
+            <p>Loaning to governments/companies</p>
+            <p><strong>Example:</strong> Kenya Eurobond paying 7% annually</p>
+            <p>Bonds are fixed-income investments where you lend money to governments or companies in exchange for regular interest payments and the return of your principal at maturity.</p>
+            <p><strong>Example:</strong> Buy a Kenya government bond for KSh 10,000 at 10% annual interest. You receive KSh 1,000 interest each year, plus your KSh 10,000 back at the end of the term.</p>
+            <div class="example-box">
+                <strong>Expected Return:</strong>
+                <ul>
+                    <li>
+                        <strong>Government Bonds:</strong> Typically pay 7-12% per year. For example, a KSh 10,000 bond at 10% earns KSh 1,000 interest annually.
+                        <br>
+                        <em>Calculation:</em> KSh 10,000 × 0.10 = KSh 1,000
+                    </li>
+                    <li>
+                        <strong>Corporate Bonds:</strong> May pay higher rates (up to 15%) but carry more risk.
+                    </li>
+                </ul>
+            </div>
+            <div class="concept-card">
+                <h4>Why Not Just Save in a Bank?</h4>
+                <p>
+                    Most Kenyan banks offer about 4% annual interest. If you save KSh 10,000, after one year you get KSh 10,400. But if inflation is 7%, your real value is KSh 10,400 / 1.07 ≈ KSh 9,720—less than you started with.
+                </p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Bank savings: KSh 10,000 × 1.04 = KSh 10,400 after one year</li>
+                        <li>Inflation adjustment: KSh 10,400 / 1.07 ≈ KSh 9,720 (real value)</li>
+                        <li>Bonds: Earn KSh 1,000 interest, total KSh 11,000. After inflation: KSh 11,000 / 1.07 ≈ KSh 10,280 (beats bank savings)</li>
+                    </ul>
+                </div>
+                <p>
+                    <strong>Summary:</strong> Bonds offer higher returns than bank savings and help protect your money from inflation.
+                </p>
+            </div>
+            <div class="concept-card">
+                <h4>What to Watch: Yield Curves & Risks</h4>
+                <ul>
+                    <li>
+                        <strong>Yield Curve:</strong> Shows interest rates for bonds of different maturities. A rising curve means higher long-term rates (good for investors), while an inverted curve can signal economic trouble.
+                        <div class="example-box">
+                            <strong>Example:</strong>
+                            <ul>
+                                <li>Kenya 2-year bond: 8% yield</li>
+                                <li>Kenya 10-year bond: 12% yield</li>
+                                <li>Steep curve = higher returns for longer-term bonds</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Risks:</strong> Bonds are safer than stocks but can lose value if interest rates rise (bond prices fall), or if the issuer defaults.
+                    </li>
+                    <li>
+                        <strong>Liquidity:</strong> Some bonds can be sold before maturity, but prices may fluctuate.
+                    </li>
+                </ul>
+                <p>
+                    <strong>How Bonds Improve Your Portfolio:</strong> Bonds provide steady income, reduce risk, and balance out stock market volatility. They are ideal for conservative investors or those seeking predictable returns.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="transition-box">
+        <p>Now that you understand the basics, let's dive deeper into each investment type:</p>
+    </div>
+</section>
+
+<!-- Then continue with your existing stock market section -->
+<section class="section" id="stocks">
+    <h2>Stock Market Deep Dive</h2>
+    [...existing stock content...]
+</section>
+        <!-- Stock Market Section -->
+        <section class="section" id="stocks">
+            <h2>Stock Market Mastery</h2>
+            <p>Learn everything about stock trading from basic concepts to advanced strategies.</p>
+            
+            <h3>Stock Trading Basics</h3>
+            <p>Stocks represent ownership in a company. When you buy a stock, you become a shareholder.</p>
+            
+            <div class="example-box">
+                <strong>Example:</strong> If you buy Safaricom (NSE: SCOM) at KSh 20 per share and sell at KSh 30:
+                <ul>
+                    <li>Profit per share = KSh 10</li>
+                    <li>With 1,000 shares: 1,000 × KSh 10 = KSh 100,000 profit</li>
+                </ul>
+            </div>
+            
+            <h3>Key Stock Market Concepts</h3>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>Market Orders vs. Limit Orders</h4>
+                    <p><strong>Market order:</strong> Buy/sell immediately at current price</p>
+                    <p><strong>Limit order:</strong> Buy/sell only at specified price or better</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Bid-Ask Spread</h4>
+                    <p>The difference between the highest price a buyer will pay (bid) and the lowest price a seller will accept (ask)</p>
+                    <p>
+                        <strong>Company Concept (Detailed):</strong> When you invest in a company by buying its shares, you become a part-owner. This ownership comes with several benefits and responsibilities:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Profit Sharing:</strong> As a shareholder, you are entitled to a portion of the company's profits, usually paid out as dividends. For example, if Safaricom performs well and declares a dividend, you receive a payment based on the number of shares you own.
+                            <div class="example-box">
+                                <strong>Example:</strong> Safaricom announces a KSh 1.10 dividend per share. If you own 2,000 shares, you receive KSh 2,200.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Share Price Growth:</strong> If the company grows and becomes more profitable, its share price may rise. You can sell your shares at a higher price for a capital gain.
+                            <div class="example-box">
+                                <strong>Example:</strong> Buy 500 KCB shares at KSh 40, sell at KSh 60 &rarr; profit = 500 × (60 - 40) = KSh 10,000.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Voting Rights:</strong> Many companies allow shareholders to vote on important matters, such as electing board members or approving mergers. This gives you a say in the company's future direction.
+                            <div class="example-box">
+                                <strong>Example:</strong> Attend Safaricom’s annual general meeting and vote on key decisions as a shareholder.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Risks:</strong> If the company performs poorly, share prices may fall and dividends can be reduced or suspended. You could lose part or all of your investment.
+                            <div class="example-box">
+                                <strong>Example:</strong> If a company reports losses, its stock price may drop and you could lose part of your investment.
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What to Expect:</strong> As a shareholder, you benefit when the company succeeds, but you also share in its risks. Watch for earnings reports, dividend announcements, and major company news—they can all impact your returns. Be prepared for both growth opportunities and potential setbacks.
+                    </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Dividends</h4>
+                    <p>Company profits distributed to shareholders (e.g., Safaricom pays ~KSh 1.10 per share annually)</p>
+                    <p>
+                        <strong>Company Concept:</strong> When you invest in stocks, you become a partial owner of a company. This means you share in its profits (through dividends), growth (as the share price rises), and sometimes its decision-making (voting rights at annual meetings).
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Dividends:</strong> Many companies pay out a portion of their profits to shareholders. For example, Safaricom pays annual dividends to investors, providing a steady income stream.
+                            <div class="example-box">
+                                <strong>Example:</strong> If you own 1,000 Safaricom shares and the company declares a KSh 1.10 dividend per share, you receive KSh 1,100.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Share Price Appreciation:</strong> As the company grows and becomes more profitable, its share price may increase. Investors can sell shares at a higher price for capital gains.
+                            <div class="example-box">
+                                <strong>Example:</strong> Buy 500 KCB shares at KSh 40, sell at KSh 60 &rarr; profit = 500 × (60 - 40) = KSh 10,000.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Voting Rights:</strong> Some shares give you the right to vote on company matters, such as electing board members or approving mergers.
+                            <div class="example-box">
+                                <strong>Example:</strong> Attend Safaricom’s annual general meeting and vote on key decisions as a shareholder.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Risks:</strong> If the company performs poorly, share prices may fall and dividends can be reduced or suspended.
+                            <div class="example-box">
+                                <strong>Example:</strong> If a company reports losses, its stock price may drop and you could lose part of your investment.
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What to Expect:</strong> As a shareholder, you benefit when the company succeeds, but you also share in its risks. Watch for earnings reports, dividend announcements, and major company news—they can all impact your returns.
+                    </p>
+                </div>
+            </div>
+            
+            <h3>Stock Market Events to Watch</h3>
+            <ul>
+                <li><strong>Earnings Reports:</strong> Quarterly financial results that move stock prices</li>
+                <li><strong>Dividend Declarations:</strong> Announcements of dividend payments</li>
+                <li><strong>IPO Launches:</strong> Initial Public Offerings of new companies</li>
+                <li><strong>Economic Indicators:</strong> GDP, unemployment rates affecting market sentiment</li>
+                <li><strong>Sector News:</strong> Industry-specific developments (e.g., tech regulations, oil prices)</li>
+            </ul>
+            
+            <h3>Company Evaluation</h3>
+            <p>Fundamental analysis metrics every investor should know:</p>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>P/E Ratio</h4>
+                    <p>Price-to-Earnings ratio shows how much investors pay per shilling of earnings</p>
+                    <p><strong>Example:</strong> Safaricom P/E ~20 means investors pay KSh 20 for KSh 1 of earnings</p>
+                    <p>
+                        The <strong>P/E Ratio</strong> (Price-to-Earnings Ratio) is a key metric used to evaluate how much investors are willing to pay for each shilling of a company's earnings. It helps you compare whether a stock is overvalued or undervalued relative to its peers or its own historical average.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Low P/E (e.g., below 10):</strong> May indicate the stock is undervalued, or the company is facing challenges.
+                            <div class="example-box">
+                                <strong>Example:</strong> If KCB Bank has a P/E of 8, it could be a bargain if the company is stable and growing.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>High P/E (e.g., above 25):</strong> May suggest the stock is overvalued, or investors expect high future growth.
+                            <div class="example-box">
+                                <strong>Example:</strong> Safaricom with a P/E of 30 means investors expect strong future earnings growth.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Comparing P/E Ratios:</strong> Always compare a company's P/E to its industry average and historical levels.
+                            <div class="example-box">
+                                <strong>Example:</strong> If Safaricom's P/E is 20 and the telecom sector average is 15, Safaricom is trading at a premium.
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What to expect:</strong> Companies with low P/E ratios may attract value investors looking for bargains, while high P/E stocks often appeal to growth investors. Watch for changes in earnings reports, sector trends, and economic conditions that can affect P/E ratios.
+                    </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>P/B Ratio</h4>
+                    <p>Price-to-Book compares market value to book value</p>
+                    <p>
+                        The <strong>Price-to-Book (P/B) Ratio</strong> compares a company's market value (share price × shares outstanding) to its book value (net assets on the balance sheet). It helps investors assess whether a stock is undervalued or overvalued relative to its actual assets.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Low P/B (e.g., below 1):</strong> May indicate the stock is trading for less than its net assets, possibly undervalued.
+                            <div class="example-box">
+                                <strong>Example:</strong> If KCB Bank has a P/B of 0.8, its shares trade below the value of its assets—could be a bargain if assets are reliable.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>High P/B (e.g., above 3):</strong> May suggest investors expect strong future growth or intangible assets (like brand value).
+                            <div class="example-box">
+                                <strong>Example:</strong> Safaricom with a P/B of 4 means investors pay 4× the book value, expecting high future profits.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Comparing P/B Ratios:</strong> Always compare to industry averages and consider asset quality.
+                            <div class="example-box">
+                                <strong>Example:</strong> If Safaricom's P/B is 4 and the telecom sector average is 2, Safaricom is trading at a premium.
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What to expect:</strong> Companies with low P/B ratios may attract value investors, especially if assets are strong and earnings are stable. High P/B ratios often reflect growth expectations or significant intangible assets. Watch for changes in asset values, earnings, and sector trends that can affect P/B ratios.
+                    </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>ROE</h4>
+                    <p>Return on Equity measures profitability relative to shareholder equity</p>
+                    <p>
+                        <strong>Return on Equity (ROE)</strong> is a key profitability metric that shows how efficiently a company uses shareholders' equity to generate profits. It is calculated as:
+                        <br>
+                        <code>ROE = Net Income / Shareholder Equity</code>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>High ROE (e.g., above 15%):</strong> Indicates the company is generating strong profits from its equity base.
+                            <div class="example-box">
+                                <strong>Example:</strong> If KCB Bank earns KSh 15 billion net income and has KSh 100 billion equity, ROE = 15%.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Low ROE (e.g., below 8%):</strong> May signal weak profitability or inefficient use of capital.
+                            <div class="example-box">
+                                <strong>Example:</strong> If a company earns KSh 5 billion net income on KSh 100 billion equity, ROE = 5%.
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Comparing ROE:</strong> Always compare to industry averages and consider how much debt the company uses (high debt can artificially boost ROE).
+                            <div class="example-box">
+                                <strong>Example:</strong> Safaricom has ROE of 30%, telecom sector average is 18%—Safaricom is highly efficient.
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>What to expect:</strong> Companies with consistently high ROE are often market leaders and attract growth investors. Watch for changes in net income, equity levels, and debt that can affect ROE. Sudden drops may signal operational issues or increased competition.
+                    </p>
+                </div>
+            </div>
+        <h3>Other Important Company Details for Investors</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Market Capitalization</h4>
+                <p>Total value of a company's outstanding shares. Indicates company size and investor confidence.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Safaricom has 40 billion shares outstanding, trading at KSh 20 each.<br>
+                    Market Cap = 40,000,000,000 × KSh 20 = KSh 800,000,000,000.
+                </div>
+                <p><strong>Why it matters:</strong> Large-cap companies are usually more stable, while small-cap stocks may offer higher growth but more risk.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Dividend Yield</h4>
+                <p>Shows how much a company pays out in dividends relative to its share price.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Safaricom pays KSh 1.10 dividend per share, share price is KSh 20.<br>
+                    Dividend Yield = (1.10 / 20) × 100% = 5.5%
+                </div>
+                <p><strong>Why it matters:</strong> Higher yields attract income-focused investors. Compare yields across companies and sectors.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Debt-to-Equity Ratio</h4>
+                <p>Measures company leverage. Ratio of total debt to shareholder equity.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> KCB Bank has KSh 200B debt, KSh 100B equity.<br>
+                    Debt-to-Equity = 200B / 100B = 2.0
+                </div>
+                <p><strong>Why it matters:</strong> High ratios mean more risk if earnings fall. Low ratios indicate conservative financing.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Earnings Per Share (EPS)</h4>
+                <p>Net profit divided by number of shares. Shows company profitability per share.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Safaricom earns KSh 80B net profit, 40B shares.<br>
+                    EPS = 80B / 40B = KSh 2.00 per share.
+                </div>
+                <p><strong>Why it matters:</strong> Rising EPS signals growing profits. Compare EPS growth over time.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Free Cash Flow</h4>
+                <p>Cash left after expenses and investments. Indicates ability to pay dividends, invest, or reduce debt.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Safaricom generates KSh 10B operating cash, spends KSh 3B on capital expenses.<br>
+                    Free Cash Flow = 10B - 3B = KSh 7B.
+                </div>
+                <p><strong>Why it matters:</strong> Positive free cash flow means financial flexibility and stability.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Management & Governance</h4>
+                <p>Quality of leadership and board oversight. Transparent, ethical management builds investor trust.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Safaricom publishes annual reports, holds shareholder meetings, and discloses executive compensation.
+                </div>
+                <p><strong>Why it matters:</strong> Good governance reduces risk of fraud and mismanagement.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Sector & Industry Trends</h4>
+                <p>Company performance is affected by sector growth, competition, and regulation.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> Telecom sector grows as mobile usage rises; banks face new regulations affecting profits.
+                </div>
+                <p><strong>Why it matters:</strong> Always consider broader industry trends when evaluating a company.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Corporate Actions</h4>
+                <p>Events like stock splits, buybacks, mergers, and acquisitions can impact share price and investor returns.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> KCB Bank announces a share buyback, reducing shares outstanding and potentially increasing EPS.
+                </div>
+                <p><strong>Why it matters:</strong> Corporate actions can signal management confidence or strategic changes.</p>
+            </div>
+        </div>
+        </section>
+        
+        <!-- Forex Section -->
+        <section class="section" id="forex">
+            <h2>Forex Trading Fundamentals</h2>
+            <p>Complete guide to currency trading and macroeconomic factors.</p>
+            <hr>
+            <h3>What is Forex?</h3>
+            <p>Forex (foreign exchange) is the largest financial market where currencies are traded. It operates 24/5 and involves buying one currency while selling another.</p>
+            <p>Major players include banks, corporations, and retail traders.</p>
+            <p>The goal of trading is to make money based on the constant moving market</p>
+            <p>You are always aiming to buy low(cheap/oversold/undervalued) and sell high(expensive/overbought/overvalued)</p>
+            
+            <h3>Major Currency Pairs</h3>
+            <ul>
+                <li>EUR/USD (Euro vs. US Dollar)</li>
+                <li>USD/JPY (US Dollar vs. Japanese Yen)</li>
+                <li>GBP/USD (British Pound vs. US Dollar)</li>
+                <li>USD/CHF (US Dollar vs. Swiss Franc)</li>
+                <li>USD/ZAR (US Dollar vs. South African Rand)</li>
+            </ul>
+            
+            <h3>Key Forex Concepts</h3>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>Pips</h4>
+                    <p>Smallest price move (0.0001 for most pairs)</p>
+                    <p><strong>Example:</strong> EUR/USD moves from 1.1000 to 1.1001 = 1 pip</p>
+                    <p>1 pip on a standard lot is equivalent to 10$ on many major pair's </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Leverage</h4>
+                    <p>Borrowed capital to increase position size (e.g., 1:100 leverage means $1 controls $100)</p>
+                    <p>Levarage allows you to control huge positions but is also risky and may lead to massive losses if misused </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Spread</h4>
+                    <p>Difference between buy and sell prices (broker's commission)</p>
+                    <p><strong>Example:</strong> EUR/USD bid 1.1000, ask 1.1002 = 2 pip spread</p>
+                    <p>Spread is the cost of trading and can vary based on market conditions</p>
+
+                </div>
+                <div class="concept-card">
+                    <h4>Margin</h4>
+                    <p>Amount required to open a leveraged position (e.g., 1% margin means $1,000 controls $100,000)</p>
+                    <p>Margin is the amount of money you need to deposit to open a position</p>
+                </div>
+                <div>
+                    <h4>Lot Sizes</h4>
+                    <p>Standard lot (100,000 units), mini lot (10,000), micro lot (1,000)</p>
+                    <p>Lot size determines position size and risk exposure</p>
+                </div>
+                <div>
+                    <h4>Order Types</h4>
+                    <p>Market orders, limit orders, stop-loss orders(SL), take-profit orders(TP)</p>
+                    <p>Order types help you control entry/exit points and risk management</p>
+                    <p>Market orders are executed instantly at the best available price while limit ordrs are set to be executed while price reaches a certain price point</p>
+                    <p>Stop-loss orders automatically close a position at a specified loss level to limit risk if price moves against you</p>
+                    <p>TP and Sl are perfect examples of limit order's you wanna exit at a specific set price</p>
+                    <p>take profit orders automatically closes your position at a specific set profit level when price moves in your direction</p>
+                    <p>Example: If you buy EUR/USD at 1.1000 and set a SL at 1.0950, your position will close automatically if the price drops to 1.0950</p>
+                    <p>Example: If you buy EUR/USD at 1.1000 and set a TP at 1.1050, your position will close automatically when the price reaches 1.1050</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Swap/Rollover</h4>
+                    <p>Interest paid or earned for holding a forex position overnight, based on the difference in interest rates between two currencies.</p>
+                    <p><strong>Example:</strong> If you buy EUR/USD and the euro has a higher interest rate than the dollar, you may earn a positive swap. If the dollar rate is higher, you pay a negative swap.</p>
+                    <div class="example-box">
+                        <strong>Swap Calculation:</strong>
+                        <ul>
+                            <li>Buy EUR/USD, hold overnight: Broker credits or debits your account based on rate differential.</li>
+                            <li>Swap rates vary by broker and currency pair.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Slippage</h4>
+                    <p>Difference between expected price and actual execution price, often during high volatility or low liquidity.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Place a buy order at 1.1000, but trade executes at 1.1003 due to fast-moving market—slippage of 3 pips.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Requotes</h4>
+                    <p>Broker offers a new price if the requested price is unavailable, common in fast markets.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Try to buy EUR/USD at 1.1000, but price moves to 1.1005—broker requotes at new price.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Stop Hunting</h4>
+                    <p>Market moves to trigger stop-loss orders before reversing, often caused by large players seeking liquidity.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>EUR/USD drops below support, triggers stops, then quickly reverses upward.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Liquidity</h4>
+                    <p>Ease of buying/selling without affecting price. Major pairs (EUR/USD, GBP/USD) have high liquidity; exotic pairs have lower liquidity and wider spreads.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>EUR/USD trades billions daily—tight spreads, fast execution.</li>
+                            <li>USD/KES has lower liquidity—wider spreads, possible slippage.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Correlation</h4>
+                    <p>How currency pairs move in relation to each other. Positive correlation means pairs move together; negative means they move opposite.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>EUR/USD and GBP/USD often move together (positive correlation).</li>
+                            <li>USD/JPY and gold (XAU/USD) may move opposite (negative correlation).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>News Trading</h4>
+                    <p>Trading based on economic news releases (NFP, CPI, interest rates). News can cause rapid price moves and increased volatility.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>US NFP beats expectations—USD rallies, EUR/USD drops sharply.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Hedging</h4>
+                    <p>Opening positions to offset risk in another trade. Used to protect against adverse price moves.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Buy EUR/USD and sell GBP/USD to hedge exposure to USD.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Carry Trade</h4>
+                    <p>Borrowing in a low-interest currency to invest in a high-interest currency, profiting from the rate difference.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Borrow JPY (low rate), buy AUD (high rate), earn positive swap.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Exotic Pairs</h4>
+                    <p>Currency pairs involving emerging market currencies (e.g., USD/KES, USD/ZAR). Higher spreads and volatility, lower liquidity.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>USD/KES trades less volume than EUR/USD—watch for wider spreads and price jumps.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Risk Management</h4>
+                    <p>Techniques to limit losses: position sizing, stop-loss, take-profit, diversification.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Risk only 2% of account per trade, use stop-loss to cap losses.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <h4>Beginner Trading Concepts</h4>
+                    <p>Simple strategies help new traders understand when to buy and sell. Here are some basics:</p>
+                    <ul>
+                        <li>
+                            <strong>Buy at Support, Sell at Resistance:</strong>
+                            <ul>
+                                <li><strong>Support:</strong> Price level where buyers step in, preventing further decline.</li>
+                                <li><strong>Resistance:</strong> Price level where sellers emerge, capping further rise.</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>Safaricom trades between KSh 20 (support) and KSh 25 (resistance). Buy near KSh 20, sell near KSh 25.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>RSI (Relative Strength Index):</strong>
+                            <ul>
+                                <li>Momentum indicator (0-100 scale).</li>
+                                <li>Below 30: Oversold (potential buy). Above 70: Overbought (potential sell).</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>RSI drops below 30 on KCB Bank—consider buying.</li>
+                                    <li>RSI rises above 70—consider selling or taking profit.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>MACD (Moving Average Convergence Divergence):</strong>
+                            <ul>
+                                <li>Shows trend direction and momentum.</li>
+                                <li>Buy signal: MACD line crosses above signal line. Sell signal: MACD crosses below signal line.</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>MACD crossover on Safaricom—buy when blue line crosses above orange line.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>EMA Crossover Strategy:</strong>
+                            <ul>
+                                <li>Uses two Exponential Moving Averages (e.g., 9-period and 26-period).</li>
+                                <li>Buy when short EMA (9) crosses above long EMA (26). Sell when short EMA crosses below long EMA.</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>Safaricom 9 EMA crosses above 26 EMA—buy signal.</li>
+                                    <li>9 EMA crosses below 26 EMA—sell signal.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Other Simple Strategies:</strong>
+                            <ul>
+                                <li><strong>Breakout Trading:</strong> Buy when price breaks above resistance with high volume.</li>
+                                <li><strong>Trend Following:</strong> Buy in uptrend, sell in downtrend using moving averages.</li>
+                                <li><strong>Pullback Trading:</strong> Buy on dips in an uptrend, sell on rallies in a downtrend.</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>Price breaks above KSh 25 resistance—enter long trade.</li>
+                                    <li>Price pulls back to moving average in uptrend—buy the dip.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>We offer free models and code for these strategies in the education section. <a href="https://wa.me/254769043920" class="whatsapp-btn">Contact for free scripts</a></p>
+                </div>
+                <div class="concept-card">
+                    <h4>Sentiment Analysis</h4>
+                    <p>Sentiment analysis gauges the mood of market participants—whether they are bullish, bearish, or neutral. It helps traders anticipate crowd behavior and potential reversals.</p>
+                    <ul>
+                        <li>
+                            <strong>Retail Sentiment:</strong> Measures the positions of retail traders (e.g., long vs. short ratios on brokers like IG or OANDA).
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>If 80% of retail traders are long EUR/USD, but price keeps falling, it may signal a contrarian opportunity to go short.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>COT Report (Commitments of Traders):</strong> Published weekly by the CFTC, shows positions of large speculators, commercial hedgers, and small traders.
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>If commercial hedgers are heavily long USD, it may signal underlying strength in the dollar.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Currency Strength Meter:</strong> Visualizes the relative strength of major currencies. Used to find strong/weak pairs for trading.
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>If USD is strong and JPY is weak, USD/JPY may trend upward.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>VIX (Volatility Index):</strong> Measures expected volatility in the S&P 500. High VIX signals fear, low VIX signals complacency.
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>VIX spikes above 30—markets are fearful, risk assets may sell off.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Russell 2000:</strong> Small-cap stock index, often used as a risk sentiment gauge. Rising Russell signals risk-on, falling signals risk-off.
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>Russell 2000 rallies while S&P 500 lags—traders favor riskier assets.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Other Sentiment Indicators:</strong>
+                            <ul>
+                                <li><strong>Put/Call Ratio:</strong> High ratio signals bearish sentiment, low ratio signals bullish.</li>
+                                <li><strong>AAII Sentiment Survey:</strong> Tracks US investor optimism/pessimism.</li>
+                                <li><strong>Fear & Greed Index:</strong> Combines multiple indicators to gauge overall market emotion.</li>
+                            </ul>
+                            <div class="example-box">
+                                <strong>Example:</strong>
+                                <ul>
+                                    <li>Put/Call ratio spikes—market may be near a bottom as fear peaks.</li>
+                                    <li>Fear & Greed Index at "Extreme Greed"—possible top forming.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <p><strong>How to Use:</strong> Sentiment analysis helps traders avoid crowded trades, spot reversals, and align with institutional flows. Combine with technical and fundamental analysis for best results.</p>
+                </div>
+
+                <div class="concept-card">
+                    <h4>Footprint Chart Types & Institutional Indicators</h4>
+                    <p>Footprint charts and institutional indicators provide deep insight into order flow, volume, and market structure. They reveal how large players operate and where liquidity is concentrated.</p>
+                    <ul>
+                        <li>
+                            <strong>Footprint Chart Types:</strong>
+                            <ul>
+                                <li><strong>Bid/Ask Footprint:</strong> Shows volume traded at bid vs. ask at each price level.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>At KSh 100.00: 5,000 buy volume (ask), 2,000 sell volume (bid)—buyers dominate.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Delta Footprint:</strong> Displays net difference between buy and sell volume.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Delta +3,000 at KSh 101.00—strong buying pressure.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Volume Imbalance Footprint:</strong> Highlights price levels with significant buy/sell imbalances.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Large imbalance at KSh 102.00—potential breakout zone.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Profile Footprint:</strong> Combines volume at price with time spent at each level, showing high-volume nodes (support/resistance).
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>High-volume node at KSh 105.00—major support area.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Institutional Indicators:</strong>
+                            <ul>
+                                <li><strong>Order Book Depth:</strong> Shows pending buy/sell orders at each price. Large walls signal institutional interest.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>10,000 buy orders stacked at KSh 100—institutions defending support.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Iceberg Orders:</strong> Large hidden orders split into smaller visible chunks to avoid moving the market.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Repeated small buy orders at KSh 101—actual size much larger, hidden by iceberg technique.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Absorption:</strong> Large orders absorb opposing trades, preventing price movement.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Sellers hit the bid repeatedly at KSh 102, but price doesn't fall—buyers absorbing all sell pressure.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Order Flow Imbalances:</strong> Sudden shifts in buy/sell pressure often precede major moves.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Buy imbalance at KSh 103—price surges as sellers are overwhelmed.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>Volume Clusters:</strong> Areas where institutions transact large volumes, often marking key support/resistance.
+                                    <div class="example-box">
+                                        <strong>Example:</strong>
+                                        <ul>
+                                            <li>Volume cluster at KSh 104—watch for reactions if price returns to this level.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>How to Use:</strong> Footprint charts and institutional indicators help traders follow the "smart money," identify high-probability zones, and avoid retail traps. Use them for scalping, day trading, and swing trading in stocks, forex, and futures.</p>
+                </div>
+            </div>
+            
+            <h3>Economic Indicators That Move Forex</h3>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>Non-Farm Payrolls (NFP)</h4>
+                    <p>US employment data released monthly - causes major volatility</p>
+                    <p>Example: Strong NFP report can strengthen USD against other currencies</p>
+                    <p><strong>Details:</strong> NFP is released on the first Friday of every month. It measures the change in the number of employed people in the US, excluding the farming industry. A higher-than-expected NFP number usually strengthens the USD, while a lower number weakens it.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Forecast: +200,000 jobs</li>
+                            <li>Actual: +300,000 jobs</li>
+                            <li>Result: USD rallies, EUR/USD drops as traders buy USD</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Consumer Price Index (CPI)</h4>
+                    <p>Measure of inflation - affects central bank interest rate decisions</p>
+                    <p>CPI tracks changes in the price of a basket of consumer goods and services. Rising CPI means inflation is increasing, which can lead central banks to raise interest rates to control inflation.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Kenya CPI rises from 110 to 115 in a year (4.5% inflation)</li>
+                            <li>Central Bank may raise interest rates to curb inflation</li>
+                            <li>Higher rates can strengthen the Kenyan Shilling as foreign investors seek better returns</li>
+                            <li>In forex, if US CPI is higher than expected, USD may strengthen against other currencies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Interest Rate Decisions</h4>
+                    <p>Central bank rates determine currency attractiveness</p>
+                    <p>Central banks (like the US Federal Reserve, ECB, or Central Bank of Kenya) set interest rates to control inflation and stimulate or slow down the economy.</p>
+                    <p>Higher interest rates make a currency more attractive to investors seeking better returns, causing it to appreciate. Lower rates can weaken a currency.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>US Federal Reserve raises rates from 5% to 5.25%</li>
+                            <li>USD strengthens as investors move money to USD assets for higher returns</li>
+                            <li>EUR/USD drops as traders buy USD and sell EUR</li>
+                        </ul>
+                    </div>
+                    <p>Central bank meetings and statements are closely watched by forex traders for clues about future rate changes.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>GDP Growth</h4>
+                    <p>Economic health indicator - stronger GDP usually strengthens currency</p>
+                    <p>Gross Domestic Product (GDP) measures the total value of goods and services produced in a country. Strong GDP growth signals a healthy economy and can boost a currency's value.</p>
+                    <p>Forex traders watch GDP releases for surprises that move markets.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Kenya's GDP expected to grow 5%, actual growth is 7%</li>
+                            <li>Kenyan Shilling may strengthen as investors gain confidence in the economy</li>
+                            <li>In forex, if US GDP beats expectations, USD may rally against other currencies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="example-box">
+                <strong>Forex Example:</strong> If USD/JPY is at 110.00:
+                <ul>
+                    <li>Buy 1 lot (100,000 units) at 110.00</li>
+                    <li>Price rises to 110.50 (50 pips gain)</li>
+                    <li>Profit = 100,000 × 0.50 = ¥50,000</li>
+                    <li>Convert to USD: ¥50,000 ÷ 110.50 ≈ $452.49 profit</li>
+                </ul>
+            </div>
+        <h3>Other Major Fundamental Events in Forex</h3>
+        <p>Besides NFP, CPI, interest rates, and GDP, many other economic events impact forex markets. Here are key events tracked by traders (as seen on Forex Factory):</p>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Central Bank Meetings & Statements</h4>
+                <p>Regular meetings where central banks (Fed, ECB, BOJ, BOE, SNB, RBA, etc.) set monetary policy and release statements.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Federal Reserve FOMC Statement: Hints at future rate hikes, USD reacts strongly.</li>
+                        <li>ECB Press Conference: Euro volatility spikes as policy outlook is discussed.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Employment Data</h4>
+                <p>Includes Unemployment Rate, Average Hourly Earnings, ADP Non-Farm Employment Change.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US Unemployment Rate drops unexpectedly, USD strengthens.</li>
+                        <li>UK Claimant Count Change rises, GBP weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Retail Sales</h4>
+                <p>Measures consumer spending, a major driver of economic growth.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US Retail Sales beats forecast, USD rallies.</li>
+                        <li>Australia Retail Sales disappoints, AUD drops.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Trade Balance</h4>
+                <p>Difference between exports and imports. Surplus strengthens currency, deficit weakens.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Japan posts large trade surplus, JPY strengthens.</li>
+                        <li>US trade deficit widens, USD weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>PMI (Purchasing Managers Index)</h4>
+                <p>Business activity in manufacturing/services. Key PMIs: US ISM, Eurozone, UK, China.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US ISM Manufacturing PMI above 50, USD gains.</li>
+                        <li>Eurozone PMI below 50, EUR drops.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Inflation Reports</h4>
+                <p>Producer Price Index (PPI), Core CPI, Harmonized Index of Consumer Prices (HICP).</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US Core CPI rises, Fed may hike rates, USD rallies.</li>
+                        <li>Eurozone HICP falls, ECB may ease policy, EUR weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Consumer Confidence</h4>
+                <p>Measures optimism about the economy. High confidence boosts currency.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US CB Consumer Confidence jumps, USD strengthens.</li>
+                        <li>Japan Consumer Confidence falls, JPY weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Building Permits & Housing Data</h4>
+                <p>Includes Housing Starts, Existing Home Sales, New Home Sales.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US Building Permits surge, USD rallies.</li>
+                        <li>UK House Prices drop, GBP weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Industrial Production</h4>
+                <p>Measures output of factories, mines, utilities.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Eurozone Industrial Production beats forecast, EUR rises.</li>
+                        <li>China Industrial Production misses, CNY drops.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Government Budget & Fiscal Policy</h4>
+                <p>Budget releases, fiscal stimulus, government spending plans.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US announces major stimulus package, USD volatility increases.</li>
+                        <li>UK budget deficit widens, GBP weakens.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Geopolitical Events</h4>
+                <p>Political elections, referendums, wars, trade negotiations, sanctions.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US presidential election causes USD swings.</li>
+                        <li>Brexit referendum impacts GBP volatility.</li>
+                        <li>Trade war headlines move USD/CNY.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Commodity Prices</h4>
+                <p>Oil, gold, and other commodities affect currencies of exporting/importing countries.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Oil price surge strengthens CAD (Canada is a major oil exporter).</li>
+                        <li>Gold price drop weakens AUD (Australia is a major gold exporter).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concept-card">
+                <h4>Bond Auctions</h4>
+                <p>Government bond sales impact currency demand and yields.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>US 10-year Treasury auction sees strong demand, USD strengthens.</li>
+                        <li>Weak Japanese bond auction, JPY drops.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>Traders use economic calendars (like Forex Factory) to track these events and anticipate market volatility. Always check the schedule before trading!</p>
+        </section>
+        
+        <!-- Volume Analysis Section -->
+        <section class="section" id="volume">
+            <h2>Advanced Volume Analysis</h2>
+            <p>Master reading order flow and market sentiment through volume.</p>
+            <h3>Why Volume Matters</h3>
+            <p>Volume is a key indicator of market strength and conviction. High volume confirms price moves, while low volume can signal weak trends or potential reversals.</p>
+            <div class="example-box">
+                <strong>Example:</strong>
+                <ul>
+                    <li>If a stock breaks resistance with high volume, the move is more likely to continue.</li>
+                    <li>If price rises on low volume, it may be a false breakout and could reverse.</li>
+                </ul>
+            </div>
+
+            <h3>Volume Divergence</h3>
+            <p>When price moves in one direction but volume does not confirm, it’s called divergence. This can warn of trend exhaustion.</p>
+            <div class="example-box">
+                <strong>Example:</strong>
+                <ul>
+                    <li>Price makes new highs, but volume is decreasing &rarr; possible reversal ahead.</li>
+                    <li>Price drops, but volume increases &rarr; sellers are strong, trend may continue.</li>
+                </ul>
+            </div>
+
+            <h3>Volume in Forex</h3>
+            <p>Forex volume is measured by tick volume (number of price changes), since centralized volume data is unavailable. Still, spikes in tick volume often align with major news or market moves.</p>
+            <div class="example-box">
+                <strong>Example:</strong>
+                <ul>
+                    <li>During NFP release, EUR/USD tick volume surges, confirming volatility.</li>
+                    <li>Low tick volume during Asian session signals less trading activity.</li>
+                </ul>
+                <h4>Volume Profile Example</h4>
+                <p>Volume profile shows traded volume at each price level, helping identify support and resistance zones.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Stock XYZ trades mostly between KSh 100 and KSh 105. Volume profile shows a high-volume node at KSh 102, indicating strong support.</li>
+                        <li>Price breaks above KSh 105 with rising volume, suggesting buyers are in control and a new uptrend may start.</li>
+                    </ul>
+                </div>
+
+                <h4>Accumulation/Distribution</h4>
+                <p>Tracks whether volume is flowing into (accumulation) or out of (distribution) an asset.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Accumulation: Price rises on increasing volume, indicating strong buying interest.</li>
+                        <li>Distribution: Price falls on increasing volume, showing strong selling pressure.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Volume-Based Strategies</h3>
+            <ul>
+                <li><strong>Breakout Trading:</strong> Enter trades when price breaks key levels with high volume.</li>
+                <li><strong>Volume Weighted Average Price (VWAP):</strong> Buy below VWAP in uptrends, sell above VWAP in downtrends.</li>
+                <li><strong>Volume Spikes:</strong> Watch for sudden volume increases to catch early moves.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Strategy Example:</strong>
+                <ul>
+                    <li>Stock consolidates at KSh 50 for days. Suddenly, volume spikes and price jumps to KSh 55. Enter long trade, set stop-loss below KSh 50.</li>
+                    <li>Forex pair EUR/USD breaks resistance at 1.1000 with high tick volume. Enter buy, target next resistance at 1.1050.</li>
+                </ul>
+                <h4>Volume Breakout Example</h4>
+                <ul>
+                    <li>Stock ABC trades in a tight range between KSh 80 and KSh 85 for several days.</li>
+                    <li>Suddenly, volume surges and price breaks above KSh 85, reaching KSh 90.</li>
+                    <li>High volume confirms the breakout; traders enter long positions targeting further upside.</li>
+                </ul>
+
+                <h4>Volume Fakeout Example</h4>
+                <ul>
+                    <li>Forex pair USD/JPY breaks below support at 150.00 on low volume.</li>
+                    <li>Price quickly reverses and moves back above 150.00 as sellers lack conviction.</li>
+                    <li>Low volume warned of a possible fake breakout; traders avoid entering short.</li>
+                </ul>
+
+                <h4>Volume Confirmation Example</h4>
+                <ul>
+                    <li>Safaricom shares rally from KSh 20 to KSh 25 on steadily increasing volume.</li>
+                    <li>Rising volume confirms strong buying interest; uptrend likely to continue.</li>
+                </ul>
+            </div>
+            
+            <h3>Volume Concepts</h3>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>Bid/Ask Volume</h4>
+                    <p>Shows buying (at ask) vs. selling (at bid) pressure</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Delta</h4>
+                    <p>Difference between buying and selling volume</p>
+                    <p><strong>Positive delta:</strong> More buying pressure</p>
+                    <p><strong>Negative delta:</strong> More selling pressure</p>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>If bid volume is 5,000 and ask volume is 2,000, delta = -3,000 (sellers dominate)</li>
+                            <li>If ask volume is 8,000 and bid volume is 3,000, delta = +5,000 (buyers dominate)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>VWAP</h4>
+                    <p>Volume Weighted Average Price - benchmark for institutional trading</p>
+                    <p>VWAP (Volume Weighted Average Price) is calculated by taking the total value traded (price × volume) and dividing by total volume. It helps traders see the average price at which a security has traded throughout the day, weighted by volume.</p>
+                    <div class="example-box">
+                        <strong>VWAP Calculation Example:</strong>
+                        <ul>
+                            <li>Trade 1: 100 shares at KSh 20 = KSh 2,000</li>
+                            <li>Trade 2: 200 shares at KSh 21 = KSh 4,200</li>
+                            <li>Trade 3: 150 shares at KSh 22 = KSh 3,300</li>
+                            <li>Total shares traded = 100 + 200 + 150 = 450</li>
+                            <li>Total value traded = KSh 2,000 + KSh 4,200 + KSh 3,300 = KSh 9,500</li>
+                            <li>VWAP = KSh 9,500 / 450 = KSh 21.11</li>
+                        </ul>
+                        <p>If price is above VWAP, buyers are in control; if below, sellers dominate. Institutions often use VWAP to execute large orders without moving the market.</p>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Volume Spikes</h4>
+                    <p>Unusual trading activity often precedes big moves</p>
+                    <p>Volume spikes are sudden, significant increases in trading volume that often precede major price moves. They can signal the start of a new trend, a reversal, or the presence of institutional activity.</p>
+                    <div class="example-box">
+                        <strong>Volume Spike Example:</strong>
+                        <ul>
+                            <li>Stock XYZ typically trades 10,000 shares per day. Suddenly, volume jumps to 100,000 shares as price breaks resistance. This spike suggests strong buying interest and a potential uptrend.</li>
+                            <li>Forex pair EUR/USD averages 50,000 tick volume per hour. During a major news release, tick volume surges to 200,000, confirming increased volatility and a possible breakout.</li>
+                            <li>Safaricom shares trade flat for weeks, then volume triples as price rallies. The volume spike confirms institutional buying and a new bullish phase.</li>
+                        </ul>
+                    </div>
+                    <p>Traders use volume spikes to:</p>
+                    <ul>
+                        <li>Identify breakout opportunities</li>
+                        <li>Confirm the strength of price moves</li>
+                        <li>Spot potential reversals when volume spikes occur at key support/resistance levels</li>
+                        <li>Detect institutional activity (large players entering or exiting positions)</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>How to Trade Volume Spikes:</strong>
+                        <ul>
+                            <li>Wait for price to break a key level (support/resistance) with a volume spike</li>
+                            <li>Enter the trade in the direction of the breakout</li>
+                            <li>Set stop-loss just below/above the breakout level to manage risk</li>
+                            <li>Use volume indicators (e.g., On-Balance Volume, Volume Oscillator) to confirm signals</li>
+                        </ul>
+                    </div>
+                    <p>Remember: Not all volume spikes lead to sustained moves. Always confirm with price action and other indicators before entering trades.</p>
+                </div>
+            </div>
+            
+            <h3>Footprint Charts</h3>
+            <p>Visual representation of order flow showing price levels with volume details:</p>
+            <div class="example-box">
+                <strong>Reading Footprints:</strong>
+                <ul>
+                    <li>Red numbers: Sellers dominating at that price</li>
+                    <li>Green numbers: Buyers dominating</li>
+                    <li>Large numbers: High volume nodes (support/resistance)</li>
+                </ul>
+                <h4>Footprint Chart Example</h4>
+                <p>Footprint charts display the volume traded at each price level, split between buyers and sellers. They help traders see where large trades occurred and which side (buy or sell) dominated at specific prices.</p>
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    <ul>
+                        <li>Price Level: KSh 100.00<br>
+                            <span style="color:green;">Buy Volume: 5,000</span> | <span style="color:red;">Sell Volume: 2,000</span>
+                        </li>
+                        <li>Price Level: KSh 100.50<br>
+                            <span style="color:green;">Buy Volume: 3,000</span> | <span style="color:red;">Sell Volume: 4,500</span>
+                        </li>
+                        <li>Price Level: KSh 101.00<br>
+                            <span style="color:green;">Buy Volume: 7,500</span> | <span style="color:red;">Sell Volume: 1,000</span>
+                        </li>
+                    </ul>
+                    <p>
+                        At KSh 100.00, buyers dominate (green), suggesting strong support.<br>
+                        At KSh 100.50, sellers dominate (red), indicating resistance.<br>
+                        At KSh 101.00, a surge in buy volume signals a breakout.
+                    </p>
+                </div>
+                <h4>How to Use Footprint Charts</h4>
+                <ul>
+                    <li>Identify price levels with high buy or sell volume to spot support/resistance zones.</li>
+                    <li>Look for imbalances (e.g., much higher buy than sell volume) to anticipate breakouts or reversals.</li>
+                    <li>Combine with price action and other indicators for confirmation.</li>
+                </ul>
+                <div class="example-box">
+                    <strong>Trading Scenario:</strong>
+                    <ul>
+                        <li>Stock ABC consolidates between KSh 80 and KSh 85.</li>
+                        <li>Footprint chart shows increasing buy volume at KSh 85.</li>
+                        <li>Price breaks above KSh 85 with a large green volume node—enter long trade.</li>
+                        <li>Set stop-loss below KSh 85, target next resistance at KSh 90.</li>
+                    </ul>
+                </div>
+                <p>
+                    Footprint charts are especially useful for day traders and scalpers who need to see real-time order flow and volume distribution. They provide a deeper understanding of market dynamics beyond simple price charts.
+                </p>
+            </div>
+            
+            <h3>DOM (Depth of Market)</h3>
+            <p>The order book showing pending buy/sell orders:</p>
+            <ul>
+                <li><strong>Iceberg Orders:</strong> Large hidden orders</li>
+                <li><strong>Order Stacking:</strong> Fake walls to manipulate price</li>
+                <li><strong>Absorption:</strong> Large orders absorbing opposing pressure</li>
+                <li><strong>Liquidity:</strong> Refers to how easily assets can be bought or sold without affecting price. High liquidity means tight bid-ask spreads and fast order execution. Low liquidity can cause slippage and unpredictable price moves.
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Safaricom shares on NSE are highly liquid—large orders can be filled quickly with minimal price impact.</li>
+                            <li>Small-cap stocks or exotic forex pairs may have low liquidity, causing wider spreads and slower execution.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>Order Book Imbalances:</strong> When there are significantly more buy or sell orders at certain price levels, it can signal potential moves.
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>Order book shows 10,000 buy orders at KSh 100, but only 2,000 sell orders at KSh 101. Price may rise as buyers outnumber sellers.</li>
+                            <li>Large sell wall at 1.1050 on EUR/USD—price struggles to break above as sellers absorb buying pressure.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>DOM Trading Strategies:</strong>
+                    <ul>
+                        <li><strong>Scalping:</strong> Traders use DOM to enter/exit quickly, profiting from small price moves and order flow changes.</li>
+                        <li><strong>Support/Resistance:</strong> Identify price levels with stacked orders to find potential reversal or breakout zones.</li>
+                        <li><strong>Absorption:</strong> Watch for large orders absorbing market pressure—if buyers keep absorbing sell orders, price may eventually break higher.</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>DOM Strategy Example:</strong>
+                        <ul>
+                            <li>Stock XYZ has a large buy wall at KSh 50 (5,000 shares). Price dips to KSh 50 but rebounds as buyers absorb all sell orders—enter long trade.</li>
+                            <li>Forex pair USD/JPY shows a fake sell wall at 150.00 (10,000 units), but price quickly moves above as wall disappears—avoid shorting, look for breakout.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>DOM Visualization Tools:</strong> Modern trading platforms offer DOM windows showing real-time order book depth. Use these to monitor liquidity, spot large orders, and time entries/exits.
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <ul>
+                            <li>MetaTrader 5, NinjaTrader, and TradingView offer DOM panels for stocks and forex.</li>
+                            <li>Professional traders use DOM alongside footprint charts for precise order flow analysis.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <!-- Financial Engineering Section -->
+        <section class="section" id="financial-engineering">
+            <h2>Financial Engineering Basics</h2>
+            <p>Introduction to quantitative analysis and algorithmic trading.</p>
+            
+            <h3>Python for Financial Analysis</h3>
+            <p>Example using yfinance to analyze stocks:</p>
+            <div class="code-block">
+<pre>import yfinance as yf
+import pandas as pd
+
+# Create a Ticker object for Apple (AAPL)
+aapl = yf.Ticker("AAPL")
+
+# Get financial statements
+income_stmt = aapl.income_stmt
+balance_sheet = aapl.balance_sheet
+cashflow = aapl.cashflow
+
+# Get historical data
+historical_data = aapl.history(period="ytd")
+
+# Analyze key metrics
+pe_ratio = aapl.info['forwardPE']
+market_cap = aapl.info['marketCap']
+print(f"AAPL P/E: {pe_ratio}, Market Cap: ${market_cap:,}")</pre>
+            </div>
+            
+            <h3>Common Financial Models</h3>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>DCF Valuation</h4>
+                    <p>Discounted Cash Flow - estimates intrinsic value based on future cash flows</p>
+                    <p>The Discounted Cash Flow (DCF) model estimates the intrinsic value of an investment by projecting its future cash flows and discounting them back to present value using a required rate of return. It's widely used to value stocks, bonds, and real estate.</p>
+                    <ul>
+                        <li><strong>How it works:</strong> 
+                            <ol>
+                                <li>Forecast future cash flows (e.g., company earnings, dividends).</li>
+                                <li>Choose a discount rate (often the weighted average cost of capital, WACC).</li>
+                                <li>Calculate the present value of each cash flow.</li>
+                                <li>Sum all present values to get the intrinsic value.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Example in financial markets:</strong>
+                            <div class="example-box">
+                                <strong>Stock Valuation:</strong>
+                                <ul>
+                                    <li>Safaricom is expected to generate KSh 10 billion in free cash flow next year, growing at 5% annually.</li>
+                                    <li>Discount rate is 10%.</li>
+                                    <li>DCF formula: PV = CF / (1 + r)^n</li>
+                                    <li>Calculate present value for each year, sum up for total intrinsic value.</li>
+                                </ul>
+                            </div>
+                            <div class="code-block">
+                    <pre># Python DCF Example
+                    cash_flows = [10_000_000_000, 10_500_000_000, 11_025_000_000]  # 3 years
+                    discount_rate = 0.10
+                    dcf_value = sum(cf / (1 + discount_rate) ** (i+1) for i, cf in enumerate(cash_flows))
+                    print(f"Intrinsic Value (3 years): KSh {dcf_value:,.0f}")
+                    </pre>
+                            </div>
+                        </li>
+                        <li><strong>Application:</strong> 
+                            <ul>
+                                <li>Used by analysts to determine if a stock is undervalued or overvalued compared to its market price.</li>
+                                <li>Helps investors make buy/sell decisions based on fundamental value.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Monte Carlo Simulation</h4>
+                    <p>Models probability of different outcomes in complex systems</p>
+                    <p>The Monte Carlo Simulation is a statistical technique used to model the probability of different outcomes in processes that are difficult to predict due to random variables. In finance, it's commonly used for portfolio risk analysis, option pricing, and forecasting future asset prices.</p>
+                    <ul>
+                        <li><strong>How it works:</strong>
+                            <ol>
+                                <li>Define a mathematical model for the financial process (e.g., stock price movement).</li>
+                                <li>Simulate thousands of random scenarios using historical volatility and returns.</li>
+                                <li>Analyze the distribution of results to estimate probabilities of outcomes (e.g., profit/loss, price ranges).</li>
+                            </ol>
+                        </li>
+                        <li><strong>Example in financial markets:</strong>
+                            <div class="example-box">
+                                <strong>Portfolio Value Forecast:</strong>
+                                <ul>
+                                    <li>Suppose you invest KSh 100,000 in a stock with an average annual return of 8% and volatility of 15%.</li>
+                                    <li>Monte Carlo simulates 10,000 possible future price paths over 5 years.</li>
+                                    <li>Results show the probability of ending up above or below certain portfolio values.</li>
+                                </ul>
+                            </div>
+                            <div class="code-block">
+                    <pre># Python Monte Carlo Example
+                    import numpy as np
+
+                    initial_investment = 100000
+                    years = 5
+                    simulations = 10000
+                    annual_return = 0.08
+                    volatility = 0.15
+
+                    results = []
+                    for _ in range(simulations):
+                        value = initial_investment
+                        for _ in range(years):
+                            value *= np.exp(np.random.normal(annual_return, volatility))
+                        results.append(value)
+
+                    prob_above_150k = np.mean(np.array(results) > 150000)
+                    print(f"Probability portfolio > KSh 150,000 after 5 years: {prob_above_150k:.2%}")
+                    </pre>
+                            </div>
+                        </li>
+                        <li><strong>Application:</strong>
+                            <ul>
+                                <li>Used by risk managers to estimate Value at Risk (VaR) and stress test portfolios.</li>
+                                <li>Helps traders and investors understand the range of possible outcomes and make informed decisions.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Black-Scholes</h4>
+                    <p>Options pricing model considering volatility and time</p>
+                    <p>The Black-Scholes model is a mathematical formula used to calculate the theoretical price of European-style options. It considers factors like the current price of the asset, strike price, time to expiration, risk-free interest rate, and volatility. The model helps traders and investors estimate fair value for call and put options.</p>
+                    <ul>
+                        <li><strong>How it works:</strong>
+                            <ol>
+                                <li>Inputs: Stock price (S), strike price (K), time to expiration (T), risk-free rate (r), volatility (σ).</li>
+                                <li>Calculates two key values (d1 and d2) using these inputs.</li>
+                                <li>Uses the cumulative normal distribution to estimate the probability the option will expire in the money.</li>
+                                <li>Outputs the fair price for call and put options.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Example in financial markets:</strong>
+                            <div class="example-box">
+                                <strong>Options Pricing:</strong>
+                                <ul>
+                                    <li>Suppose Safaricom stock is trading at KSh 20, strike price is KSh 22, time to expiration is 30 days, risk-free rate is 10%, volatility is 25%.</li>
+                                    <li>Black-Scholes calculates the fair price for a call option to buy Safaricom at KSh 22 in 30 days.</li>
+                                </ul>
+                            </div>
+                            <div class="code-block">
+                    <pre># Python Black-Scholes Example
+                    from math import log, sqrt, exp
+                    from scipy.stats import norm
+
+                    def black_scholes_call(S, K, T, r, sigma):
+                        d1 = (log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * sqrt(T))
+                        d2 = d1 - sigma * sqrt(T)
+                        call_price = S * norm.cdf(d1) - K * exp(-r * T) * norm.cdf(d2)
+                        return call_price
+
+                    # Example: Safaricom
+                    S = 20      # Current price
+                    K = 22      # Strike price
+                    T = 30/365  # Time to expiration (years)
+                    r = 0.10    # Risk-free rate
+                    sigma = 0.25 # Volatility
+
+                    price = black_scholes_call(S, K, T, r, sigma)
+                    print(f"Call Option Price: KSh {price:.2f}")
+                    </pre>
+                            </div>
+                        </li>
+                        <li><strong>Application:</strong>
+                            <ul>
+                                <li>Used by traders to value options and develop trading strategies.</li>
+                                <li>Helps risk managers and institutions hedge portfolios using options.</li>
+                                <li>Forms the basis for many advanced derivatives pricing models.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <div class="concept-card">
+                    <h4>CAPM</h4>
+                    <p>Capital Asset Pricing Model - calculates expected return based on risk</p>
+                    <p>The Capital Asset Pricing Model (CAPM) is a foundational finance model that estimates the expected return of an asset based on its risk relative to the market. It helps investors understand how much return they should expect for taking on additional risk.</p>
+                    <ul>
+                        <li><strong>How it works:</strong>
+                            <ol>
+                                <li>CAPM formula: <code>E(R) = Rf + β(Rm - Rf)</code></li>
+                                <li><strong>Rf</strong>: Risk-free rate (e.g., government bond yield)</li>
+                                <li><strong>β (Beta)</strong>: Asset's volatility compared to the market</li>
+                                <li><strong>Rm</strong>: Expected market return</li>
+                            </ol>
+                        </li>
+                        <li><strong>Example in financial markets:</strong>
+                            <div class="example-box">
+                                <strong>Stock Expected Return:</strong>
+                                <ul>
+                                    <li>Risk-free rate (Rf): 10% (Kenya T-bill)</li>
+                                    <li>Market return (Rm): 15%</li>
+                                    <li>Safaricom beta (β): 1.2</li>
+                                    <li>CAPM: E(R) = 10% + 1.2 × (15% - 10%) = 16%</li>
+                                    <li>Interpretation: Investors should expect a 16% return for holding Safaricom, given its risk profile.</li>
+                                </ul>
+                            </div>
+                            <div class="code-block">
+                    <pre># Python CAPM Example
+                    risk_free_rate = 0.10
+                    market_return = 0.15
+                    beta = 1.2
+
+                    expected_return = risk_free_rate + beta * (market_return - risk_free_rate)
+                    print(f"Expected Return (Safaricom): {expected_return:.2%}")
+                    </pre>
+                            </div>
+                        </li>
+                        <li><strong>Application:</strong>
+                            <ul>
+                                <li>Used by portfolio managers to estimate required returns for stocks and compare investment opportunities.</li>
+                                <li>Helps in asset allocation and risk management.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <div>
+                    <h4>ARIMA</h4>
+                    <p>AutoRegressive Integrated Moving Average - time series forecasting model</p>
+                    <p>ARIMA (AutoRegressive Integrated Moving Average) is a powerful statistical model used for forecasting time series data, such as stock prices, exchange rates, or economic indicators. It combines three components:</p>
+                    <ul>
+                        <li><strong>AR (AutoRegressive):</strong> Uses past values to predict future values.</li>
+                        <li><strong>I (Integrated):</strong> Differencing the data to make it stationary (removing trends).</li>
+                        <li><strong>MA (Moving Average):</strong> Models the error of predictions as a combination of past errors.</li>
+                    </ul>
+                    <p><strong>How ARIMA Works:</strong></p>
+                    <ol>
+                        <li>Identify if the time series is stationary (constant mean/variance). If not, difference the data.</li>
+                        <li>Select AR and MA orders (how many past values/errors to use).</li>
+                        <li>Fit the ARIMA model to historical data.</li>
+                        <li>Use the model to forecast future values.</li>
+                    </ol>
+                    <div class="example-box">
+                        <strong>Example in Financial Markets:</strong>
+                        <ul>
+                            <li>Forecasting Safaricom stock price for the next 7 days using historical closing prices.</li>
+                            <li>Predicting USD/KES exchange rate trends for risk management.</li>
+                            <li>Estimating future sales or revenue for budgeting.</li>
+                        </ul>
+                    </div>
+                    <div class="code-block">
+                    <pre># Python ARIMA Example
+                    import pandas as pd
+                    from statsmodels.tsa.arima.model import ARIMA
+
+                    # Load historical Safaricom prices (example data)
+                    data = pd.read_csv('safaricom_prices.csv', index_col='Date', parse_dates=True)
+                    prices = data['Close']
+
+                    # Fit ARIMA model (order p=1, d=1, q=1)
+                    model = ARIMA(prices, order=(1,1,1))
+                    model_fit = model.fit()
+
+                    # Forecast next 7 days
+                    forecast = model_fit.forecast(steps=7)
+                    print("Safaricom price forecast:", forecast.values)
+                    </pre>
+                    </div>
+                    <p><strong>Application:</strong> ARIMA is widely used by analysts and traders to forecast prices, detect trends, and inform trading strategies. It helps in portfolio management, risk assessment, and algorithmic trading.</p>
+                <div>
+                    <h4>GARCH</h4>
+                    <p>Generalized Autoregressive Conditional Heteroskedasticity - models volatility clustering in financial time series</p>
+                    <p>The GARCH (Generalized Autoregressive Conditional Heteroskedasticity) model is a statistical tool used to estimate and forecast financial market volatility. Unlike basic models that assume constant volatility, GARCH captures "volatility clustering"—periods when markets are more or less volatile over time.</p>
+                    <ul>
+                        <li><strong>How GARCH Works:</strong>
+                            <ol>
+                                <li>Analyzes past returns and past volatility to predict future volatility.</li>
+                                <li>Models periods of high and low volatility, which is common in financial markets.</li>
+                                <li>Widely used for risk management, option pricing, and trading strategies.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Example in Financial Markets:</strong>
+                            <div class="example-box">
+                                <strong>Volatility Forecasting:</strong>
+                                <ul>
+                                    <li>Traders use GARCH to forecast daily volatility of stocks, forex pairs, or indices.</li>
+                                    <li>Helps set stop-loss levels, position sizing, and price options more accurately.</li>
+                                    <li>Risk managers use GARCH to estimate Value at Risk (VaR) for portfolios.</li>
+                                </ul>
+                            </div>
+                            <div class="code-block">
+                    <pre># Python GARCH Example
+                    import pandas as pd
+                    from arch import arch_model
+
+                    # Load historical Safaricom returns (example data)
+                    data = pd.read_csv('safaricom_returns.csv')
+                    returns = data['Return']
+
+                    # Fit GARCH(1,1) model
+                    model = arch_model(returns, vol='Garch', p=1, q=1)
+                    model_fit = model.fit(disp='off')
+
+                    # Forecast next 5 days volatility
+                    forecast = model_fit.forecast(horizon=5)
+                    print("Forecasted volatility:", forecast.variance.values[-1])
+                    </pre>
+                            </div>
+                        </li>
+                        <li><strong>Application:</strong>
+                            <ul>
+                                <li>Used by traders to adjust strategies during volatile periods.</li>
+                                <li>Helps banks and funds manage risk and comply with regulations.</li>
+                                <li>Essential for pricing derivatives and structuring hedges.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>ACTIVE PROJECTS</h4>
+                    <p>We are currently developing advanced financial engineering courses covering topics like algorithmic trading, quantitative analysis, and risk management.</p>
+                    <p>we curruntl have several models active
+                        <ol>
+                            <li>Mean Reversion Model.</li>
+                            <li>Multi-Broker Arbitrage Model.</li>
+                            <li>Company Evaluation model</li>
+                            <li>Portfolio Optimization Model.</li>
+                            <li>A Machine-Learning Model based on next candle prediction using a simple XGBClassifier Algorithm </li>
+                        </ol>
+                        <p>Note all this models are free to get any source code: <a href="https://wa.me/254769043920" class="whatsapp-btn">Text/Contact</a></p>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-cta">
+                <h3>Want to Learn Financial Engineering?</h3>
+                <p>Contact us for advanced quantitative finance lessons</p>
+                <a href="https://wa.me/25469043920" class="whatsapp-btn">
+                    WhatsApp for Advanced Training
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="investments.html">Investments</a>
+            <a href="services.html">Services</a>
+            <a href="education.html">Education</a>
+            <a href="https://wa.me/25469043920">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2023 FKN TRADING HUB. All rights reserved.</p>
+    </footer>
+</body>
+</html>
