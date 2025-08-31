@@ -1,258 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - FKN FINANCIAL HUB</title>
-    <style>
-        /* ===== BASE ===== */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - FKN Financial Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-        /* ===== NAVIGATION ===== */
-        nav {
-            background: rgba(255,255,255,0.95);
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-            top: 0;
-            z-index: 100;
-        }
-        nav a {
-            text-decoration: none;
-            color: #040c05;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin: 0 1rem;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #9910cf;
-        }
-        nav a::after {
-            content: "|";
-            position: absolute;
-            right: -1.2rem;
-            color: #040c05;
-        }
-        nav a:last-child::after {
-            display: none;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    /* Navigation Bar */
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        /* ===== HEADER ===== */
-        header {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            opacity: 0.9;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* ===== ABOUT CONTAINER ===== */
-        .about-container {
-            max-width: 1100px;
-            margin: 2.5rem auto;
-            padding: 2.5rem 1.5rem;
-            background: rgba(255,255,255,0.9);
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-        }
-        .about-container h2 {
-            color: #9910cf;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #9910cf;
-            padding-bottom: 0.5rem;
-        }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
 
-        /* ===== STATS ===== */
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 3rem 0;
-            text-align: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .stat-item {
-            flex: 1 1 200px;
-            background: #f5f5f5;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-        .stat-number {
-            font-size: 2.5em;
-            color: #9910cf;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #d4af37; /* gold */
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        /* ===== TEAM ===== */
-        .team-section {
-            margin: 3rem 0;
-            text-align: center;
-        }
-        .team-member {
-            padding: 20px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .team-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 15px;
-            border: 3px solid #9910cf;
-        }
-        .team-member h3 {
-            margin: 0.5rem 0;
-            color: #333;
-        }
+    nav ul li a:hover {
+      color: #9910cf; /* purple hover */
+    }
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #040c05;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        .footer-links a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover {
-            color: #9910cf;
-        }
-        .credit {
-            color: #9910cf;
-            font-weight: bold;
-        }
+    /* Hero Section */
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
+    }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            header {
-                padding: 3rem 1.5rem;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            .stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            .team-photo {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 10px auto;
+      color: #ccc;
+    }
+
+    /* About Container */
+    .about-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .about-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #9910cf;
+    }
+
+    .about-container p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #444;
+      text-align: center;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .stat-item {
+      flex: 1 1 200px;
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      color: #d4af37;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Leadership */
+    .team-section {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .team-member {
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .team-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #9910cf;
+    }
+
+    .team-member h3 {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    /* Values */
+    .values {
+      margin: 40px 0;
+    }
+
+    .values ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .values ul li {
+      background: #f4f4f4;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      color: #444;
+    }
+
+    .values strong {
+      color: #9910cf;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .credit {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .stats {
+        flex-direction: column;
+      }
+      .team-photo {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html">HOME</a>
-            <a href="services.html">SERVICES</a>
-            <a href="FKN_academy.html">ACADEMY</a>
-            <a href="education.html">EDUCATION</a>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="FKN_Academy.html">Academy</a></li>
+      <li><a href="Education.html">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About FKN Financial Hub</h1>
+    <p>Institutional-Grade Strategy. Quant-Level Execution.</p>
+  </section>
+
+  <!-- About Content -->
+  <main>
+    <div class="about-container">
+      <section>
+        <h2>Our Mission</h2>
+        <p>At FKN Financial Hub, we empower individuals and businesses to achieve financial freedom through cutting-edge investment strategies, algorithmic trading models, and elite financial education. Our approach blends the precision of quantitative finance with the vision of wealth creation for the next generation.</p>
+        <p>Founded in 2020, we have guided thousands of clients with strategies inspired by world-class institutions like Goldman Sachs and Citadel, but tailored for ambitious individuals and forward-looking businesses.</p>
+      </section>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">5K+</div>
+          <div>Clients Served</div>
         </div>
-    </nav>
-
-    <!-- HEADER -->
-    <header>
-        <h1>About FKN Financial Hub</h1>
-        <p>Institutional-Grade Strategy. Quant-Level Execution.</p>
-    </header>
-
-    <!-- MAIN -->
-    <main>
-        <div class="about-container">
-            <section class="mission-section">
-                <h2>Our Mission</h2>
-                <p>At FKN Financial Hub, we empower individuals and businesses to achieve financial freedom through cutting-edge investment strategies, algorithmic trading models, and elite financial education. Our approach blends the precision of quantitative finance with the vision of wealth creation for the next generation.</p>
-                <p>Founded in 2020, we have guided thousands of clients with strategies inspired by world-class institutions like Goldman Sachs and Citadel, but tailored for ambitious individuals and forward-looking businesses.</p>
-            </section>
-
-            <!-- Stats -->
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">5K+</div>
-                    <div>Clients Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div>Investment Strategies</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div>Satisfaction Rate</div>
-                </div>
-            </div>
-
-            <!-- Leadership -->
-            <section class="team-section">
-                <h2>Meet Our Leadership</h2>
-                <div class="team-member">
-                    <img src="https://1drv.ms/i/c/60abd4e71154a918/Ef0oqlHjImVGkl4x0uNc4f8Bh5ixGf44nRPdOQhfnnR0qw?e=hm1cSH" alt="CEO Photo" class="team-photo">
-                    <h3>Francis Kamande</h3>
-                    <p><strong>Founder & CEO</strong></p>
-                    <p>Quant Strategist | 5+ Years in Financial Markets</p>
-                    <p>Architect of FKN’s algorithmic trading and financial engineering frameworks.</p>
-                </div>
-            </section>
-
-            <!-- Values -->
-            <section>
-                <h2>Our Values</h2>
-                <ul>
-                    <li><strong>Transparency:</strong> Clear, ethical, and client-first strategies.</li>
-                    <li><strong>Education:</strong> Knowledge as the foundation of wealth.</li>
-                    <li><strong>Innovation:</strong> Quant-driven, future-focused financial solutions.</li>
-                    <li><strong>Integrity:</strong> Trust is the core of our legacy.</li>
-                </ul>
-            </section>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div>Investment Strategies</div>
         </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="FKN_academy.html">Academy</a>
-            <a href="education.html">Education</a>
-            <a href="https://wa.me/254769043920" style="color: #25D366;">Contact</a>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div>Satisfaction Rate</div>
         </div>
-        <p>&copy; 2025 FKN Financial Hub. All rights reserved.</p>
-        <p class="credit">Designed by FKN</p>
-    </footer>
+      </div>
+
+      <!-- Leadership -->
+      <section class="team-section">
+        <h2>Meet Our Leadership</h2>
+        <div class="team-member">
+          <img src="https://1drv.ms/i/c/60abd4e71154a918/Ef0oqlHjImVGkl4x0uNc4f8Bh5ixGf44nRPdOQhfnnR0qw?e=hm1cSH" alt="CEO Photo" class="team-photo">
+          <h3>Francis Kamande</h3>
+          <p><strong>Founder & CEO</strong></p>
+          <p>Quant Strategist | 5+ Years in Financial Markets</p>
+          <p>Architect of FKN’s algorithmic trading and financial engineering frameworks.</p>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="values">
+        <h2>Our Values</h2>
+        <ul>
+          <li><strong>Transparency:</strong> Clear, ethical, and client-first strategies.</li>
+          <li><strong>Education:</strong> Knowledge as the foundation of wealth.</li>
+          <li><strong>Innovation:</strong> Quant-driven, future-focused financial solutions.</li>
+          <li><strong>Integrity:</strong> Trust is the core of our legacy.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://wa.me/254769043920">Contact 📞</a>
+    <p>&copy; 2025 FKN Financial Hub. All rights reserved.</p>
+    <p class="credit">Designed by FKN</p>
+  </footer>
 </body>
 </html>
