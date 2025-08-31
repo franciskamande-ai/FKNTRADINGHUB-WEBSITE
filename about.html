@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271037411724238"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - FKN FINANCIAL HUB</title>
@@ -12,7 +10,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f8ff;
+            background-color: #f0f8ff;
             color: #333;
             line-height: 1.6;
         }
@@ -74,15 +72,17 @@
         /* ===== ABOUT CONTAINER ===== */
         .about-container {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            background: white;
+            margin: 2.5rem auto;
+            padding: 2.5rem 1.5rem;
+            background: rgba(255,255,255,0.9);
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
         .about-container h2 {
             color: #9910cf;
             margin-bottom: 1rem;
+            border-bottom: 2px solid #9910cf;
+            padding-bottom: 0.5rem;
         }
 
         /* ===== STATS ===== */
@@ -96,9 +96,13 @@
         }
         .stat-item {
             flex: 1 1 200px;
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         .stat-number {
-            font-size: 2.8em;
+            font-size: 2.5em;
             color: #9910cf;
             font-weight: bold;
             margin-bottom: 0.5rem;
@@ -111,7 +115,7 @@
         }
         .team-member {
             padding: 20px;
-            background: #fafafa;
+            background: rgba(255,255,255,0.9);
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             max-width: 400px;
@@ -129,9 +133,6 @@
             margin: 0.5rem 0;
             color: #333;
         }
-        .team-member p {
-            margin: 0.3rem 0;
-        }
 
         /* ===== FOOTER ===== */
         footer {
@@ -141,10 +142,16 @@
             padding: 2rem;
             margin-top: 3rem;
         }
-        footer p {
-            margin: 0.3rem 0;
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
         }
-        footer .credit {
+        .footer-links a:hover {
+            color: #9910cf;
+        }
+        .credit {
             color: #9910cf;
             font-weight: bold;
         }
@@ -188,7 +195,6 @@
     <!-- MAIN -->
     <main>
         <div class="about-container">
-            <!-- Mission -->
             <section class="mission-section">
                 <h2>Our Mission</h2>
                 <p>At FKN Financial Hub, we empower individuals and businesses to achieve financial freedom through cutting-edge investment strategies, algorithmic trading models, and elite financial education. Our approach blends the precision of quantitative finance with the vision of wealth creation for the next generation.</p>
@@ -238,7 +244,13 @@
 
     <!-- FOOTER -->
     <footer>
-        <a href="https://wa.me/254769043920" style="color: #25D366; font-size: 20px; text-decoration: none;">CONTACT📞</a>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="FKN_academy.html">Academy</a>
+            <a href="education.html">Education</a>
+            <a href="https://wa.me/254769043920" style="color: #25D366;">Contact</a>
+        </div>
         <p>&copy; 2025 FKN Financial Hub. All rights reserved.</p>
         <p class="credit">Designed by FKN</p>
     </footer>
