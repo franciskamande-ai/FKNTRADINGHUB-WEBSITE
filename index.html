@@ -6,116 +6,137 @@
   <title>FKN Financial Hub</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
       background-color: #f9f9f9;
       color: #333;
     }
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    /* Navigation Bar */
+    nav {
+      background-color: #9910cf;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
       margin: 0;
-      font-size: 2.5rem;
-      color: #d4af37;
+      padding: 0;
     }
 
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #111, #222);
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
       color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
+    nav ul li a:hover {
+      color: #ffccff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #9910cf, #6a0dad);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      color: #d4af37;
     }
-
     .hero p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 10px auto;
-      color: #ccc;
+      margin: 0 auto;
     }
 
+    /* Features Section */
     .features {
       padding: 60px 20px;
       background: #fff;
     }
-
-    .features h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: #9910cf;
-    }
-
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
+      margin-top: 40px;
     }
-
     .feature-card {
       background: #f4f4f4;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
     .feature-icon {
       font-size: 2rem;
-      margin-bottom: 10px;
+      color: #9910cf;
+      margin-bottom: 15px;
     }
 
+    /* CTA Section */
     .cta {
-      padding: 60px 20px;
+      background: #9910cf;
+      color: white;
       text-align: center;
-      background: linear-gradient(135deg, #222, #111);
-      color: #fff;
+      padding: 60px 20px;
     }
-
     .cta h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #d4af37;
     }
-
-    .cta button {
+    .cta a {
+      display: inline-block;
+      background: white;
+      color: #9910cf;
       padding: 12px 25px;
-      font-size: 1rem;
-      background: #9910cf;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta a:hover {
+      background: #ffccff;
+      color: #6a0dad;
     }
 
-    .cta button:hover {
-      background: #b52dd9;
-    }
-
+    /* Disclaimer Section */
     .disclaimer {
-      background: #eee;
-      padding: 20px;
+      background: #222;
+      color: #bbb;
       font-size: 0.9rem;
-      color: #555;
+      padding: 20px;
       text-align: center;
     }
 
+    /* Footer */
     footer {
       background: #111;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
@@ -123,21 +144,31 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>FKN Financial Hub</h1>
-  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">FKN Financial Hub</a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="FKN_Academy.html">ACADEMY</a></li>
+      <li><a href="Education.html">Education</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Advanced Quantitative Research & Global Trading Strategies</h1>
-    <p>Building Africa’s first elite hedge fund powered by data, technology, and research-driven execution.</p>
-    <p>We engineer markets, extract alpha, and manage risk at institutional scale.</p>
+    <h1>FKN Financial Hub</h1>
+    <p>Advanced Quantitative Research & Global Trading Strategies</p>
+    <p style="font-size:1.1rem; max-width:700px; margin:20px auto;">
+      Building Africa’s first elite hedge fund powered by data, technology, and research-driven execution.
+    </p>
   </section>
 
   <!-- Features Section -->
-  <section class="features">
-    <h2>Our Edge</h2>
+  <section id="features" class="features">
+    <h2 style="text-align: center; color: #9910cf; font-size: 2rem;">Our Edge</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
@@ -179,18 +210,19 @@
 
   <!-- CTA Section -->
   <section class="cta">
-    <h2>Join Us at the Cutting Edge of Global Markets</h2>
-    <button>Partner With FKN</button>
+    <h2>Partner With the Future of Quant Finance</h2>
+    <a href="#contact">Get In Touch</a>
   </section>
 
   <!-- Disclaimer Section -->
   <section class="disclaimer">
-    <p><strong>Disclaimer:</strong> FKN Financial Hub is an emerging financial research and trading firm. This site is for informational purposes only and does not constitute financial advice, solicitation, or an offer to invest. Past performance is not indicative of future results. All investments carry risk.</p>
+    <p><strong>Disclaimer:</strong> FKN Financial Hub is currently in development phase. No investment services are being offered at this time. Content is for informational and educational purposes only.</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 FKN Financial Hub. All Rights Reserved.</p>
+    <p>&copy; 2025 FKN Financial Hub. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
