@@ -13,24 +13,30 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
+            background-color: #111;
+            color: #eee;
             line-height: 1.6;
         }
         
         /* ===== NAVIGATION ===== */
         nav {
-            background: rgba(255,255,255,0.95);
+            background: #111;
             padding: 1.5rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
+            position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.shrink {
+            padding: 0.7rem 0;
+            background: #000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
         
         nav a {
             text-decoration: none;
-            color: #040c05;
+            color: #d4af37; /* gold */
             text-transform: uppercase;
             font-weight: 600;
             margin: 0 1rem;
@@ -40,18 +46,7 @@
         }
         
         nav a:hover {
-            color: #9910cf;
-        }
-        
-        nav a::after {
-            content: "|";
-            position: absolute;
-            right: -1.2rem;
-            color: #040c05;
-        }
-        
-        nav a:last-child::after {
-            display: none;
+            color: #9910cf; /* purple hover */
         }
         
         .nav-container {
@@ -62,15 +57,16 @@
         
         /* ===== HEADER ===== */
         header {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #111, #222);
             color: white;
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
         }
         
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: #d4af37;
         }
         
         /* ===== SERVICES GRID ===== */
@@ -84,16 +80,17 @@
         }
         
         .service-card {
-            background: white;
+            background: #1a1a1a;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
         }
         
         .service-icon {
@@ -103,13 +100,13 @@
         }
         
         .service-card h2 {
-            color: #9910cf;
+            color: #d4af37;
             margin-top: 0;
         }
         
         /* ===== FOOTER ===== */
         footer {
-            background: #040c05;
+            background: #000;
             color: white;
             text-align: center;
             padding: 2rem;
@@ -118,7 +115,7 @@
         
         .contact-btn {
             display: inline-block;
-            background: #25D366;
+            background: #9910cf;
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 50px;
@@ -129,13 +126,13 @@
         }
         
         .contact-btn:hover {
-            background: #128C7E;
+            background: #b52dd9;
             transform: scale(1.05);
         }
         
         .copyright {
             margin-top: 1rem;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
         }
         
@@ -159,27 +156,16 @@
                 font-size: 0.9rem;
             }
         }
-        
-        @media (max-width: 480px) {
-            nav a {
-                display: inline-block;
-                margin: 0.5rem 0;
-            }
-            
-            nav a::after {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html">HOME |</a>
-            <a href="about.html">ABOUT |</a>
-            <a href="FKN_academy.html">ACADEMY |</a>
-            <a href="education.html">EDUCATION |</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FKN_academy.html">Academy</a>
+            <a href="education.html">Education</a>
         </div>
     </nav>
     
@@ -236,5 +222,17 @@
         </a>
         <p class="copyright">&copy; 2025 FKN Financial Hub. All rights reserved.</p>
     </footer>
+
+    <!-- Shrink Navbar on Scroll -->
+    <script>
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add("shrink");
+            } else {
+                navbar.classList.remove("shrink");
+            }
+        });
+    </script>
 </body>
 </html>
