@@ -1,240 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271037411724238"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <title>Financial Academy - FKN FINANCIAL HUB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FKN Financial Academy - Learn investing, algorithmic trading, financial engineering, machine learning for finance, and more. Elite training for future quants and professionals.">
-    <style>
-        /* ===== BASE ===== */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FKN Academy - Education</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #111;
+      color: #eee;
+    }
 
-        /* ===== NAVIGATION ===== */
-        nav {
-            background: rgba(255,255,255,0.95);
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-            top: 0;
-            z-index: 100;
-        }
-        nav a {
-            text-decoration: none;
-            color: #040c05;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin: 0 1rem;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #9910cf;
-        }
-        nav a::after {
-            content: "|";
-            position: absolute;
-            right: -1.2rem;
-            color: #040c05;
-        }
-        nav a:last-child::after {
-            display: none;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    /* NAVIGATION */
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #d4af37; /* gold */
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #9910cf; /* purple hover */
+    }
 
-        /* ===== HEADER ===== */
-        header {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            opacity: 0.9;
-        }
+    /* HEADER */
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
 
-        /* ===== COURSES ===== */
-        .course-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        .course {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .course:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        .course h2 {
-            color: #9910cf;
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-        .course p {
-            margin: 0.5rem 0 1rem;
-            font-size: 0.95rem;
-        }
-        .course-features h3 {
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-size: 1.05rem;
-        }
-        .course-features ul {
-            padding-left: 1.2rem;
-        }
-        .course-features li {
-            margin-bottom: 0.4rem;
-        }
+    /* COURSES */
+    .course-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .course {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .course:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .course h2 {
+      color: #9910cf;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    .course p {
+      margin: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .course-features h3 {
+      margin-bottom: 0.5rem;
+      color: #d4af37;
+      font-size: 1.05rem;
+    }
+    .course-features ul {
+      padding-left: 1.2rem;
+    }
+    .course-features li {
+      margin-bottom: 0.4rem;
+    }
 
-        /* ===== BUTTON ===== */
-        .enroll-btn {
-            background-color: #9910cf;
-            color: white;
-            padding: 0.8rem 1.4rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 15px;
-            text-decoration: none;
-        }
-        .enroll-btn:hover {
-            background-color: #7a0da8;
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+    /* BUTTON */
+    .enroll-btn {
+      background-color: #9910cf;
+      color: white;
+      padding: 0.8rem 1.4rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+    }
+    .enroll-btn:hover {
+      background-color: #b52dd9;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-        /* ===== WHATSAPP LINK ===== */
-        .whatsapp-link {
-            text-align: center;
-            margin: 2rem auto;
-            font-size: 1.1em;
-        }
-        .whatsapp-link a {
-            color: #25D366;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .whatsapp-link a:hover {
-            text-decoration: underline;
-        }
+    /* WHATSAPP LINK */
+    .whatsapp-link {
+      text-align: center;
+      margin: 2rem auto;
+      font-size: 1.1em;
+    }
+    .whatsapp-link a {
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .whatsapp-link a:hover {
+      text-decoration: underline;
+    }
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #040c05;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        footer p {
-            margin: 0.3rem 0;
-        }
-        footer .credit {
-            color: #9910cf;
-            font-weight: bold;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            header {
-                padding: 3rem 1.5rem;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .course-container {
-                grid-template-columns: 1fr;
-                padding: 1.5rem;
-            }
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    footer p {
+      margin: 0.3rem 0;
+    }
+    footer .credit {
+      color: #9910cf;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="services.html">SERVICES</a>
-            <a href="education.html">EDUCATION</a>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>FKN Academy</h1>
+    <p>Structured training across Finance, Quant, Technology & Global Markets</p>
+  </header>
+
+  <!-- COURSES -->
+  <main>
+    <section class="course-container">
+      <!-- Python & Data Science -->
+      <div class="course">
+        <h2>Python & Quant Programming</h2>
+        <p>Core coding and data skills for finance</p>
+        <div class="course-features">
+          <h3>You'll Learn:</h3>
+          <ul>
+            <li>Python for finance & trading</li>
+            <li>Data preprocessing & cleaning</li>
+            <li>Pandas, NumPy, Matplotlib</li>
+            <li>Data manipulation & representation</li>
+            <li>Building backtesting systems</li>
+          </ul>
         </div>
-    </nav>
+        <a href="#" class="enroll-btn">Enroll</a>
+      </div>
 
-    <!-- HEADER -->
-    <header>
-        <h1>FKN Financial Academy</h1>
-        <p>Elite Training for Future Quants, Traders & Finance Professionals</p>
-    </header>
-
-    <!-- MAIN -->
-    <main>
-        <section class="course-container">
-            <!-- Example Course -->
-            <div class="course">
-                <h2>Financial Engineering Strategies & Models</h2>
-                <p><strong>Duration:</strong> 8 Weeks | <strong>Level:</strong> Advanced</p>
-                <div class="course-features">
-                    <h3>You'll Learn:</h3>
-                    <ul>
-                        <li>Quantitative analysis for financial markets</li>
-                        <li>DCF, CAPM, Black-Scholes & advanced modeling</li>
-                        <li>Portfolio optimization & risk management</li>
-                        <li>Python for financial data analysis</li>
-                        <li>Time series forecasting (ARIMA, GARCH)</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/254769043920?text=Enroll%20Financial%20Engineering%20Strategies%20%26%20Models" class="enroll-btn">Enroll via WhatsApp</a>
-            </div>
-
-            <!-- Add all other courses here in same structure... -->
-        </section>
-
-        <div class="whatsapp-link">
-            <p>Have questions? <a href="https://wa.me/254769043920">Chat with us on WhatsApp</a></p>
+      <!-- Stocks & Long-Term Investing -->
+      <div class="course">
+        <h2>Stocks & Long-Term Investing</h2>
+        <p>Equity markets, valuation & growth strategies</p>
+        <div class="course-features">
+          <h3>You'll Learn:</h3>
+          <ul>
+            <li>Fundamental & technical analysis</li>
+            <li>DCF, multiples & valuation models</li>
+            <li>Portfolio construction</li>
+            <li>Long-term wealth strategies</li>
+            <li>Dividend & value investing</li>
+          </ul>
         </div>
-    </main>
+        <a href="#" class="enroll-btn">Enroll</a>
+      </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 FKN Financial Hub. All rights reserved.</p>
-        <p class="credit">Designed by FKN</p>
-    </footer>
+      <!-- Forex -->
+      <div class="course">
+        <h2>Forex & Global Currencies</h2>
+        <p>Trading in the largest global market</p>
+        <div class="course-features">
+          <h3>You'll Learn:</h3>
+          <ul>
+            <li>Currency pairs & liquidity</li>
+            <li>Order flow & volume analysis</li>
+            <li>Central bank policy & FX impact</li>
+            <li>Risk management in leveraged FX</li>
+            <li>Algorithmic FX strategies</li>
+          </ul>
+        </div>
+        <a href="#" class="enroll-btn">Enroll</a>
+      </div>
+
+      <!-- Options & Derivatives -->
+      <div class="course">
+        <h2>Options & Derivatives</h2>
+        <p>Advanced contracts for hedging & speculation</p>
+        <div class="course-features">
+          <h3>You'll Learn:</h3>
+          <ul>
+            <li>Options pricing models (B-S, Greeks)</li>
+            <li>Volatility trading strategies</li>
+            <li>Hedging & risk management</li>
+            <li>Derivatives for portfolio protection</li>
+            <li>Exotics & structured products</li>
+          </ul>
+        </div>
+        <a href="#" class="enroll-btn">Enroll</a>
+      </div>
+
+      <!-- Macro & Microeconomics -->
+      <div class="course">
+        <h2>Macro & Microeconomics</h2>
+        <p>Understanding the forces that move markets</p>
+        <div class="course-features">
+          <h3>You'll Learn:</h3>
+          <ul>
+            <li>GDP, inflation, employment metrics</li>
+            <li>Global macro themes & policy</li>
+            <li>Microeconomic principles & pricing</li>
+            <li>Market cycles & business dynamics</li>
+            <li>Top-down vs bottom-up analysis</li>
+          </ul>
+        </div>
+        <a href="#" class="enroll-btn">Enroll</a>
+      </div>
+    </section>
+
+    <!-- WHATSAPP -->
+    <div class="whatsapp-link">
+      <p>Have questions? <a href="https://wa.me/254769043920">Chat with us on WhatsApp</a></p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 FKN Financial Hub. All Rights Reserved.</p>
+    <p class="credit">Designed by FKN</p>
+  </footer>
 </body>
 </html>
