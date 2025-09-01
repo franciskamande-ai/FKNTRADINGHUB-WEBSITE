@@ -1,694 +1,1077 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271037411724238"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Education | FKN TRADING HUB</title>
-    <style>
-        /* ===== BASE STYLES ===== */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #111; /* dark background */
-            color: #ddd;
-            line-height: 1.8;
-        }
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271037411724238" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Education | FKN TRADING HUB</title>
+<style>
+/* ===== BASE STYLES ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* dark background */
+    color: #ddd;
+    line-height: 1.8;
+}
 
-        /* ===== NAVIGATION ===== */
-        nav {
-            background: #111;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
+/* ===== NAVIGATION ===== */
+nav {
+    background: #111;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
 
-        nav a {
-            text-decoration: none;
-            color: #d4af37; /* gold */
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 1.2rem;
-            transition: color 0.3s ease;
-        }
+nav a {
+    text-decoration: none;
+    color: #d4af37; /* gold */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 1.2rem;
+    transition: color 0.3s ease;
+}
 
-        nav a:hover {
-            color: #9910cf; /* purple hover */
-        }
+nav a:hover {
+    color: #9910cf; /* purple hover */
+}
 
-        /* ===== HEADER ===== */
-        header {
-            background: linear-gradient(135deg, #111, #222);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #111, #222);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            color: #d4af37;
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: #d4af37;
+}
 
-        header p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            color: #bbb;
-        }
+header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #bbb;
+}
 
-        /* ===== TOPIC SELECTOR (Dropdown) ===== */
-        .topic-selector {
-            max-width: 800px;
-            margin: 2rem auto;
-            text-align: center;
-        }
+/* ===== TOPIC SELECTOR (Dropdown) ===== */
+.topic-selector {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            max-width: 400px;
-        }
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
 
-        .dropbtn {
-            background-color: #9910cf;
-            color: white;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            text-align: left;
-            position: relative;
-        }
+.dropbtn {
+    background-color: #9910cf;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
 
-        .dropbtn:after {
-            content: "▼";
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.8rem;
-        }
+.dropbtn:after {
+    content: "▼";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #1a1a1a;
-            width: 100%;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-            z-index: 1;
-            border-radius: 0 0 6px 6px;
-            overflow: hidden;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+}
 
-        .dropdown-content a {
-            color: #ddd;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            transition: background 0.3s;
-        }
+.dropdown-content a {
+    color: #ddd;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background 0.3s;
+}
 
-        .dropdown-content a:hover {
-            background-color: #222;
-            color: #d4af37;
-        }
+.dropdown-content a:hover {
+    background-color: #222;
+    color: #d4af37;
+}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        .dropdown:hover .dropbtn {
-            border-radius: 6px 6px 0 0;
-        }
+.dropdown:hover .dropbtn {
+    border-radius: 6px 6px 0 0;
+}
 
-        /* ===== MAIN CONTENT ===== */
-        .education-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+/* ===== MAIN CONTENT ===== */
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-        .topic-section {
-            display: none;
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-            margin-bottom: 3rem;
-            animation: fadeIn 0.5s;
-        }
+.topic-section {
+    display: none;
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    margin-bottom: 3rem;
+    animation: fadeIn 0.5s;
+}
 
-        .topic-section.active {
-            display: block;
-        }
+.topic-section.active {
+    display: block;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        h2 {
-            color: #d4af37;
-            border-bottom: 2px solid #9910cf;
-            padding-bottom: 0.5rem;
-        }
+h2 {
+    color: #d4af37;
+    border-bottom: 2px solid #9910cf;
+    padding-bottom: 0.5rem;
+}
 
-        h3 {
-            color: #9910cf;
-        }
+h3 {
+    color: #9910cf;
+}
 
-        h4 {
-            color: #d4af37;
-        }
+h4 {
+    color: #d4af37;
+}
 
-        /* ===== CONTENT BOXES ===== */
-        .example-box {
-            background: #222;
-            border-left: 4px solid #9910cf;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            color: #ccc;
-        }
+/* ===== CONTENT BOXES ===== */
+.example-box {
+    background: #222;
+    border-left: 4px solid #9910cf;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    color: #ccc;
+}
 
-        .note-box {
-            background: #2a2a2a;
-            border-left: 4px solid #d4af37;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-            color: #ddd;
-        }
+.note-box {
+    background: #2a2a2a;
+    border-left: 4px solid #d4af37;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #ddd;
+}
 
-        .important-note {
-            background: #331111;
-            border-left: 4px solid #ff4d4d;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
+.important-note {
+    background: #331111;
+    border-left: 4px solid #ff4d4d;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
 
-        .tip-box {
-            background: #113311;
-            border-left: 4px solid #00cc66;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
+.tip-box {
+    background: #113311;
+    border-left: 4px solid #00cc66;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
 
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 1rem;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            margin: 1rem 0;
-        }
-        
-        /* ===== GRID LAYOUT ===== */
-        .concept-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .concept-card {
-            background: #222;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-            border: 1px solid #333;
-        }
-        
-        /* ===== CTA SECTION ===== */
-        .contact-cta {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #222, #111);
-            color: white;
-            border-radius: 10px;
-        }
-        
-        .whatsapp-btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-        }
+.code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #111;
-            color: #aaa;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: #d4af37;
-            margin: 0 1rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #9910cf;
-        }
-        
-        .copyright {
-            margin-top: 1rem;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
+/* ===== GRID LAYOUT ===== */
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
-        /* ===== MEDIA QUERIES ===== */
-        @media (max-width: 900px) {
-            .concept-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                padding: 3rem 1.5rem;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .education-container {
-                padding: 1.5rem;
-            }
-            
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            
-            nav a {
-                margin: 0.5rem 0;
-            }
-            
-            .topic-section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+.concept-card {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+}
+
+/* ===== CTA SECTION ===== */
+.contact-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #222, #111);
+    color: white;
+    border-radius: 10px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #d4af37;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #9910cf;
+}
+
+.copyright {
+    margin-top: 1rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 900px) {
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .education-container {
+        padding: 1.5rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    nav a {
+        margin: 0.5rem 0;
+    }
+    .topic-section {
+        padding: 1.5rem;
+    }
+}
+</style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="services.html">SERVICES</a>
-        <a href="about.html">ABOUT</a>
-        <a href="FKN_Academy.html">ACADEMY</a>
-        <a href="Education.html">EDUCATION</a>
-    </nav>
-    
-    <!-- Header -->
-    <header>
-        <h1>Financial Education Center</h1>
-        <p>Master stocks, forex, and volume analysis with our comprehensive guides</p>
-    </header>
-    
-    <!-- Topic Selector -->
-    <div class="topic-selector">
-        <div class="dropdown">
-            <button class="dropbtn">Select a Topic to Learn</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showTopic('investing-intro')">What is Investing?</a>
-                <a href="#" onclick="showTopic('stocks')">Stock Market</a>
-                <a href="#" onclick="showTopic('forex')">Forex Trading</a>
-                <a href="#" onclick="showTopic('volume')">Volume Analysis</a>
-                <a href="#" onclick="showTopic('financial-engineering')">Financial Engineering</a>
-            </div>
+<!-- Navigation -->
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="services.html">SERVICES</a>
+    <a href="about.html">ABOUT</a>
+    <a href="FKN_Academy.html">ACADEMY</a>
+    <a href="Education.html">EDUCATION</a>
+</nav>
+
+<!-- Header -->
+<header>
+    <h1>Financial Education Center</h1>
+    <p>Master stocks, forex, and volume analysis with our comprehensive guides</p>
+</header>
+
+<!-- Topic Selector -->
+<div class="topic-selector">
+    <div class="dropdown">
+        <button class="dropbtn">Select a Topic to Learn</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showTopic('investing-intro')">What is Investing?</a>
+            <a href="#" onclick="showTopic('stocks')">Stock Market</a>
+            <a href="#" onclick="showTopic('forex')">Forex Trading</a>
+            <a href="#" onclick="showTopic('volume')">Volume Analysis</a>
+            <a href="#" onclick="showTopic('financial-engineering')">Financial Engineering</a>
         </div>
     </div>
-    
-    <!-- Main Content -->
-    <main class="education-container">
-        <!-- Investing Introduction Section -->
-        <section id="investing-intro" class="topic-section active">
-            <h2>What is Investing?</h2>
-            <p>Investing means allocating money with the expectation of generating profit or income. Unlike saving, investing involves calculated risks to grow your wealth over time.</p>
-            
-            <div class="note-box">
-                <strong>📝 Key Note:</strong> Investing is not gambling. While both involve risk, investing is based on research, analysis, and a long-term strategy, while gambling relies mostly on chance.
+</div>
+
+<!-- Main Content -->
+<main class="education-container">
+    <!-- Investing Introduction Section -->
+    <section id="investing-intro" class="topic-section active">
+        <h2>What is Investing?</h2>
+        <p>Investing means allocating money with the expectation of generating profit or income. Unlike saving, investing involves calculated risks to grow your wealth over time.</p>
+        
+        <div class="note-box">
+            <strong>📝 Key Note:</strong> Investing is not gambling. While both involve risk, investing is based on research, analysis, and a long-term strategy, while gambling relies mostly on chance.
+        </div>
+        
+        <div class="concept-card">
+            <h3>Why Invest?</h3>
+            <ul>
+                <li><strong>Beat inflation:</strong> Cash loses value (3-7% annually in Kenya)</li>
+                <li><strong>Wealth building:</strong> Compound growth over time</li>
+                <li><strong>Passive income:</strong> Dividends/rental income</li>
+                <li><strong>Financial independence:</strong> Create assets that work for you</li>
+                <li><strong>Achieve goals:</strong> Fund education, retirement, or major purchases</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Start investing early! Thanks to compound interest, someone who starts investing at 25 will have significantly more at retirement than someone who starts at 35, even if they invest less money overall.
+        </div>
+        
+        <h3>Main Ways to Invest</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>1. Stocks (Equities)</h4>
+                <p>Buying shares of companies like Safaricom, KCB</p>
+                <p><strong>Example:</strong> 100 Safaricom shares @ KSh 20 = KSh 2,000 investment</p>
+                <p><strong>Risk Level:</strong> Medium to High</p>
+                <p><strong>Liquidity:</strong> High (easily bought/sold)</p>
             </div>
             
             <div class="concept-card">
-                <h3>Why Invest?</h3>
-                <ul>
-                    <li><strong>Beat inflation:</strong> Cash loses value (3-7% annually in Kenya)</li>
-                    <li><strong>Wealth building:</strong> Compound growth over time</li>
-                    <li><strong>Passive income:</strong> Dividends/rental income</li>
-                    <li><strong>Financial independence:</strong> Create assets that work for you</li>
-                    <li><strong>Achieve goals:</strong> Fund education, retirement, or major purchases</li>
-                </ul>
-            </div>
-
-            <div class="tip-box">
-                <strong>💡 Pro Tip:</strong> Start investing early! Thanks to compound interest, someone who starts investing at 25 will have significantly more at retirement than someone who starts at 35, even if they invest less money overall.
-            </div>
-
-            <h3>Main Ways to Invest</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>1. Stocks (Equities)</h4>
-                    <p>Buying shares of companies like Safaricom, KCB</p>
-                    <p><strong>Example:</strong> 100 Safaricom shares @ KSh 20 = KSh 2,000 investment</p>
-                    <p><strong>Risk Level:</strong> Medium to High</p>
-                    <p><strong>Liquidity:</strong> High (easily bought/sold)</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>2. Real Estate</h4>
-                    <p>Physical properties or REITs</p>
-                    <p><strong>Example:</strong> Buying a rental apartment in Nairobi</p>
-                    <p><strong>Risk Level:</strong> Medium</p>
-                    <p><strong>Liquidity:</strong> Low (hard to sell quickly)</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>3. Bonds</h4>
-                    <p>Loaning to governments/companies</p>
-                    <p><strong>Example:</strong> Kenya Eurobond paying 7% annually</p>
-                    <p><strong>Risk Level:</strong> Low to Medium</p>
-                    <p><strong>Liquidity:</strong> Medium</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>4. Mutual Funds & ETFs</h4>
-                    <p>Baskets of stocks/bonds managed professionally</p>
-                    <p><strong>Example:</strong> ICEA Lion Money Market Fund</p>
-                    <p><strong>Risk Level:</strong> Low to High (depends on fund)</p>
-                    <p><strong>Liquidity:</strong> High</p>
-                </div>
-            </div>
-
-            <div class="example-box">
-                <strong>Expected Returns Comparison (Historical Averages):</strong>
-                <ul>
-                    <li><strong>Stocks:</strong> 10-15% annually</li>
-                    <li><strong>Real Estate:</strong> 8-12% annually + appreciation</li>
-                    <li><strong>Bonds:</strong> 7-12% annually</li>
-                    <li><strong>Savings Account:</strong> 4% annually (often below inflation)</li>
-                    <li><strong>Forex Trading:</strong> Varies widely based on strategy</li>
-                </ul>
+                <h4>2. Real Estate</h4>
+                <p>Physical properties or REITs</p>
+                <p><strong>Example:</strong> Buying a rental apartment in Nairobi</p>
+                <p><strong>Risk Level:</strong> Medium</p>
+                <p><strong>Liquidity:</strong> Low (hard to sell quickly)</p>
             </div>
             
-            <div class="important-note">
-                <strong>⚠️ Important:</strong> Past performance does not guarantee future results. All investments carry risk, including the possible loss of principal. Diversify your investments to manage risk.
+            <div class="concept-card">
+                <h4>3. Bonds</h4>
+                <p>Loaning to governments/companies</p>
+                <p><strong>Example:</strong> Kenya Eurobond paying 7% annually</p>
+                <p><strong>Risk Level:</strong> Low to Medium</p>
+                <p><strong>Liquidity:</strong> Medium</p>
             </div>
             
-            <h3>Investment Strategies for Beginners</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Dollar-Cost Averaging</h4>
-                    <p>Investing a fixed amount regularly regardless of market conditions. This reduces the impact of market volatility.</p>
-                    <p><strong>Example:</strong> Investing KSh 5,000 every month in an ETF</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Buy and Hold</h4>
-                    <p>Purchasing investments with the intention of holding them for the long term, regardless of short-term fluctuations.</p>
-                    <p><strong>Best for:</strong> Stocks of fundamentally strong companies</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Value Investing</h4>
-                    <p>Finding undervalued stocks that trade for less than their intrinsic value.</p>
-                    <p><strong>Famous practitioner:</strong> Warren Buffett</p>
-                </div>
+            <div class="concept-card">
+                <h4>4. Mutual Funds & ETFs</h4>
+                <p>Baskets of stocks/bonds managed professionally</p>
+                <p><strong>Example:</strong> ICEA Lion Money Market Fund</p>
+                <p><strong>Risk Level:</strong> Low to High (depends on fund)</p>
+                <p><strong>Liquidity:</strong> High</p>
             </div>
-            
-            <div class="note-box">
-                <strong>📊 Key Metrics to Understand:</strong>
-                <ul>
-                    <li><strong>ROI (Return on Investment):</strong> (Gain from Investment - Cost of Investment) / Cost of Investment</li>
-                    <li><strong>Diversification:</strong> Spreading investments across different assets to reduce risk</li>
-                    <li><strong>Liquidity:</strong> How quickly an asset can be converted to cash</li>
-                    <li><strong>Volatility:</strong> How much and how quickly an investment's value changes</li>
-                </ul>
-            </div>
-        </section>
-        
-        <!-- Stock Market Section -->
-        <section id="stocks" class="topic-section">
-            <h2>Stock Market Mastery</h2>
-            <p>Learn everything about stock trading from basic concepts to advanced strategies.</p>
-            
-            <div class="note-box">
-                <strong>📈 Stock Market Basics:</strong> A stock market is where shares of publicly traded companies are bought and sold. The Nairobi Securities Exchange (NSE) is Kenya's primary stock exchange.
-            </div>
-            
-            <h3>Stock Trading Basics</h3>
-            <p>Stocks represent ownership in a company. When you buy a stock, you become a shareholder.</p>
-            
-            <div class="example-box">
-                <strong>Example:</strong> If you buy Safaricom (NSE: SCOM) at KSh 20 per share and sell at KSh 30:
-                <ul>
-                    <li>Profit per share = KSh 10</li>
-                    <li>With 1,000 shares: 1,000 × KSh 10 = KSh 100,000 profit</li>
-                    <li>Minus brokerage commission and taxes</li>
-                </ul>
-            </div>
-            
-            <div class="tip-box">
-                <strong>💡 Did You Know?</strong> The first stock exchange was established in Amsterdam in 1602 with the Dutch East India Company being the first company to issue stocks.
-            </div>
-            
-            <h3>Types of Stocks</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Common Stocks</h4>
-                    <p>Most typical type of stock that gives shareholders voting rights but variable dividends.</p>
-                    <p><strong>Voting rights:</strong> Usually 1 vote per share</p>
-                    <p><strong>Dividends:</strong> Not guaranteed</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Preferred Stocks</h4>
-                    <p>Hybrid between stocks and bonds with fixed dividends but usually no voting rights.</p>
-                    <p><strong>Dividends:</strong> Fixed, guaranteed</p>
-                    <p><strong>Priority:</strong> Paid before common stockholders</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Growth Stocks</h4>
-                    <p>Companies expected to grow at an above-average rate compared to the market.</p>
-                    <p><strong>Characteristics:</strong> Reinvest earnings, pay little/no dividends</p>
-                    <p><strong>Example:</strong> Technology companies</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Value Stocks</h4>
-                    <p>Companies that appear undervalued relative to their fundamentals.</p>
-                    <p><strong>Characteristics:</strong> Lower P/E ratios, often pay dividends</p>
-                    <p><strong>Example:</strong> Established banks, insurance companies</p>
-                </div>
-            </div>
-            
-            <h3>Key Stock Market Concepts</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Market Orders vs. Limit Orders</h4>
-                    <p><strong>Market order:</strong> Buy/sell immediately at current price</p>
-                    <p><strong>Limit order:</strong> Buy/sell only at specified price or better</p>
-                    <p><strong>Stop order:</strong> Becomes market order when price reaches specified level</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Bid-Ask Spread</h4>
-                    <p>The difference between the highest price a buyer will pay (bid) and the lowest price a seller will accept (ask).</p>
-                    <p><strong>Example:</strong> Bid: KSh 19.90, Ask: KSh 20.00 → Spread: KSh 0.10</p>
-                    <p><strong>Liquidity:</strong> Narrow spread = high liquidity, Wide spread = low liquidity</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Dividends</h4>
-                    <p>Company profits distributed to shareholders (e.g., Safaricom pays ~KSh 1.10 per share annually).</p>
-                    <p><strong>Declaration date:</strong> When dividend is announced</p>
-                    <p><strong>Ex-dividend date:</strong> Must own stock before this date to receive dividend</p>
-                    <p><strong>Payment date:</strong> When dividend is actually paid</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Market Capitalization</h4>
-                    <p>Total value of a company's outstanding shares.</p>
-                    <p><strong>Formula:</strong> Share price × Number of outstanding shares</p>
-                    <p><strong>Large-cap:</strong> > KSh 50 billion (Safaricom, Equity Bank)</p>
-                    <p><strong>Mid-cap:</strong> KSh 10-50 billion</p>
-                    <p><strong>Small-cap:</strong> < KSh 10 billion</p>
-                </div>
-            </div>
-            
-            <h3>Stock Analysis Methods</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Fundamental Analysis</h4>
-                    <p>Evaluating a company's financial health and intrinsic value.</p>
-                    <p><strong>What to analyze:</strong></p>
-                    <ul>
-                        <li>Financial statements (income, balance sheet, cash flow)</li>
-                        <li>Management quality</li>
-                        <li>Industry position</li>
-                        <li>Economic conditions</li>
-                    </ul>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Technical Analysis</h4>
-                    <p>Analyzing statistical trends from trading activity.</p>
-                    <p><strong>What to analyze:</strong></p>
-                    <ul>
-                        <li>Price movements</li>
-                        <li>Trading volume</li>
-                        <li>Chart patterns</li>
-                        <li>Technical indicators (RSI, MACD, moving averages)</li>
-                    </ul>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Key Financial Ratios</h4>
-                    <p><strong>P/E Ratio:</strong> Price-to-Earnings ratio (Market value per share / Earnings per share)</p>
-                    <p><strong>P/B Ratio:</strong> Price-to-Book ratio (Market price per share / Book value per share)</p>
-                    <p><strong>ROE:</strong> Return on Equity (Net income / Shareholder's equity)</p>
-                    <p><strong>Debt-to-Equity:</strong> Total liabilities / Shareholder's equity</p>
-                    <p><strong>Dividend Yield:</strong> Annual dividends per share / Price per share</p>
-                </div>
-            </div>
-            
-            <div class="important-note">
-                <strong>⚠️ Risk Management:</strong> Never invest more than you can afford to lose. Use stop-loss orders to limit potential losses. Diversify across sectors and asset classes.
-            </div>
-            
-            <h3>Trading Strategies</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Swing Trading</h4>
-                    <p>Holding stocks for several days to weeks to capture short-term gains.</p>
-                    <p><strong>Timeframe:</strong> Days to weeks</p>
-                    <p><strong>Analysis:</strong> Technical + fundamental</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Day Trading</h4>
-                    <p>Buying and selling securities within the same trading day.</p>
-                    <p><strong>Timeframe:</strong> Minutes to hours (no overnight positions)</p>
-                    <p><strong>Analysis:</strong> Primarily technical</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Position Trading</h4>
-                    <p>Long-term approach holding stocks for months or years.</p>
-                    <p><strong>Timeframe:</strong> Months to years</p>
-                    <p><strong>Analysis:</strong> Primarily fundamental</p>
-                </div>
-            </div>
-            
-            <div class="note-box">
-                <strong>📊 NSE Trading Hours:</strong>
-                <ul>
-                    <li><strong>Pre-opening session:</strong> 9:00 AM - 9:45 AM</li>
-                    <li><strong>Normal trading:</strong> 9:45 AM - 3:00 PM</li>
-                    <li><strong>Closing session:</strong> 3:00 PM - 3:30 PM</li>
-                </ul>
-            </div>
-        </section>
-        
-        <!-- Additional sections would continue here with the same structure -->
-        
-        <div class="contact-cta">
-            <h3>Want to Learn More?</h3>
-            <p>Contact us for advanced trading education and mentorship</p>
-            <a href="https://wa.me/25469043920" class="whatsapp-btn">
-                WhatsApp for Advanced Training
-            </a>
         </div>
-    </main>
+        
+        <div class="example-box">
+            <strong>Expected Returns Comparison (Historical Averages):</strong>
+            <ul>
+                <li><strong>Stocks:</strong> 10-15% annually</li>
+                <li><strong>Real Estate:</strong> 8-12% annually + appreciation</li>
+                <li><strong>Bonds:</strong> 7-12% annually</li>
+                <li><strong>Savings Account:</strong> 4% annually (often below inflation)</li>
+                <li><strong>Forex Trading:</strong> Varies widely based on strategy</li>
+            </ul>
+        </div>
+        
+        <div class="important-note">
+            <strong>⚠️ Important:</strong> Past performance does not guarantee future results. All investments carry risk, including the possible loss of principal. Diversify your investments to manage risk.
+        </div>
+        
+        <h3>Investment Strategies for Beginners</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Dollar-Cost Averaging</h4>
+                <p>Investing a fixed amount regularly regardless of market conditions. This reduces the impact of market volatility.</p>
+                <p><strong>Example:</strong> Investing KSh 5,000 every month in an ETF</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Buy and Hold</h4>
+                <p>Purchasing investments with the intention of holding them for the long term, regardless of short-term fluctuations.</p>
+                <p><strong>Best for:</strong> Stocks of fundamentally strong companies</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Value Investing</h4>
+                <p>Finding undervalued stocks that trade for less than their intrinsic value.</p>
+                <p><strong>Famous practitioner:</strong> Warren Buffett</p>
+            </div>
+        </div>
+        
+        <div class="note-box">
+            <strong>📊 Key Metrics to Understand:</strong>
+            <ul>
+                <li><strong>ROI (Return on Investment):</strong> (Gain from Investment - Cost of Investment) / Cost of Investment</li>
+                <li><strong>Diversification:</strong> Spreading investments across different assets to reduce risk</li>
+                <li><strong>Liquidity:</strong> How quickly an asset can be converted to cash</li>
+                <li><strong>Volatility:</strong> How much and how quickly an investment's value changes</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Stock Market Section -->
+    <section id="stocks" class="topic-section">
+        <h2>Stock Market Mastery</h2>
+        <p>Learn everything about stock trading from basic concepts to advanced strategies.</p>
+        
+        <div class="note-box">
+            <strong>📈 Stock Market Basics:</strong> A stock market is where shares of publicly traded companies are bought and sold. The Nairobi Securities Exchange (NSE) is Kenya's primary stock exchange.
+        </div>
+        
+        <h3>Stock Trading Basics</h3>
+        <p>Stocks represent ownership in a company. When you buy a stock, you become a shareholder.</p>
+        
+        <div class="example-box">
+            <strong>Example:</strong> If you buy Safaricom (NSE: SCOM) at KSh 20 per share and sell at KSh 30:
+            <ul>
+                <li>Profit per share = KSh 10</li>
+                <li>With 1,000 shares: 1,000 × KSh 10 = KSh 100,000 profit</li>
+                <li>Minus brokerage commission and taxes</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Did You Know?</strong> The first stock exchange was established in Amsterdam in 1602 with the Dutch East India Company being the first company to issue stocks.
+        </div>
+        
+        <h3>Types of Stocks</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Common Stocks</h4>
+                <p>Most typical type of stock that gives shareholders voting rights but variable dividends.</p>
+                <p><strong>Voting rights:</strong> Usually 1 vote per share</p>
+                <p><strong>Dividends:</strong> Not guaranteed</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Preferred Stocks</h4>
+                <p>Hybrid between stocks and bonds with fixed dividends but usually no voting rights.</p>
+                <p><strong>Dividends:</strong> Fixed, guaranteed</p>
+                <p><strong>Priority:</strong> Paid before common stockholders</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Growth Stocks</h4>
+                <p>Companies expected to grow at an above-average rate compared to the market.</p>
+                <p><strong>Characteristics:</strong> Reinvest earnings, pay little/no dividends</p>
+                <p><strong>Example:</strong> Technology companies</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Value Stocks</h4>
+                <p>Companies that appear undervalued relative to their fundamentals.</p>
+                <p><strong>Characteristics:</strong> Lower P/E ratios, often pay dividends</p>
+                <p><strong>Example:</strong> Established banks, insurance companies</p>
+            </div>
+        </div>
+        
+        <h3>Key Stock Market Concepts</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Market Orders vs. Limit Orders</h4>
+                <p><strong>Market order:</strong> Buy/sell immediately at current price</p>
+                <p><strong>Limit order:</strong> Buy/sell only at specified price or better</p>
+                <p><strong>Stop order:</strong> Becomes market order when price reaches specified level</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Bid-Ask Spread</h4>
+                <p>The difference between the highest price a buyer will pay (bid) and the lowest price a seller will accept (ask).</p>
+                <p><strong>Example:</strong> Bid: KSh 19.90, Ask: KSh 20.00 → Spread: KSh 0.10</p>
+                <p><strong>Liquidity:</strong> Narrow spread = high liquidity, Wide spread = low liquidity</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Dividends</h4>
+                <p>Company profits distributed to shareholders (e.g., Safaricom pays ~KSh 1.10 per share annually).</p>
+                <p><strong>Declaration date:</strong> When dividend is announced</p>
+                <p><strong>Ex-dividend date:</strong> Must own stock before this date to receive dividend</p>
+                <p><strong>Payment date:</strong> When dividend is actually paid</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Market Capitalization</h4>
+                <p>Total value of a company's outstanding shares.</p>
+                <p><strong>Formula:</strong> Share price × Number of outstanding shares</p>
+                <p><strong>Large-cap:</strong> > KSh 50 billion (Safaricom, Equity Bank)</p>
+                <p><strong>Mid-cap:</strong> KSh 10-50 billion</p>
+                <p><strong>Small-cap:</strong> < KSh 10 billion</p>
+            </div>
+        </div>
+        
+        <h3>Stock Analysis Methods</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Fundamental Analysis</h4>
+                <p>Evaluating a company's financial health and intrinsic value.</p>
+                <p><strong>What to analyze:</strong></p>
+                <ul>
+                    <li>Financial statements (income, balance sheet, cash flow)</li>
+                    <li>Management quality</li>
+                    <li>Industry position</li>
+                    <li>Economic conditions</li>
+                </ul>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Technical Analysis</h4>
+                <p>Analyzing statistical trends from trading activity.</p>
+                <p><strong>What to analyze:</strong></p>
+                <ul>
+                    <li>Price movements</li>
+                    <li>Trading volume</li>
+                    <li>Chart patterns</li>
+                    <li>Technical indicators (RSI, MACD, moving averages)</li>
+                </ul>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Key Financial Ratios</h4>
+                <p><strong>P/E Ratio:</strong> Price-to-Earnings ratio (Market value per share / Earnings per share)</p>
+                <p><strong>P/B Ratio:</strong> Price-to-Book ratio (Market price per share / Book value per share)</p>
+                <p><strong>ROE:</strong> Return on Equity (Net income / Shareholder's equity)</p>
+                <p><strong>Debt-to-Equity:</strong> Total liabilities / Shareholder's equity</p>
+                <p><strong>Dividend Yield:</strong> Annual dividends per share / Price per share</p>
+            </div>
+        </div>
+        
+        <div class="important-note">
+            <strong>⚠️ Risk Management:</strong> Never invest more than you can afford to lose. Use stop-loss orders to limit potential losses. Diversify across sectors and asset classes.
+        </div>
+        
+        <h3>Trading Strategies</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Swing Trading</h4>
+                <p>Holding stocks for several days to weeks to capture short-term gains.</p>
+                <p><strong>Timeframe:</strong> Days to weeks</p>
+                <p><strong>Analysis:</strong> Technical + fundamental</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Day Trading</h4>
+                <p>Buying and selling securities within the same trading day.</p>
+                <p><strong>Timeframe:</strong> Minutes to hours (no overnight positions)</p>
+                <p><strong>Analysis:</strong> Primarily technical</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Position Trading</h4>
+                <p>Long-term approach holding stocks for months or years.</p>
+                <p><strong>Timeframe:</strong> Months to years</p>
+                <p><strong>Analysis:</strong> Primarily fundamental</p>
+            </div>
+        </div>
+        
+        <div class="note-box">
+            <strong>📊 NSE Trading Hours:</strong>
+            <ul>
+                <li><strong>Pre-opening session:</strong> 9:00 AM - 9:45 AM</li>
+                <li><strong>Normal trading:</strong> 9:45 AM - 3:00 PM</li>
+                <li><strong>Closing session:</strong> 3:00 PM - 3:30 PM</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Forex Trading Section -->
+    <section id="forex" class="topic-section">
+        <h2>Forex Trading</h2>
+        <p>Learn how to trade currencies in the world's largest financial market.</p>
+        
+        <div class="note-box">
+            <strong>🌍 Forex Market Basics:</strong> The foreign exchange market is where currencies are traded. It's the largest and most liquid market in the world, with a daily trading volume exceeding $6 trillion.
+        </div>
+        
+        <h3>What is Forex Trading?</h3>
+        <p>Forex trading involves buying one currency while simultaneously selling another currency. Currencies are traded in pairs, such as EUR/USD (Euro/US Dollar).</p>
+        
+        <div class="example-box">
+            <strong>Example:</strong> If you buy EUR/USD at 1.1000 and sell at 1.1200:
+            <ul>
+                <li>Price movement = 200 pips</li>
+                <li>With a standard lot (100,000 units): Profit = $2,000</li>
+                <li>Minus spread and commission</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Did You Know?</strong> The most traded currency pairs are called "majors" and include EUR/USD, USD/JPY, GBP/USD, and USD/CHF. These pairs account for about 75% of all forex trading.
+        </div>
+        
+        <h3>Major Currency Pairs</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>EUR/USD</h4>
+                <p>Euro vs. US Dollar</p>
+                <p><strong>Characteristics:</strong> Most liquid pair, tight spreads</p>
+                <p><strong>Typical spread:</strong> 0.5-1.5 pips</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>USD/JPY</h4>
+                <p>US Dollar vs. Japanese Yen</p>
+                <p><strong>Characteristics:</strong> Sensitive to Asian market hours</p>
+                <p><strong>Typical spread:</strong> 0.7-1.7 pips</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>GBP/USD</h4>
+                <p>British Pound vs. US Dollar</p>
+                <p><strong>Characteristics:</strong> High volatility, wider spreads</p>
+                <p><strong>Typical spread:</strong> 1.2-2.5 pips</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>USD/CHF</h4>
+                <p>US Dollar vs. Swiss Franc</p>
+                <p><strong>Characteristics:</strong> Safe-haven currency, lower volatility</p>
+                <p><strong>Typical spread:</strong> 1.5-3 pips</p>
+            </div>
+        </div>
+        
+        <h3>Forex Trading Concepts</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Pips and Lots</h4>
+                <p><strong>Pip:</strong> Smallest price move a currency pair can make (usually 0.0001)</p>
+                <p><strong>Standard Lot:</strong> 100,000 units of base currency</p>
+                <p><strong>Mini Lot:</strong> 10,000 units</p>
+                <p><strong>Micro Lot:</strong> 1,000 units</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Leverage and Margin</h4>
+                <p><strong>Leverage:</strong> Using borrowed capital to increase potential returns</p>
+                <p><strong>Margin:</strong> Collateral required to open and maintain a position</p>
+                <p><strong>Example:</strong> 100:1 leverage means you can control $100,000 with $1,000</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Long and Short Positions</h4>
+                <p><strong>Long:</strong> Buying a currency pair expecting it to rise in value</p>
+                <p><strong>Short:</strong> Selling a currency pair expecting it to fall in value</p>
+                <p><strong>Example:</strong> Going long EUR/USD means buying Euros while selling US Dollars</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Fundamental Factors</h4>
+                <p><strong>Interest Rates:</strong> Central bank policies affect currency values</p>
+                <p><strong>Economic Indicators:</strong> GDP, employment, inflation data</p>
+                <p><strong>Political Stability:</strong> Elections, policies, geopolitical events</p>
+                <p><strong>Market Sentiment:</strong> Risk-on vs. risk-off environments</p>
+            </div>
+        </div>
+        
+        <div class="important-note">
+            <strong>⚠️ Risk Warning:</strong> Forex trading involves high leverage, which can magnify both profits and losses. It's possible to lose more than your initial investment. Only trade with money you can afford to lose.
+        </div>
+        
+        <h3>Forex Trading Strategies</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Day Trading</h4>
+                <p>Opening and closing positions within the same trading day to capture small price movements.</p>
+                <p><strong>Timeframe:</strong> 5-minute to 1-hour charts</p>
+                <p><strong>Indicators:</strong> Moving averages, RSI, MACD</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Swing Trading</h4>
+                <p>Holding positions for several days to capture medium-term price swings.</p>
+                <p><strong>Timeframe:</strong> 4-hour to daily charts</p>
+                <p><strong>Indicators:</strong> Fibonacci, support/resistance, trend lines</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Carry Trade</h4>
+                <p>Borrowing in a low-interest-rate currency to invest in a higher-interest-rate currency.</p>
+                <p><strong>Example:</strong> Borrow JPY (low interest), buy ZAR (high interest)</p>
+                <p><strong>Risk:</strong> Currency depreciation can erase interest gains</p>
+            </div>
+        </div>
+        
+        <div class="note-box">
+            <strong>📊 Forex Market Hours (EAT):</strong>
+            <ul>
+                <li><strong>Tokyo Session:</strong> 3:00 AM - 12:00 PM</li>
+                <li><strong>London Session:</strong> 10:00 AM - 7:00 PM</li>
+                <li><strong>New York Session:</strong> 4:00 PM - 1:00 AM</li>
+                <li><strong>Most volatile:</strong> During session overlaps (London-NY: 4:00 PM - 7:00 PM)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Volume Analysis Section -->
+    <section id="volume" class="topic-section">
+        <h2>Volume Analysis</h2>
+        <p>Learn how to use trading volume to confirm trends and predict market movements.</p>
+        
+        <div class="note-box">
+            <strong>📊 Volume Basics:</strong> Volume represents the number of shares or contracts traded in a security or market during a given period. It's a measure of market activity and liquidity.
+        </div>
+        
+        <h3>Why Volume Matters</h3>
+        <p>Volume analysis helps traders understand the strength behind price movements. High volume confirms the validity of a price move, while low volume may indicate weak conviction.</p>
+        
+        <div class="example-box">
+            <strong>Example:</strong> A stock breaking out to new highs:
+            <ul>
+                <li>With high volume: Strong confirmation of breakout</li>
+                <li>With low volume: Possible false breakout, be cautious</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Volume often precedes price. An increase in volume can signal that a significant price move is coming, even before the price itself moves dramatically.
+        </div>
+        
+        <h3>Volume Concepts</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Volume Bars</h4>
+                <p>Vertical bars at the bottom of charts showing trading volume for each period.</p>
+                <p><strong>Green bars:</strong> Volume on up periods (price increased)</p>
+                <p><strong>Red bars:</strong> Volume on down periods (price decreased)</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Moving Average</h4>
+                <p>A moving average applied to volume data to smooth out fluctuations and identify trends in trading activity.</p>
+                <p><strong>Common periods:</strong> 20-day or 50-day volume MA</p>
+                <p><strong>Usage:</strong> Compare current volume to average volume</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Profile</h4>
+                <p>A charting technique that shows trading activity at specific price levels over a specified time period.</p>
+                <p><strong>Value Area:</strong> Price range where 70% of volume occurred</p>
+                <p><strong>Point of Control:</strong> Price level with highest volume</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>On-Balance Volume (OBV)</h4>
+                <p>A momentum indicator that uses volume flow to predict changes in stock price.</p>
+                <p><strong>Calculation:</strong> Add volume on up days, subtract on down days</p>
+                <p><strong>Signal:</strong> OBV divergence can foreshadow price reversals</p>
+            </div>
+        </div>
+        
+        <h3>Volume Analysis Techniques</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Volume Confirmation</h4>
+                <p>Volume should confirm the price trend:</p>
+                <p><strong>Uptrend:</strong> Higher volume on rallies, lower volume on pullbacks</p>
+                <p><strong>Downtrend:</strong> Higher volume on declines, lower volume on bounces</p>
+                <p><strong>Warning:</strong> Price moving against volume suggests weakness in trend</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Breakouts</h4>
+                <p>A significant increase in volume often accompanies breakouts from consolidation patterns.</p>
+                <p><strong>Valid breakout:</strong> Volume at least 50% above average</p>
+                <p><strong>False breakout:</strong> Low volume suggests lack of conviction</p>
+                <p><strong>Example:</strong> Stock breaking above resistance on high volume</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Climax</h4>
+                <p>Extremely high volume levels often mark turning points in the market.</p>
+                <p><strong>Selling climax:</strong> Panic selling on huge volume often marks bottoms</p>
+                <p><strong>Buying climax:</strong> Frenzied buying on huge volume often marks tops</p>
+                <p><strong>Example:</strong> Capitulation volume during market crashes</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Divergence</h4>
+                <p>When price and volume move in opposite directions, often signaling potential reversals.</p>
+                <p><strong>Bearish divergence:</strong> Price making new highs, volume declining</p>
+                <p><strong>Bullish divergence:</strong> Price making new lows, volume declining</p>
+                <p><strong>Example:</strong> Stock hits new high but on diminishing volume</p>
+            </div>
+        </div>
+        
+        <div class="important-note">
+            <strong>⚠️ Volume Limitations:</strong> Volume analysis should not be used in isolation. Always combine volume with other technical indicators and price action analysis for better confirmation.
+        </div>
+        
+        <h3>Practical Volume Applications</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Accumulation/Distribution</h4>
+                <p>Analyzing whether large players are accumulating (buying) or distributing (selling) a stock.</p>
+                <p><strong>Accumulation:</strong> Price stable or rising on increasing volume</p>
+                <p><strong>Distribution:</strong> Price stable or falling on increasing volume</p>
+                <p><strong>Example:</strong> Institutional buying often shows as large volume spikes</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume Weighted Average Price (VWAP)</h4>
+                <p>The average price a security has traded at throughout the day, based on both volume and price.</p>
+                <p><strong>Usage:</strong> Institutional traders use VWAP to measure execution quality</p>
+                <p><strong>Trading:</strong> Price above VWAP = bullish intraday bias, below = bearish</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Volume by Price</h4>
+                <p>A historical analysis showing how much volume occurred at each price level.</p>
+                <p><strong>High volume nodes:</strong> Price levels where much trading occurred (support/resistance)</p>
+                <p><strong>Low volume nodes:</strong> Price levels with little trading (easier to move through)</p>
+            </div>
+        </div>
+        
+        <div class="note-box">
+            <strong>📈 Volume Patterns to Watch:</strong>
+            <ul>
+                <li><strong>Volume spike:</strong> Sudden increase in volume, often precedes big moves</li>
+                <li><strong>Volume drying up:</strong> Decreasing volume often precedes consolidation or reversal</li>
+                <li><strong>Churning:</strong> High volume with little price progress suggests distribution</li>
+                <li><strong>Volume expansion in trends:</strong> Healthy trends show increasing volume in direction of trend</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Financial Engineering Section -->
+    <section id="financial-engineering" class="topic-section">
+        <h2>Financial Engineering</h2>
+        <p>Learn how quantitative methods and technology are used to solve financial problems and create innovative products.</p>
+        
+        <div class="note-box">
+            <strong>⚙️ Financial Engineering Basics:</strong> Financial engineering applies mathematical methods, computer science, and economic theory to solve problems in finance, including derivative pricing, risk management, and portfolio optimization.
+        </div>
+        
+        <h3>What is Financial Engineering?</h3>
+        <p>Financial engineering involves the design, development, and implementation of innovative financial instruments and processes to solve financial problems and exploit market opportunities.</p>
+        
+        <div class="example-box">
+            <strong>Example Applications:</strong>
+            <ul>
+                <li>Designing structured products for specific investor needs</li>
+                <li>Developing algorithmic trading strategies</li>
+                <li>Creating risk management systems for banks</li>
+                <li>Pricing complex derivatives</li>
+                <li>Portfolio optimization for institutional investors</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Did You Know?</strong> The Black-Scholes model for option pricing, developed in 1973, is one of the most famous applications of financial engineering and won the Nobel Prize in Economics in 1997.
+        </div>
+        
+        <h3>Key Concepts in Financial Engineering</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Derivatives Pricing</h4>
+                <p>Mathematical models to value options, futures, swaps, and other derivative securities.</p>
+                <p><strong>Common models:</strong> Black-Scholes, Binomial options pricing model</p>
+                <p><strong>Inputs:</strong> Underlying price, strike price, time to expiration, volatility, interest rates</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Risk Management</h4>
+                <p>Quantifying and managing financial risks using statistical methods.</p>
+                <p><strong>Value at Risk (VaR):</strong> Maximum loss over a specific time period at a given confidence level</p>
+                <p><strong>Stress testing:</strong> Assessing portfolio performance under extreme market conditions</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Portfolio Optimization</h4>
+                <p>Mathematical approaches to constructing portfolios that maximize returns for a given level of risk.</p>
+                <p><strong>Modern Portfolio Theory (MPT):</strong> Harry Markowitz's Nobel-winning framework</p>
+                <p><strong>Efficient frontier:</strong> Set of optimal portfolios offering highest return for defined risk</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Algorithmic Trading</h4>
+                <p>Using computer algorithms to automate trading decisions and execution.</p>
+                <p><strong>High-frequency trading (HFT):</strong> Sub-millisecond trading strategies</p>
+                <p><strong>Statistical arbitrage:</strong> exploiting temporary price inefficiencies</p>
+                <p><strong>Market making:</strong> Providing liquidity to earn bid-ask spread</p>
+            </div>
+        </div>
+        
+        <h3>Financial Engineering Tools</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Stochastic Calculus</h4>
+                <p>Mathematics of random processes, essential for modeling financial markets.</p>
+                <p><strong>Brownian motion:</strong> Mathematical model of random market movements</p>
+                <p><strong>Ito's Lemma:</strong> Fundamental theorem used in derivative pricing</p>
+                <p><strong>Application:</strong> Modeling stock price movements as random walks</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Monte Carlo Simulation</h4>
+                <p>Using random sampling to solve problems that might be deterministic in principle.</p>
+                <p><strong>Application:</strong> Pricing complex derivatives with multiple sources of uncertainty</p>
+                <p><strong>Process:</strong> Simulate thousands of possible price paths, average outcomes</p>
+                <p><strong>Example:</strong> Valuing path-dependent options like Asian options</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Time Series Analysis</h4>
+                <p>Statistical techniques for analyzing sequences of data points over time.</p>
+                <p><strong>Autocorrelation:</strong> Relationship between a variable's current and past values</p>
+                <p><strong>Stationarity:</strong> Statistical properties constant over time</p>
+                <p><strong>Application:</strong> Forecasting financial markets, volatility modeling</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Machine Learning in Finance</h4>
+                <p>Applying AI algorithms to financial data for prediction and decision making.</p>
+                <p><strong>Applications:</strong> Credit scoring, algorithmic trading, fraud detection</p>
+                <p><strong>Techniques:</strong> Neural networks, random forests, reinforcement learning</p>
+                <p><strong>Example:</strong> Using NLP to analyze news sentiment for trading signals</p>
+            </div>
+        </div>
+        
+        <div class="important-note">
+            <strong>⚠️ Model Risk:</strong> All financial models are simplifications of reality and have limitations. Financial engineers must understand model assumptions, limitations, and potential errors. Over-reliance on models without understanding their weaknesses contributed to the 2008 financial crisis.
+        </div>
+        
+        <h3>Financial Products Created Through Engineering</h3>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h4>Structured Products</h4>
+                <p>Customized investments that combine traditional securities with derivatives.</p>
+                <p><strong>Principal-protected notes:</strong> Guarantee return of principal with upside participation</p>
+                <p><strong>Reverse convertibles:</strong> Offer high coupon payments but expose investors to equity risk</p>
+                <p><strong>Autocallables:</strong> Automatically redeemed if underlying reaches predetermined level</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Exotic Options</h4>
+                <p>Complex options with non-standard features.</p>
+                <p><strong>Barrier options:</strong> Activated or extinguished when underlying hits barrier price</p>
+                <p><strong>Asian options:</strong> Payoff based on average price of underlying over time</p>
+                <p><strong>Digital options:</strong> Pay fixed amount if condition met, nothing otherwise</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Credit Derivatives</h4>
+                <p>Financial instruments to transfer credit risk between parties.</p>
+                <p><strong>Credit default swaps (CDS):</strong> Insurance against credit events like default</p>
+                <p><strong>Collateralized debt obligations (CDO):</strong> Pooled debt assets sliced into tranches</p>
+                <p><strong>Credit spread options:</strong> Options on the spread between corporate and risk-free bonds</p>
+            </div>
+            
+            <div class="concept-card">
+                <h4>Exchange-Traded Funds (ETFs)</h4>
+                <p>Investment funds traded on stock exchanges that hold assets like stocks, commodities, or bonds.</p>
+                <p><strong>Inverse ETFs:</strong> Designed to deliver opposite of index performance</p>
+                <p><strong>Leveraged ETFs:</strong> Use derivatives to amplify index returns</p>
+                <p><strong>Smart beta ETFs:</strong> Track alternative index construction rules</p>
+            </div>
+        </div>
+        
+        <div class="note-box">
+            <strong>📚 Required Skills for Financial Engineers:</strong>
+            <ul>
+                <li><strong>Mathematics:</strong> Calculus, linear algebra, probability, statistics</li>
+                <li><strong>Programming:</strong> Python, R, C++, MATLAB, SQL</li>
+                <li><strong>Finance:</strong> Financial markets, instruments, corporate finance</li>
+                <li><strong>Economics:</strong> Microeconomics, macroeconomics, econometrics</li>
+                <li><strong>Communication:</strong> Explaining complex concepts to non-technical stakeholders</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- Contact CTA -->
+<section class="contact-cta">
+    <h2>Ready to Master Financial Markets?</h2>
+    <p>Join our community of traders and investors. Get personalized guidance and advanced strategies.</p>
+    <a href="https://wa.me/254712345678?text=Hello%20FKN%20Trading%20Hub,%20I'd%20like%20to%20learn%20more%20about%20your%20services" class="whatsapp-btn">Contact Us on WhatsApp</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="FKN_Academy.html">Academy</a>
+        <a href="Education.html">Education</a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 FKN Trading Hub. All rights reserved. | Financial education for Kenyan investors</p>
+    </div>
+</footer>
+
+<script>
+// Function to show the selected topic and hide others
+function showTopic(topicId) {
+    // Hide all topic sections
+    var sections = document.getElementsByClassName('topic-section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+    }
     
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="FKN_Academy.html">Academy</a>
-            <a href="Education.html">Education</a>
-            <a href="https://wa.me/25469043920">Contact</a>
-        </div>
-        <p class="copyright">&copy; 2025 FKN Financial Hub. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Function to show selected topic and hide others
-        function showTopic(topicId) {
-            // Hide all topic sections
-            const sections = document.querySelectorAll('.topic-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show the selected topic section
-            document.getElementById(topicId).classList.add('active');
-            
-            // Update dropdown button text
-            const dropbtn = document.querySelector('.dropbtn');
-            const selectedTopic = document.querySelector(`a[onclick="showTopic('${topicId}')"]`).textContent;
-            dropbtn.textContent = selectedTopic;
-            
-            // Scroll to the top of the section
-            window.scrollTo({
-                top: document.getElementById(topicId).offsetTop - 100,
-                behavior: 'smooth'
-            });
-        }
-        
-        // Set the first topic as active by default
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show the first topic by default
-            showTopic('investing-intro');
-        });
-    </script>
+    // Show the selected topic section
+    document.getElementById(topicId).classList.add('active');
+    
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+}
+</script>
 </body>
 </html>
