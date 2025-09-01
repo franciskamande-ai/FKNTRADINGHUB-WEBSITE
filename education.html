@@ -7,337 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Education | FKN TRADING HUB</title>
     <style>
-        /* ===== BASE STYLES ===== */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* ===== NAVIGATION ===== */
-        nav {
-            background: rgba(255,255,255,0.95);
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #040c05;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin: 0 1rem;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #9910cf;
-        }
-        
-        nav a::after {
-            content: "|";
-            position: absolute;
-            right: -1.2rem;
-            color: #040c05;
-        }
-        
-        nav a:last-child::after {
-            display: none;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        /* ===== HEADER ===== */
-        header {
-            background: linear-gradient(135deg, #111, #222);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        /* ===== TOPIC SELECTOR ===== */
-        .topic-selector {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            text-align: center;
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            max-width: 400px;
-        }
-        
-        .dropbtn {
-            background-color: #9910cf;
-            color: white;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            text-align: left;
-            position: relative;
-        }
-        
-        .dropbtn:after {
-            content: "▼";
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.8rem;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 0 0 5px 5px;
-            overflow: hidden;
-        }
-        
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            transition: background-color 0.3s;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #9910cf;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown:hover .dropbtn {
-            border-radius: 5px 5px 0 0;
-        }
-        
-        /* ===== MAIN CONTENT ===== */
-        .education-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .topic-section {
-            display: none;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
-            animation: fadeIn 0.5s;
-        }
-        
-        .topic-section.active {
-            display: block;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        h2 {
-            color: #9910cf;
-            border-bottom: 2px solid #9910cf;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-        }
-        
-        h3 {
-            color: #6a0dad;
-        }
-        
-        h4 {
-            color: #5a67d8;
-        }
-        
-        .example-box {
-            background: #f5f5f5;
-            border-left: 4px solid #9910cf;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .concept-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .concept-card {
-            background: rgba(255,255,255,0.9);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            border: 1px solid #e0e0e0;
-        }
-        
-        .note-box {
-            background: #fff9e6;
-            border-left: 4px solid #ffcc00;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        .important-note {
-            background: #ffe6e6;
-            border-left: 4px solid #ff4d4d;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        .tip-box {
-            background: #e6ffe6;
-            border-left: 4px solid #00cc66;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 1rem;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            margin: 1rem 0;
-        }
-        
-        .contact-cta {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: linear-gradient(to right, #9910cf, #6a0dad);
-            color: white;
-            border-radius: 10px;
-        }
-        
-        .whatsapp-btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-        }
-        
-        /* ===== FOOTER ===== */
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #9910cf;
-        }
-        
-        .copyright {
-            margin-top: 1rem;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-        }
-        
-        /* ===== MEDIA QUERIES ===== */
-        @media (max-width: 900px) {
-            .concept-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                padding: 3rem 1.5rem;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .education-container {
-                padding: 1.5rem;
-            }
-            
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            nav a {
-                display: inline-block;
-                margin: 0.5rem 0;
-            }
-            
-            nav a::after {
-                display: none;
-            }
-            
-            .topic-section {
-                padding: 1.5rem;
-            }
-        }
+      /* ===== BASE STYLES ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4 {
+    color: #d4af37; /* gold */
+    margin-top: 1.2rem;
+}
+
+p, li {
+    color: #ccc;
+    font-size: 1.05rem;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background: #111;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d4af37; /* gold */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9910cf; /* purple hover */
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #111, #222);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #d4af37;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 1rem;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.content section {
+    margin-bottom: 2.5rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+footer .credit {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 0.8rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -1353,4 +1156,5 @@ plt.show()</pre>
     </script>
 </body>
 </html>
+
 
