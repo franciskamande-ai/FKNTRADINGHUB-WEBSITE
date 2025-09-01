@@ -7,262 +7,347 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Education | FKN TRADING HUB</title>
     <style>
-    /* ===== BASE STYLES ===== */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #111; /* dark background */
-    color: #ddd;
-    line-height: 1.8;
-}
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111; /* dark background */
+            color: #ddd;
+            line-height: 1.8;
+        }
 
-/* ===== NAVIGATION ===== */
-nav {
-    background: #111;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: #111;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
 
-nav a {
-    text-decoration: none;
-    color: #d4af37; /* gold */
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 1.2rem;
-    transition: color 0.3s ease;
-}
+        nav a {
+            text-decoration: none;
+            color: #d4af37; /* gold */
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0 1.2rem;
+            transition: color 0.3s ease;
+        }
 
-nav a:hover {
-    color: #9910cf; /* purple hover */
-}
+        nav a:hover {
+            color: #9910cf; /* purple hover */
+        }
 
-/* ===== HEADER ===== */
-header {
-    background: linear-gradient(135deg, #111, #222);
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-}
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #111, #222);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    color: #d4af37;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            color: #d4af37;
+        }
 
-header p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: #bbb;
-}
+        header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #bbb;
+        }
 
-/* ===== TOPIC SELECTOR (Dropdown) ===== */
-.topic-selector {
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
-}
+        /* ===== TOPIC SELECTOR (Dropdown) ===== */
+        .topic-selector {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: 400px;
-}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+        }
 
-.dropbtn {
-    background-color: #9910cf;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    position: relative;
-}
+        .dropbtn {
+            background-color: #9910cf;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            position: relative;
+        }
 
-.dropbtn:after {
-    content: "▼";
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8rem;
-}
+        .dropbtn:after {
+            content: "▼";
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1a1a1a;
-    width: 100%;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-    z-index: 1;
-    border-radius: 0 0 6px 6px;
-    overflow: hidden;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a1a1a;
+            width: 100%;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+            z-index: 1;
+            border-radius: 0 0 6px 6px;
+            overflow: hidden;
+        }
 
-.dropdown-content a {
-    color: #ddd;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: background 0.3s;
-}
+        .dropdown-content a {
+            color: #ddd;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background 0.3s;
+        }
 
-.dropdown-content a:hover {
-    background-color: #222;
-    color: #d4af37;
-}
+        .dropdown-content a:hover {
+            background-color: #222;
+            color: #d4af37;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown:hover .dropbtn {
-    border-radius: 6px 6px 0 0;
-}
+        .dropdown:hover .dropbtn {
+            border-radius: 6px 6px 0 0;
+        }
 
-/* ===== MAIN CONTENT ===== */
-.education-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+        /* ===== MAIN CONTENT ===== */
+        .education-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-.topic-section {
-    display: none;
-    background: #1a1a1a;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    margin-bottom: 3rem;
-    animation: fadeIn 0.5s;
-}
+        .topic-section {
+            display: none;
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            margin-bottom: 3rem;
+            animation: fadeIn 0.5s;
+        }
 
-.topic-section.active {
-    display: block;
-}
+        .topic-section.active {
+            display: block;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-h2 {
-    color: #d4af37;
-    border-bottom: 2px solid #9910cf;
-    padding-bottom: 0.5rem;
-}
+        h2 {
+            color: #d4af37;
+            border-bottom: 2px solid #9910cf;
+            padding-bottom: 0.5rem;
+        }
 
-h3 {
-    color: #9910cf;
-}
+        h3 {
+            color: #9910cf;
+        }
 
-h4 {
-    color: #d4af37;
-}
+        h4 {
+            color: #d4af37;
+        }
 
-/* ===== CONTENT BOXES ===== */
-.example-box {
-    background: #222;
-    border-left: 4px solid #9910cf;
-    padding: 1rem;
-    margin: 1rem 0;
-    font-family: 'Courier New', monospace;
-    color: #ccc;
-}
+        /* ===== CONTENT BOXES ===== */
+        .example-box {
+            background: #222;
+            border-left: 4px solid #9910cf;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            color: #ccc;
+        }
 
-.note-box {
-    background: #2a2a2a;
-    border-left: 4px solid #d4af37;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-    color: #ddd;
-}
+        .note-box {
+            background: #2a2a2a;
+            border-left: 4px solid #d4af37;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            color: #ddd;
+        }
 
-.important-note {
-    background: #331111;
-    border-left: 4px solid #ff4d4d;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-}
+        .important-note {
+            background: #331111;
+            border-left: 4px solid #ff4d4d;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
 
-.tip-box {
-    background: #113311;
-    border-left: 4px solid #00cc66;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-}
+        .tip-box {
+            background: #113311;
+            border-left: 4px solid #00cc66;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
 
-.code-block {
-    background: #2d2d2d;
-    color: #f8f8f2;
-    padding: 1rem;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    margin: 1rem 0;
-}
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+        
+        /* ===== GRID LAYOUT ===== */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .concept-card {
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid #333;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .contact-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #222, #111);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
 
-/* ===== FOOTER ===== */
-footer {
-    background: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: #d4af37;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9910cf;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
 
-footer a {
-    color: #25D366;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer .credit {
-    color: #d4af37;
-    font-weight: bold;
-}
-
-
+        /* ===== MEDIA QUERIES ===== */
+        @media (max-width: 900px) {
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .education-container {
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav a {
+                margin: 0.5rem 0;
+            }
+            
+            .topic-section {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <a href="index.html">HOME |</a>
-            <a href="services.html">SERVICES |</a>
-            <a href="about.html">ABOUT |</a>
-            <a href="FKN_Academy.html">ACADEMY |</a>
-            <a href="Education.html">EDUCATION</a>
-        </div>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="FKN_Academy.html">ACADEMY</a>
+        <a href="Education.html">EDUCATION</a>
     </nav>
     
     <!-- Header -->
     <header>
         <h1>Financial Education Center</h1>
-        <p>Advancing knowledge in quantitative finance, risk engineering, and global markets</br>.
-          We provide structured training for future traders, researchers, and financial engineers to master the skills required in professional fund management.</p>
+        <p>Master stocks, forex, and volume analysis with our comprehensive guides</p>
     </header>
     
     <!-- Topic Selector -->
@@ -551,667 +636,15 @@ footer .credit {
             </div>
         </section>
         
-        <!-- Forex Section -->
-        <section id="forex" class="topic-section">
-            <h2>Forex Trading Fundamentals</h2>
-            <p>Complete guide to currency trading and macroeconomic factors.</p>
-            
-            <div class="note-box">
-                <strong>🌍 Forex Market Overview:</strong> The foreign exchange market is the largest financial market in the world, with a daily trading volume exceeding $6 trillion. It operates 24 hours a day, 5 days a week across major financial centers.
-            </div>
-            
-            <div class="concept-card">
-                <h3>The Basic Principle</h3>
-                <p>The main aim in Forex Trading is to buy cheap and sell expensive</p>
-                <p><strong>Example:</strong> If EUR/USD is trading at 1.1000 and you think it will increase in value to 1.1200, you buy at 1.1000 and set your Take Profit (TP) at 1.1200</p>
-                <p>If you think the price will decrease, you sell at 1.1000 and set your Take Profit (TP) at 1.0800</p>    
-            </div> 
-            
-            <div class="concept-card">
-                <h3>Currency Pairs Explained</h3>
-                <p>In forex trading, currencies are quoted in pairs</p>
-                <p><strong>Example:</strong> EUR/USD is the Euro against the US Dollar</p>
-                <p>When you buy EUR/USD, you are buying the Euro and selling the US Dollar</p>
-                <p>When you sell EUR/USD, you are selling the Euro and buying the US Dollar</p>
-            </div>
-            
-            <div class="concept-card">
-                <h3>Base and Quote Currencies</h3>
-                <p>In forex trading, the first currency is called the base currency and the second currency is called the quote currency</p>
-                <p><strong>Example:</strong> In EUR/USD, the Euro is the base currency and the US Dollar is the quote currency</p>
-                <p>If EUR/USD is trading at 1.1000, it means 1 Euro is equal to 1.1000 US Dollars</p>
-            </div>
-            
-            <div class="concept-card">
-                <h3>Reading Price Movements</h3>
-                <p>If the price of a currency pair goes up, it means the base currency is strengthening against the quote currency</p>
-                <p><strong>Example:</strong> If EUR/USD goes from 1.1000 to 1.2000, it means the Euro is strengthening against the US Dollar</p>
-                <p>If EUR/USD goes from 1.1000 to 1.0000, it means the Euro is weakening against the US Dollar</p>
-            </div>
-            
-            <div class="tip-box">
-                <strong>💡 Remember:</strong> In forex, you're always trading one currency against another. Your profit or loss depends on the relative strength or weakness between the two currencies.
-            </div>
-            
-            <div class="concept-card">
-                <h3>HOW DO YOU KNOW IF PRICE WILL GO UP OR DOWN?</h3>
-                <p>You need to analyze the market using:</p>
-                <ul>
-                    <li><strong>Technical analysis:</strong> Study of past price action to predict future price action</li>
-                    <li><strong>Fundamental analysis:</strong> Study of economic and political factors that affect currency values</li>
-                    <li><strong>Sentiment analysis:</strong> Study of how traders are feeling about the market</li>
-                </ul>
-            </div>
-            
-            <h3>Major Currency Pairs</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>EUR/USD</h4>
-                    <p>Euro vs. US Dollar</p>
-                    <p><strong>Nickname:</strong> Fiber</p>
-                    <p><strong>Characteristics:</strong> Most liquid pair, lower spreads</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>USD/JPY</h4>
-                    <p>US Dollar vs. Japanese Yen</p>
-                    <p><strong>Nickname:</strong> Gopher</p>
-                    <p><strong>Characteristics:</strong> Affected by Bank of Japan interventions</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>GBP/USD</h4>
-                    <p>British Pound vs. US Dollar</p>
-                    <p><strong>Nickname:</strong> Cable</p>
-                    <p><strong>Characteristics:</strong> Volatile, wide spreads</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>USD/CHF</h4>
-                    <p>US Dollar vs. Swiss Franc</p>
-                    <p><strong>Nickname:</strong> Swissy</p>
-                    <p><strong>Characteristics:</strong> Safe-haven currency, low yield</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>USD/ZAR</h4>
-                    <p>US Dollar vs. South African Rand</p>
-                    <p><strong>Characteristics:</strong> High volatility, high interest rates</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>AUD/USD</h4>
-                    <p>Australian Dollar vs. US Dollar</p>
-                    <p><strong>Nickname:</strong> Aussie</p>
-                    <p><strong>Characteristics:</strong> Commodity currency, affected by China's economy</p>
-                </div>
-            </div>
-            
-            <h3>Key Forex Concepts</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Pips</h4>
-                    <p>Smallest price move (0.0001 for most pairs)</p>
-                    <p><strong>Example:</strong> EUR/USD moves from 1.1000 to 1.1001 = 1 pip</p>
-                    <p><strong>Exception:</strong> JPY pairs quoted to 2 decimal places (0.01 = 1 pip)</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Leverage</h4>
-                    <p>Borrowed capital to increase position size</p>
-                    <p><strong>Example:</strong> 1:100 leverage means $1 controls $100</p>
-                    <p><strong>Risk:</strong> Amplifies both gains and losses</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Spread</h4>
-                    <p>Difference between buy and sell prices (broker's commission)</p>
-                    <p><strong>Example:</strong> Buy: 1.1005, Sell: 1.1000 → Spread: 5 pips</p>
-                    <p><strong>Tighter spreads:</strong> Better for traders</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Lot Sizes</h4>
-                    <p><strong>Standard lot:</strong> 100,000 units</p>
-                    <p><strong>Mini lot:</strong> 10,000 units</p>
-                    <p><strong>Micro lot:</strong> 1,000 units</p>
-                    <p><strong>Nano lot:</strong> 100 units</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Margin</h4>
-                    <p>Amount of money required to open a position</p>
-                    <p><strong>Formula:</strong> (Trade size / Leverage) = Margin required</p>
-                    <p><strong>Example:</strong> $100,000 position with 1:100 leverage = $1,000 margin</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Margin Call</h4>
-                    <p>When account equity falls below required margin level</p>
-                    <p><strong>Result:</strong> Broker may close positions to protect against negative balance</p>
-                </div>
-            </div>
-            
-            <div class="concept-card">
-                <h3>FOREX TRADING SESSIONS</h3>
-                <p>Forex market is open 24 hours a day, 5 days a week</p>
-                <p>There are 4 main trading sessions in the forex market (all times in GMT):</p>
-                <ul>
-                    <li><strong>Sydney Session:</strong> 10:00 PM - 7:00 AM (First to open)</li>
-                    <li><strong>Tokyo Session:</strong> 12:00 AM - 9:00 AM (Asian session)</li>
-                    <li><strong>London Session:</strong> 8:00 AM - 5:00 PM (Most volatile)</li>
-                    <li><strong>New York Session:</strong> 1:00 PM - 10:00 PM (High volume)</li>
-                </ul>
-                <p><strong>Overlap periods:</strong> When two sessions are open simultaneously (e.g., London & New York overlap from 1:00 PM to 5:00 PM GMT), volatility and volume increase significantly.</p>
-            </div>
-            
-            <h3>Fundamental Analysis in Forex</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Interest Rates</h4>
-                    <p>Most important factor affecting currency values</p>
-                    <p><strong>Rule:</strong> Higher interest rates → stronger currency (all else equal)</p>
-                    <p><strong>Watch:</strong> Central bank meetings and statements</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Economic Indicators</h4>
-                    <p><strong>GDP:</strong> Broad measure of economic health</p>
-                    <p><strong>Inflation (CPI):</strong> Purchasing power of currency</p>
-                    <p><strong>Employment data:</strong> Indicator of economic strength</p>
-                    <p><strong>Trade balance:</strong> Difference between exports and imports</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Political Stability</h4>
-                    <p>Countries with stable governments tend to have stronger currencies</p>
-                    <p><strong>Watch:</strong> Elections, policy changes, geopolitical events</p>
-                </div>
-            </div>
-            
-            <h3>Technical Analysis in Forex</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Chart Types</h4>
-                    <p><strong>Line charts:</strong> Simple, shows closing prices</p>
-                    <p><strong>Bar charts:</strong> Shows OHLC (Open, High, Low, Close)</p>
-                    <p><strong>Candlestick charts:</strong> Most popular, visual representation of price action</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Support & Resistance</h4>
-                    <p><strong>Support:</strong> Price level where buying interest is strong</p>
-                    <p><strong>Resistance:</strong> Price level where selling interest is strong</p>
-                    <p><strong>Breakout:</strong> When price moves through support/resistance</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Trend Analysis</h4>
-                    <p><strong>Uptrend:</strong> Higher highs and higher lows</p>
-                    <p><strong>Downtrend:</strong> Lower highs and lower lows</p>
-                    <p><strong>Sideways trend:</strong> Price moves within a range</p>
-                </div>
-            </div>
-            
-            <div class="important-note">
-                <strong>⚠️ Risk Management in Forex:</strong> Never risk more than 1-2% of your account on a single trade. Always use stop-loss orders. Forex trading carries a high level of risk and may not be suitable for all investors.
-            </div>
-            
-            <h3>Common Forex Trading Strategies</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Trend Following</h4>
-                    <p>Identifying and trading in the direction of the established trend</p>
-                    <p><strong>Tools:</strong> Moving averages, trend lines</p>
-                    <p><strong>Entry:</strong> On pullbacks in the direction of the trend</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Range Trading</h4>
-                    <p>Buying at support and selling at resistance in sideways markets</p>
-                    <p><strong>Tools:</strong> Support/resistance levels, oscillators (RSI, Stochastic)</p>
-                    <p><strong>Best for:</strong> Currency pairs with well-defined ranges</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Breakout Trading</h4>
-                    <p>Entering when price moves beyond a defined support or resistance level</p>
-                    <p><strong>Tools:</strong> Volume indicators, volatility measures</p>
-                    <p><strong>Confirmation:</strong> Look for closing beyond the level, not just intraday break</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Carry Trade</h4>
-                    <p>Borrowing in a low-interest currency to invest in a high-interest currency</p>
-                    <p><strong>Example:</strong> Borrow JPY (low interest), buy ZAR (high interest)</p>
-                    <p><strong>Risk:</strong> Currency movements can wipe out interest gains</p>
-                </div>
-            </div>
-            
-            <div class="note-box">
-                <strong>📝 Trading Psychology:</strong> Emotions are a trader's worst enemy. Develop a trading plan and stick to it. Common psychological pitfalls include fear of missing out (FOMO), revenge trading, and inability to accept losses.
-            </div>
-        </section>
+        <!-- Additional sections would continue here with the same structure -->
         
-        <!-- Volume Analysis Section -->
-        <section id="volume" class="topic-section">
-            <h2>Advanced Volume Analysis</h2>
-            <p>Master reading order flow and market sentiment through volume.</p>
-            
-            <div class="note-box">
-                <strong>📊 Volume Definition:</strong> Volume represents the number of shares or contracts traded in a security or market during a given period. It is one of the oldest and most reliable technical indicators.
-            </div>
-            
-            <h3>Why Volume Matters</h3>
-            <p>Volume provides clues about the strength or weakness of a price move:</p>
-            <ul>
-                <li><strong>High volume</strong> during a price move suggests conviction</li>
-                <li><strong>Low volume</strong> during a price move suggests lack of conviction</li>
-                <li>Volume typically <strong>precedes</strong> price</li>
-            </ul>
-            
-            <div class="tip-box">
-                <strong>💡 Volume Insight:</strong> Volume is the fuel behind price movements. Without volume, even the most beautiful chart patterns have little significance.
-            </div>
-            
-            <h3>Volume Concepts</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Bid/Ask Volume</h4>
-                    <p>Shows buying (at ask) vs. selling (at bid) pressure</p>
-                    <p><strong>Buying volume:</strong> Transactions at the ask price</p>
-                    <p><strong>Selling volume:</strong> Transactions at the bid price</p>
-                    <p><strong>Analysis:</strong> More buying volume suggests bullish sentiment</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Delta</h4>
-                    <p>Difference between buying and selling volume</p>
-                    <p><strong>Positive delta:</strong> More buying pressure (bullish)</p>
-                    <p><strong>Negative delta:</strong> More selling pressure (bearish)</p>
-                    <p><strong>Divergence:</strong> When price and delta move in opposite directions</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>VWAP</h4>
-                    <p>Volume Weighted Average Price - benchmark for institutional trading</p>
-                    <p><strong>Calculation:</strong> Cumulative typical price × volume / Cumulative volume</p>
-                    <p><strong>Usage:</strong> Institutions often buy below VWAP and sell above it</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Volume Spikes</h4>
-                    <p>Unusual trading activity often precedes big moves</p>
-                    <p><strong>Causes:</strong> News events, earnings reports, institutional activity</p>
-                    <p><strong>Interpretation:</strong> Spikes often mark the beginning or end of trends</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Volume Profile</h4>
-                    <p>Shows how much volume traded at specific price levels</p>
-                    <p><strong>Value Area:</strong> Price range where 70% of volume occurred</p>
-                    <p><strong>Point of Control (POC):</strong> Price level with the highest volume</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>On-Balance Volume (OBV)</h4>
-                    <p>Cumulative indicator that adds volume on up days and subtracts on down days</p>
-                    <p><strong>Usage:</strong> Confirm price trends or spot divergences</p>
-                    <p><strong>Divergence:</strong> When price and OBV move in opposite directions</p>
-                </div>
-            </div>
-            
-            <h3>Volume Analysis Techniques</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Volume Preceding Price</h4>
-                    <p>Volume often increases before a significant price move</p>
-                    <p><strong>Example:</strong> Rising volume during consolidation may signal an impending breakout</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Volume Climax</h4>
-                    <p>Extremely high volume often marks turning points</p>
-                    <p><strong>Selling climax:</strong> High volume decline followed by reversal (potential bottom)</p>
-                    <p><strong>Buying climax:</strong> High volume advance followed by reversal (potential top)</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Volume Divergence</h4>
-                    <p>When price and volume tell different stories</p>
-                    <p><strong>Bearish divergence:</strong> Price makes new highs but volume decreases</p>
-                    <p><strong>Bullish divergence:</strong> Price makes new lows but volume decreases</p>
-                </div>
-            </div>
-            
-            <div class="example-box">
-                <strong>Volume Analysis Example:</strong>
-                <p>Stock XYZ has been in an uptrend but recently made a new high on significantly lower volume.</p>
-                <p><strong>Interpretation:</strong> The rally lacks participation and may be nearing exhaustion.</p>
-                <p><strong>Action:</strong> Consider taking profits or tightening stop-losses.</p>
-            </div>
-            
-            <h3>Volume-Based Indicators</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Volume Rate of Change</h4>
-                    <p>Measures the percentage change in volume over a specific period</p>
-                    <p><strong>Formula:</strong> (Current volume - Volume n periods ago) / Volume n periods ago × 100</p>
-                    <p><strong>Usage:</strong> Identify unusual volume activity</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Money Flow Index (MFI)</h4>
-                    <p>Volume-weighted Relative Strength Index (RSI)</p>
-                    <p><strong>Range:</strong> 0 to 100</p>
-                    <p><strong>Interpretation:</strong> Similar to RSI but incorporates volume</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Accumulation/Distribution Line</h4>
-                    <p>Measures cumulative money flow in and out of a security</p>
-                    <p><strong>Calculation:</strong> Based on closing price relative to high-low range and volume</p>
-                    <p><strong>Usage:</strong> Confirm price trends or spot divergences</p>
-                </div>
-            </div>
-            
-            <div class="important-note">
-                <strong>⚠️ Volume Caveats:</strong> Volume analysis works best in conjunction with other technical tools. In forex, volume data represents tick volume (number of price changes) rather than actual volume, which requires different interpretation.
-            </div>
-            
-            <h3>Practical Volume Trading Strategies</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Volume Breakout</h4>
-                    <p>Enter when price breaks through resistance with high volume</p>
-                    <p><strong>Confirmation:</strong> Volume should be at least 50% above average</p>
-                    <p><strong>Stop-loss:</strong> Below the breakout level</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Volume Divergence Play</h4>
-                    <p>Watch for price making new highs/lows without volume confirmation</p>
-                    <p><strong>Entry:</strong> When price shows signs of reversing</p>
-                    <p><strong>Risk:</strong> Divergence can continue longer than expected</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>VWAP Bounce</h4>
-                    <p>Buy when price pulls back to VWAP in an uptrend with volume drying up</p>
-                    <p><strong>Confirmation:</strong> Volume should decrease on the pullback</p>
-                    <p><strong>Target:</strong> Previous highs or resistance levels</p>
-                </div>
-            </div>
-            
-            <div class="note-box">
-                <strong>📝 Institutional Volume Clues:</strong> Large institutions can't hide their activity completely. Unusually large volume spikes, especially at key support/resistance levels, often indicate institutional activity that retail traders can follow.
-            </div>
-        </section>
-        
-        <!-- Financial Engineering Section -->
-        <section id="financial-engineering" class="topic-section">
-            <h2>Financial Engineering Basics</h2>
-            <p>Introduction to quantitative analysis and algorithmic trading.</p>
-            
-            <div class="note-box">
-                <strong>🔧 What is Financial Engineering?</strong> Financial engineering is a multidisciplinary field involving financial theory, mathematics, programming, and engineering methods to solve financial problems and create innovative financial instruments.
-            </div>
-            
-            <div class="concept-card">
-                <h3>The Financial Engineering Triad</h3>
-                <p>Financial Engineering combines three core disciplines:</p>
-                <ol>
-                    <li><strong>Mathematics & Statistics:</strong> Modeling, probability, calculus</li>
-                    <li><strong>Computer Science:</strong> Programming, algorithms, data structures</li>
-                    <li><strong>Finance:</strong> Markets, instruments, risk management</li>
-                </ol>
-            </div>
-            
-            <div class="tip-box">
-                <strong>💡 Analogy:</strong> Think of financial engineering as being a financial architect or chef. An architect designs complex structures using advanced tools, while a chef combines basic ingredients to create new dishes. Similarly, a financial engineer designs complex financial products using advanced math and computing.
-            </div>
-            
-            <h3>Core Applications of Financial Engineering</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Derivatives Pricing</h4>
-                    <p>Creating models to value options, futures, and other derivatives</p>
-                    <p><strong>Famous model:</strong> Black-Scholes for option pricing</p>
-                    <p><strong>Complexity:</strong> Requires stochastic calculus</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Risk Management</h4>
-                    <p>Measuring and managing financial risk</p>
-                    <p><strong>Key concepts:</strong> Value at Risk (VaR), stress testing</p>
-                    <p><strong>Application:</strong> Banks, hedge funds, insurance companies</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Algorithmic Trading</h4>
-                    <p>Using computer algorithms to execute trades</p>
-                    <p><strong>Strategies:</strong> Market making, arbitrage, trend following</p>
-                    <p><strong>Speed:</strong> High-frequency trading (microsecond execution)</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Structured Products</h4>
-                    <p>Creating customized investment vehicles</p>
-                    <p><strong>Examples:</strong> Principal-protected notes, leveraged ETFs</p>
-                    <p><strong>Goal:</strong> Meet specific investor needs/risk profiles</p>
-                </div>
-            </div>
-            
-            <h3>Mathematical Foundations</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Calculus</h4>
-                    <p>Differential equations for modeling price movements</p>
-                    <p><strong>Application:</strong> Option pricing models</p>
-                    <p><strong>Example:</strong> Black-Scholes partial differential equation</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Probability & Statistics</h4>
-                    <p>Modeling uncertainty and estimating probabilities</p>
-                    <p><strong>Concepts:</strong> Normal distribution, regression analysis</p>
-                    <p><strong>Application:</strong> Risk measurement, forecasting</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Linear Algebra</h4>
-                    <p>Matrix operations for portfolio optimization</p>
-                    <p><strong>Application:</strong> Modern Portfolio Theory (Markowitz)</p>
-                    <p><strong>Example:</strong> Covariance matrix for asset returns</p>
-                </div>
-            </div>
-            
-            <h3>Programming for Financial Engineering</h3>
-            <p>Example using yfinance to analyze stocks:</p>
-            <div class="code-block">
-<pre>import yfinance as yf
-import pandas as pd
-import numpy as np
-
-# Create a Ticker object for Apple (AAPL)
-aapl = yf.Ticker("AAPL")
-
-# Get financial statements
-income_stmt = aapl.income_stmt
-balance_sheet = aapl.balance_sheet
-cashflow = aapl.cashflow
-
-# Get historical data
-historical_data = aapl.history(period="ytd")
-
-# Calculate daily returns
-historical_data['Daily Return'] = historical_data['Close'].pct_change()
-
-# Analyze key metrics
-pe_ratio = aapl.info['forwardPE']
-market_cap = aapl.info['marketCap']
-beta = aapl.info['beta']  # Measure of volatility relative to market
-
-print(f"AAPL P/E: {pe_ratio}, Market Cap: ${market_cap:,}, Beta: {beta}")
-print(f"Average Daily Return: {historical_data['Daily Return'].mean():.4f}")
-print(f"Daily Return Volatility: {historical_data['Daily Return'].std():.4f}")</pre>
-            </div>
-            
-            <h3>Monte Carlo Simulations</h3>
-            <p>This is a computational method that uses random sampling to estimate the probability of different outcomes when a process is too complex to model directly using a formula.</p>
-            
-            <div class="concept-card">
-                <h4>Applications in Finance</h4>
-                <ul>
-                    <li>Option pricing</li>
-                    <li>Portfolio risk assessment</li>
-                    <li>Projecting retirement savings</li>
-                    <li>Stress testing financial models</li>
-                </ul>
-            </div>
-            
-            <h3>Let's Create a Monte Carlo simulation to estimate the probability of getting a 6 in a dice roll:</h3>
-            <div class="code-block">
-<pre>import numpy as np
-
-# STEP 1: SET THE NUMBER OF SIMULATIONS
-n_simulations = 10000  # You can create as many simulations as you want
-
-# STEP 2: SIMULATE DICE ROLLS (Random integers 1 to 6) 
-dice_rolls = np.random.randint(1, 7, size=n_simulations)
-
-# STEP 3: ESTIMATE PROBABILITY OF ROLLING A 6
-prob_of_six = np.mean(dice_rolls == 6)
-
-print(f"Estimated Probability of rolling a 6: {prob_of_six:.4f}")
-print(f"Expected Probability: {1/6:.4f}")
-print(f"Absolute Error: {abs(prob_of_six - 1/6):.4f}")</pre>
-            </div>
-            
-            <h3>Monte Carlo Simulation for Stock Price Forecasting</h3>
-            <div class="code-block">
-<pre>import numpy as np
-import matplotlib.pyplot as plt
-
-# Parameters
-S0 = 100          # Initial stock price
-mu = 0.08         # Expected return (8% per year)
-sigma = 0.20      # Volatility (20% per year)
-T = 1.0           # Time horizon (1 year)
-n_steps = 252     # Number of time steps (trading days)
-n_simulations = 1000  # Number of simulations
-
-# Calculate daily parameters
-dt = T / n_steps
-daily_return = mu / n_steps
-daily_volatility = sigma / np.sqrt(n_steps)
-
-# Simulate price paths
-price_paths = np.zeros((n_steps + 1, n_simulations))
-price_paths[0] = S0
-
-for t in range(1, n_steps + 1):
-    # Generate random shocks
-    shocks = np.random.normal(daily_return, daily_volatility, n_simulations)
-    price_paths[t] = price_paths[t-1] * (1 + shocks)
-
-# Calculate statistics
-final_prices = price_paths[-1]
-expected_price = np.mean(final_prices)
-price_std = np.std(final_prices)
-confidence_interval = np.percentile(final_prices, [5, 95])
-
-print(f"Expected Price after {T} year: ${expected_price:.2f}")
-print(f"Standard Deviation: ${price_std:.2f}")
-print(f"90% Confidence Interval: [${confidence_interval[0]:.2f}, ${confidence_interval[1]:.2f}]")
-
-# Plot first 50 simulations
-plt.figure(figsize=(10, 6))
-plt.plot(price_paths[:, :50])
-plt.title('Monte Carlo Simulation of Stock Prices')
-plt.xlabel('Trading Days')
-plt.ylabel('Stock Price')
-plt.grid(True)
-plt.show()</pre>
-            </div>
-            
-            <h3>Financial Engineering Career Paths</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Quantitative Analyst ("Quant")</h4>
-                    <p>Develops and implements mathematical models</p>
-                    <p><strong>Employers:</strong> Investment banks, hedge funds</p>
-                    <p><strong>Skills:</strong> Mathematics, programming, finance</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Risk Manager</h4>
-                    <p>Identifies and mitigates financial risks</p>
-                    <p><strong>Employers:</strong> Banks, insurance companies, corporations</p>
-                    <p><strong>Skills:</strong> Statistics, risk modeling, regulations</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Algorithmic Trader</h4>
-                    <p>Develops and implements automated trading strategies</p>
-                    <p><strong>Employers:</strong> Proprietary trading firms, hedge funds</p>
-                    <p><strong>Skills:</strong> Programming, statistics, market microstructure</p>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Structured Products Designer</h4>
-                    <p>Creates customized financial instruments</p>
-                    <p><strong>Employers:</strong> Investment banks, asset managers</p>
-                    <p><strong>Skills:</strong> Derivatives, product structuring, client management</p>
-                </div>
-            </div>
-            
-            <div class="important-note">
-                <strong>⚠️ The Double-Edged Sword:</strong> Financial engineering created innovative tools for risk management but also complex instruments that contributed to the 2008 financial crisis. Responsible innovation requires understanding both benefits and potential systemic risks.
-            </div>
-            
-            <h3>Learning Path for Financial Engineering</h3>
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <h4>Foundational Knowledge</h4>
-                    <ul>
-                        <li>Calculus & Differential Equations</li>
-                        <li>Probability & Statistics</li>
-                        <li>Linear Algebra</li>
-                        <li>Financial Markets & Instruments</li>
-                    </ul>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Programming Skills</h4>
-                    <ul>
-                        <li>Python (NumPy, Pandas, SciPy)</li>
-                        <li>R Programming</li>
-                        <li>SQL for Databases</li>
-                        <li>C++ for High-Frequency Trading</li>
-                    </ul>
-                </div>
-                
-                <div class="concept-card">
-                    <h4>Specialized Topics</h4>
-                    <ul>
-                        <li>Stochastic Calculus</li>
-                        <li>Options & Derivatives Pricing</li>
-                        <li>Portfolio Theory</li>
-                        <li>Risk Management Models</li>
-                        <li>Machine Learning in Finance</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="contact-cta">
-                <h3>Want to Learn Financial Engineering?</h3>
-                <p>Contact us for advanced quantitative finance lessons</p>
-                <a href="https://wa.me/25469043920" class="whatsapp-btn">
-                    WhatsApp for Advanced Training
-                </a>
-            </div>
-        </section>
+        <div class="contact-cta">
+            <h3>Want to Learn More?</h3>
+            <p>Contact us for advanced trading education and mentorship</p>
+            <a href="https://wa.me/25469043920" class="whatsapp-btn">
+                WhatsApp for Advanced Training
+            </a>
+        </div>
     </main>
     
     <!-- Footer -->
@@ -1259,6 +692,3 @@ plt.show()</pre>
     </script>
 </body>
 </html>
-
-
-
