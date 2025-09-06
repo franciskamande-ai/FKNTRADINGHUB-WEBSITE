@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Trading | FKN TRADING HUB</title>
+    <style>
+        /* ===== BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #000;
+            color: #d4af37;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.85;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d4af37;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        nav a:hover {
+            color: #9910cf;
+            background: rgba(153, 16, 207, 0.1);
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        .widget-section {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            margin-bottom: 2rem;
+        }
+
+        .widget-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .widget-info {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #aaa;
+        }
+
+        /* Education & Strategies Sections */
+        .education-section {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: #9910cf;
+            border-bottom: 2px solid #9910cf;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .concept-card {
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+            border: 1px solid #333;
+        }
+
+        .concept-card h3 {
+            color: #d4af37;
+            margin-bottom: 0.8rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #d4af37;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #9910cf;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">FKN TRADING HUB</div>
+        <div class="tagline">Your Gateway to Financial Markets</div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="investments.html">INVESTMENTS</a>
+            <a href="services.html">SERVICES</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="options.html">OPTIONS</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Options Trading Center</h1>
+
+        <!-- Options Widget Section -->
+        <section class="widget-section">
+            <h2 class="section-title">Live Options Chain</h2>
+            <p class="widget-info">Analyze real-time options data for various assets. Use the filters to find trading opportunities.</p>
+
+            <div class="widget-container">
+                <iframe width="100%" height="560" src="//widget2.sentryd.com/widget/#/e7cdbe22-a1c5-4fdf-a893-547943aaf59d" frameborder="0" style="border-radius: 8px; min-height: 560px;"></iframe>
+            </div>
+
+            <p class="widget-info">This widget provides real-time options data. Refresh the page if the widget doesn't load immediately.</p>
+        </section>
+
+        <!-- Options Education Section -->
+        <section class="education-section">
+            <h2 class="section-title">Options Trading Basics</h2>
+            <p>Options are financial derivatives that give buyers the right, but not the obligation, to buy or sell an underlying asset at an agreed-upon price and date.</p>
+
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>Call Options</h3>
+                    <p>Give the holder the right to buy an asset at a specific price within a specific time period.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Put Options</h3>
+                    <p>Give the holder the right to sell an asset at a specific price within a specific time period.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Strike Price</h3>
+                    <p>The predetermined price at which an option can be exercised.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Expiration Date</h3>
+                    <p>The date on which an option contract becomes void.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Premium</h3>
+                    <p>The price paid by the buyer to the seller to acquire the option rights.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>In-the-Money (ITM)</h3>
+                    <p>A call option is ITM when the underlying price is above the strike price. A put option is ITM when the underlying price is below the strike price.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Options Strategies Section -->
+        <section class="education-section">
+            <h2 class="section-title">Common Options Strategies</h2>
+
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>Covered Call</h3>
+                    <p>Writing call options against a long position in the underlying asset.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Protective Put</h3>
+                    <p>Buying put options to protect against a decline in the value of a long position.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Straddle</h3>
+                    <p>Buying both a call and a put option with the same strike price and expiration date.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Iron Condor</h3>
+                    <p>Selling an out-of-the-money call spread and an out-of-the-money put spread.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="investments.html">Investments</a>
+            <a href="services.html">Services</a>
+            <a href="education.html">Education</a>
+            <a href="options.html">Options</a>
+            <a href="https://wa.me/254769043920">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2023 FKN Financial Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
