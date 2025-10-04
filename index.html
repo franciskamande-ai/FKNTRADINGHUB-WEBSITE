@@ -32,40 +32,105 @@
         overflow-x: hidden; /* Add this line only */
     }
 
-    /* Navigation Bar */
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 50px;
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    transition: .3s;
+    padding: 5px 0;
+    position: relative;
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9910cf;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D4AF37;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
     nav {
-      background: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
     }
-
+    
     nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
+        margin-top: 15px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: 100%;
+        padding: 10px 0;
     }
-
+    
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+    
     nav ul li {
-      margin: 0 1.5rem;
+        margin: 0 10px;
+        flex-shrink: 0;
     }
-
+    
+    nav ul li:first-child {
+        margin-left: 5px;
+    }
+    
+    nav ul li:last-child {
+        margin-right: 5px;
+    }
+    
     nav ul li a {
-      text-decoration: none;
-      color: #d4af37; /* gold */
-      font-weight: bold;
-      transition: color 0.3s ease;
+        padding: 8px 16px;
+        background: #222;
+        border-radius: 20px;
+        border: 1px solid #444;
     }
-
-    nav ul li a:hover {
-      color: #9910cf; /* purple hover */
-    }
-
+}
     /* Hero Section */
     .hero {
       padding: 80px 20px;
@@ -172,6 +237,7 @@
 <body>
   <!-- Navigation -->
   <nav>
+      <div class="logo">FKN Capital</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -181,7 +247,6 @@
       <li><a href="https://wa.me/254769043920?">Contact</a></li>
       <li><a href="options.html">Options</a></li>
       <li><a href="https://fknlabs.netlify.app/">FKNLABS</a></li>
-
     </ul>
   </nav>
 
@@ -253,6 +318,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
