@@ -11,41 +11,140 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
 /* ===== BASE STYLES ===== */
+* {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #111; /* dark background */
+    background-color: #111;
     color: #ddd;
     line-height: 1.8;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* ===== NAVIGATION ===== */
 nav {
-    background: #111;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 50px;
+    background: #000;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 100;
+    gap: 50px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #d4af37; /* gold */
-    text-transform: uppercase;
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #D4AF37;
     font-weight: bold;
-    margin: 0 1.2rem;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #9910cf; /* purple hover */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
+nav ul li a {
+    font-weight: bold;
+    transition: .3s;
+    padding: 5px 0;
+    position: relative;
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9910cf;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D4AF37;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+        flex-shrink: 0;
+    }
+    
+    nav ul li:first-child {
+        margin-left: 5px;
+    }
+    
+    nav ul li:last-child {
+        margin-right: 5px;
+    }
+    
+    nav ul li a {
+        padding: 8px 16px;
+        background: #222;
+        border-radius: 20px;
+        border: 1px solid #444;
+    }
+
+    /* Keep your existing mobile styles */
+    header {
+        padding: 3rem 1.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .education-container {
+        padding: 1.5rem;
+    }
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+    .topic-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topic-section {
+        padding: 1.5rem;
+    }
+}
 /* ===== HEADER ===== */
 header {
     background: linear-gradient(135deg, #111, #222);
@@ -334,16 +433,19 @@ footer {
 </head>
 
 <body>
-<!-- Navigation -->
+    <!-- Navigation -->
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="services.html">SERVICES</a>
-    <a href="about.html">ABOUT</a>
-    <a href="FKN_Academy.html">ACADEMY</a>
-    <a href="Education.html">EDUCATION</a>
-    <a href="options.html">Options</a>
-    <a href="https://fknlabs.netlify.app/">FKNLABS</a>
-
+    <div class="logo">FKN Capital</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="FKN_Academy.html">Academy</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="https://wa.me/254769043920?">Contact</a></li>
+        <li><a href="options.html">Options</a></li>
+        <li><a href="https://fknlabs.netlify.app/">FKNLABS</a></li>
+    </ul>
 </nav>
 
 <!-- Header -->
@@ -1046,8 +1148,7 @@ footer {
 <section class="contact-cta">
     <h2>Ready to Master Financial Markets?</h2>
     <p>Join our community of traders and investors. Get personalized guidance and advanced strategies.</p>
-    <a href="https://wa.me/254712345678?text=Hello%20FKN%20Trading%20Hub,%20I'd%20like%20to%20learn%20more%20about%20your%20services" class="whatsapp-btn">Contact Us on WhatsApp</a>
-</section>
+    <a href="https://wa.me/254769043920?text=Hello%20FKN%20Trading%20Hub,%20I'd%20like%20to%20learn%20more%20about%20your%20services" class="whatsapp-btn">Contact Us on WhatsApp</a></section>
 
 <!-- Footer -->
 <footer>
@@ -1084,6 +1185,7 @@ function showTopic(topicId) {
 </script>
 </body>
 </html>
+
 
 
 
