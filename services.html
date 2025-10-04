@@ -10,67 +10,113 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         /* ===== BASE STYLES ===== */
-        * {margin:0;padding:0;box-sizing:border-box;font-family:'Arial', sans-serif;}
         body {
-            background: #111;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
             color: #eee;
             line-height: 1.6;
-            max-width: 100%;
-            overflow-x: hidden;
         }
-        
         /* ===== NAVIGATION ===== */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 50px;
-            background: #000;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            gap: 50px;
-        }
-        
-        nav .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            color: #D4AF37;
-            font-weight: bold;
-        }
-        
-        nav .nav-container {
-            display: flex;
-            gap: 25px;
-        }
-        
-        nav .nav-container a {
-            font-weight: bold;
-            transition: .3s;
-            padding: 5px 0;
-            position: relative;
-            color: #D4AF37;
-            text-decoration: none;
-        }
-        
-        nav .nav-container a:hover {
-            color: #9910cf;
-        }
-        
-        nav .nav-container a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #D4AF37;
-            transition: width 0.3s;
-        }
-        
-        nav .nav-container a:hover::after {
-            width: 100%;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 50px;
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    transition: .3s;
+    padding: 5px 0;
+    position: relative;
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9910cf;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D4AF37;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+        flex-shrink: 0;
+    }
+    
+    nav ul li:first-child {
+        margin-left: 5px;
+    }
+    
+    nav ul li:last-child {
+        margin-right: 5px;
+    }
+    
+    nav ul li a {
+        padding: 8px 16px;
+        background: #222;
+        border-radius: 20px;
+        border: 1px solid #444;
+    }
+}
         
         /* ===== HEADER ===== */
         header {
@@ -103,7 +149,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
-            border: 1px solid #333;
         }
         
         .service-card:hover {
@@ -120,12 +165,6 @@
         .service-card h2 {
             color: #d4af37;
             margin-top: 0;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card p {
-            line-height: 1.7;
-            color: #ccc;
         }
         
         /* ===== FOOTER ===== */
@@ -160,50 +199,8 @@
             font-size: 0.9rem;
         }
         
-        /* ===== MOBILE RESPONSIVE ===== */
+        /* ===== MEDIA QUERIES ===== */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 15px;
-                gap: 15px;
-            }
-            
-            nav .nav-container {
-                margin-top: 15px;
-                display: flex;
-                overflow-x: auto;
-                overflow-y: hidden;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-                width: 100%;
-                padding: 10px 0;
-                gap: 0;
-            }
-            
-            nav .nav-container::-webkit-scrollbar {
-                display: none;
-            }
-            
-            nav .nav-container a {
-                margin: 0 10px;
-                flex-shrink: 0;
-                padding: 8px 16px;
-                background: #222;
-                border-radius: 20px;
-                border: 1px solid #444;
-            }
-            
-            nav .nav-container a:first-child {
-                margin-left: 5px;
-            }
-            
-            nav .nav-container a:last-child {
-                margin-right: 5px;
-            }
-        
-            /* Header */
             header {
                 padding: 3rem 1.5rem;
             }
@@ -212,56 +209,32 @@
                 font-size: 2rem;
             }
             
-            /* Services Grid */
             .services-grid {
                 grid-template-columns: 1fr;
                 padding: 1.5rem;
-                gap: 1.5rem;
             }
             
-            .service-card {
-                padding: 1.5rem;
-            }
-        }
-        
-        /* Additional small screen optimization */
-        @media (max-width: 480px) {
-            header {
-                padding: 2rem 1rem;
-            }
-            
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .services-grid {
-                padding: 1rem;
-            }
-            
-            .service-card {
-                padding: 1.2rem;
-            }
-            
-            .service-icon {
-                font-size: 2rem;
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">FKN Capital</div>
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="FKN_academy.html">Academy</a>
-            <a href="education.html">Education</a>
-            <a href="options.html">Options</a>
-            <a href="https://fknlabs.netlify.app/">FKNLABS</a>
-
-        </div>
-    </nav>
+<nav id="navbar">
+    <div class="logo">FKN Capital</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="FKN_academy.html">Academy</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="options.html">Options</a></li>
+        <li><a href="https://fknlabs.netlify.app/">FKNLABS</a></li>
+    </ul>
+</nav>
     
     <!-- Header -->
     <header>
@@ -330,10 +303,6 @@
     </script>
 </body>
 </html>
-
-
-
-
 
 
 
