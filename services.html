@@ -9,8 +9,7 @@
     <title>Institutional Strategies | FKN FINANCIAL HUB</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        
-               /* ===== BASE STYLES ===== */
+        /* ===== BASE STYLES ===== */
         * {margin:0;padding:0;box-sizing:border-box;font-family:'Arial', sans-serif;}
         body {
             background: #111;
@@ -20,7 +19,7 @@
             overflow-x: hidden;
         }
         
-        /* --- Navbar --- */
+        /* ===== NAVIGATION ===== */
         nav {
             display: flex;
             justify-content: center;
@@ -30,7 +29,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            gap: 50px; /* Space between logo and nav items */
+            gap: 50px;
         }
         
         nav .logo {
@@ -40,24 +39,25 @@
             font-weight: bold;
         }
         
-        nav ul {
-            list-style: none;
+        nav .nav-container {
             display: flex;
-            gap: 25px; /* Space between nav items */
+            gap: 25px;
         }
         
-        nav ul li a {
+        nav .nav-container a {
             font-weight: bold;
             transition: .3s;
             padding: 5px 0;
             position: relative;
-        }
-        
-        nav ul li a:hover {
             color: #D4AF37;
+            text-decoration: none;
         }
         
-        nav ul li a::after {
+        nav .nav-container a:hover {
+            color: #9910cf;
+        }
+        
+        nav .nav-container a::after {
             content: '';
             position: absolute;
             width: 0;
@@ -68,7 +68,7 @@
             transition: width 0.3s;
         }
         
-        nav ul li a:hover::after {
+        nav .nav-container a:hover::after {
             width: 100%;
         }
         
@@ -84,46 +84,6 @@
             margin: 0;
             font-size: 2.8rem;
             color: #d4af37;
-        }
-         /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            nav {flex-direction:column;padding:15px;}
-            nav ul {
-                margin-top:15px;
-                display: flex;
-                overflow-x: auto;
-                overflow-y: hidden;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-                width: 100%;
-                padding: 10px 0;
-            }
-            
-            nav ul::-webkit-scrollbar {
-                display: none;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-                flex-shrink: 0;
-            }
-            
-            nav ul li:first-child {
-                margin-left: 5px;
-            }
-            
-            nav ul li:last-child {
-                margin-right: 5px;
-            }
-            
-            nav ul li a {
-                padding: 8px 16px;
-                background: #222;
-                border-radius: 20px;
-                border: 1px solid #444;
-            }
         }
         
         /* ===== SERVICES GRID ===== */
@@ -202,14 +162,13 @@
         
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 768px) {
-            /* Navigation */
             nav {
                 flex-direction: column;
                 padding: 15px;
                 gap: 15px;
             }
             
-            nav ul {
+            nav .nav-container {
                 margin-top: 15px;
                 display: flex;
                 overflow-x: auto;
@@ -220,30 +179,28 @@
                 -ms-overflow-style: none;
                 width: 100%;
                 padding: 10px 0;
+                gap: 0;
             }
             
-            nav ul::-webkit-scrollbar {
+            nav .nav-container::-webkit-scrollbar {
                 display: none;
             }
             
-            nav ul li {
+            nav .nav-container a {
                 margin: 0 10px;
                 flex-shrink: 0;
-            }
-            
-            nav ul li:first-child {
-                margin-left: 5px;
-            }
-            
-            nav ul li:last-child {
-                margin-right: 5px;
-            }
-            
-            nav ul li a {
                 padding: 8px 16px;
                 background: #222;
                 border-radius: 20px;
                 border: 1px solid #444;
+            }
+            
+            nav .nav-container a:first-child {
+                margin-left: 5px;
+            }
+            
+            nav .nav-container a:last-child {
+                margin-right: 5px;
             }
         
             /* Header */
@@ -373,6 +330,7 @@
     </script>
 </body>
 </html>
+
 
 
 
